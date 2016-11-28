@@ -3,7 +3,7 @@
 @section('content')
 	<div class="row">
 		<div class="panel panel-info">
-		  <div class="panel-heading">Panel heading without title</div>
+		  <div class="panel-heading">Panel heading without title(Git Check)</div>
 		  <div class="panel-body">
 		    <div class="table-responsive">
 				<table class="table table-hover">
