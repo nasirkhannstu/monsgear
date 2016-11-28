@@ -28,8 +28,20 @@
 					{{Form::label('slug','Slug:')}}
 					{{Form::text('slug', null,array('class' => 'form-control','required'=>'','maxlength'=>'225'))}}
 
+					{{ Form::label('category_id', 'Category:', ["class" => 'form-spacing-top']) }}
+					{{ Form::select('category_id', $categories, null, ["class" => 'form-control']) }}
+
 					{{Form::label('price','Price:')}}
 					{{Form::text('price',null,array('class' => 'form-control','required'=>'','maxlength'=>'255'))}}
+
+					{{Form::label('status','Status:')}}
+					<select class="form-control" name="status">
+							<option value="a">In Stock</option>
+							<option value="n">out of stock</option>
+					</select>
+
+					{{Form::label('shortdes','Product Short Description:')}}
+					{{Form::textarea('shortdes',null,array('class' => 'form-control'))}}
 
 					{{Form::label('body','Product Description:')}}
 					{{Form::textarea('body',null,array('class' => 'form-control'))}}

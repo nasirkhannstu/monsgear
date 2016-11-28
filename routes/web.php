@@ -37,6 +37,11 @@ Route::get('/', ['uses' => 'PagesController@getIndex', 'as' => 'pages.index']);
 
 Route::get('p/{slug}', ['uses' => 'PagesController@getSingleProduct', 'as' => 'blog.single'])->where('slug', '[\w\d\-\_]+');
 
+Route::get('b/{slug}', ['uses' => 'PagesController@getSingleBlog', 'as' => 'sBlog.single'])->where('slug', '[\w\d\-\_]+');
+
+//Categories
+Route::resource('categories', 'CategoryController', ['except' => 'create']);
+
 //Admin Panel
 Route::get('/adminpanel', 'AdminpanelController@getIndex');
 

@@ -14,6 +14,7 @@
 				<h4> <a href="{{ url('p/'.$product->slug)}}">Slug: {{ url('p/'.$product->slug)}}</a></h4>
 				<h4>Price: {!! $product->price !!}</h4>
 				<h4>Created At: {!! $product->created_at !!}</h4>
+				<h4>Category: {!! $product->category->name !!}</h4>
 				<br>
 				<p class="lead">Description: {!! $product->body !!}</p>
 			</div>
