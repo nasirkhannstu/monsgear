@@ -20,7 +20,12 @@ class CreateCommentsTable extends Migration
             $table->string('name');
             $table->text('body');
             $table->string('visibility');
+            $table->integer('blog_id')->nullable()->unsigned();
             $table->timestamps();
+        });
+
+        Schema::table('comments', function ($table) {
+            $table->foreign('blog_id')->references('id')->on('blogs')->onDelete('cascade');
         });
     }
 
@@ -31,6 +36,7 @@ class CreateCommentsTable extends Migration
      */
     public function down()
     {
+        $table->dropForeign('blog_id');
         Schema::dropIfExists('comments');
     }
 }
