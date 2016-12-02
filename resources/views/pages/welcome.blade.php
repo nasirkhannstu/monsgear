@@ -147,114 +147,26 @@
                 <div class="view view-newest-content-by-type view-id-newest_content_by_type view-display-id-posted_in view-dom-id-3739d303609e7db5c7e0ee32613b6362">
 
                     <div class="view-content">
-
+                        @foreach ($blogs as $key => $blog)
                         <div class="item">
                             <div class="inner-wrap">
                                 <a href="/workouts/fast-mass-program" alt="Fast Mass Program: The 4 Day Superset Split Workout" title="Fast Mass Program: The 4 Day Superset Split Workout">
                                     <div class="nodeImgWrap">
                                         <div class="nodeImg ">
-                                            <img src="https://cdn.muscleandstrength.com/sites/default/files/styles/400x250/public/field/image/workout/fast-mass-thumb.jpg?itok=rSjM5otH" width="400" height="250" alt="Fast Mass Program: The 4 Day Superset Split Workout" /></div>
+                                            <img src="{{ asset('uploads/blogimg/'. $blog->image) }}" width="400" height="250" alt="Fast Mass Program: The 4 Day Superset Split Workout" /></div>
                                     </div>
                                     <div class="nodeData">
                                         <div class="nodeTitle">
-                                            Fast Mass Program: The 4 Day Superset Split Workout        </div>
+                                            {{ $blog->title }}      
+                                        </div>
                                     </div>
                                 </a>
                                 <div class="stats-wrap">
 
-                                    <div class="posted-in">Posted in: Workout Routines</div>    </div>
+                                    <div class="posted-in">{!! $blog->body !!} </div>    </div>
                             </div>
                         </div>
-
-                        <div class="item">
-                            <div class="inner-wrap">
-                                <a href="/recipes/gameday-buffalo-chicken-sliders" alt="Gameday Buffalo Chicken Sliders Recipe" title="Gameday Buffalo Chicken Sliders Recipe">
-                                    <div class="nodeImgWrap">
-                                        <div class="nodeImg ">
-                                            <img src="https://cdn.muscleandstrength.com/sites/default/files/styles/400x250/public/field/image/recipe/buffalo-chicken-sliders-feature.jpg?itok=7RoJI2j5" width="400" height="250" alt="Gameday Buffalo Chicken Sliders Recipe" />      </div>
-                                    </div>
-                                    <div class="nodeData">
-                                        <div class="nodeTitle">
-                                            Gameday Buffalo Chicken Sliders Recipe        </div>
-                                    </div>
-                                </a>
-                                <div class="stats-wrap">
-
-                                    <div class="posted-in">Posted in: Recipes</div>    </div>
-                            </div>
-                        </div>
-
-                        <div class="item">
-                            <div class="inner-wrap">
-                                <a href="/articles/how-to-calculate-perfect-macros" alt="How to Calculate the Perfect Macros for Your Fitness Goals" title="How to Calculate the Perfect Macros for Your Fitness Goals">
-                                    <div class="nodeImgWrap">
-                                        <div class="nodeImg ">
-                                            <img src="https://cdn.muscleandstrength.com/sites/default/files/styles/400x250/public/field/image/article/macros-thumb.jpg?itok=CxrjvdXI" width="400" height="250" alt="How to Calculate the Perfect Macros for Your Fitness Goals" /></div>
-                                    </div>
-                                    <div class="nodeData">
-                                        <div class="nodeTitle">
-                                            How to Calculate the Perfect Macros for Your Fitness Goals        </div>
-                                    </div>
-                                </a>
-                                <div class="stats-wrap">
-
-                                    <div class="posted-in">Posted in: Articles</div>    </div>
-                            </div>
-                        </div>
-
-                        <div class="item">
-                            <div class="inner-wrap">
-                                <a href="/articles/6-training-tips-team-sports" alt="6 Strength &amp; Athleticism Training Tips for Athletes" title="6 Strength &amp; Athleticism Training Tips for Athletes">
-                                    <div class="nodeImgWrap">
-                                        <div class="nodeImg ">
-                                            <img src="https://cdn.muscleandstrength.com/sites/default/files/styles/400x250/public/field/image/article/team-sport-training-thumb.jpg?itok=W7iMLj8j" width="400" height="250" alt="6 Strength &amp; Athleticism Training Tips for Team Sports Athletes" /></div>
-                                    </div>
-                                    <div class="nodeData">
-                                        <div class="nodeTitle">
-                                            6 Strength &amp; Athleticism Training Tips for Athletes        </div>
-                                    </div>
-                                </a>
-                                <div class="stats-wrap">
-
-                                    <div class="posted-in">Posted in: Articles</div>    </div>
-                            </div>
-                        </div>
-
-                        <div class="item">
-                            <div class="inner-wrap">
-                                <a href="/workouts/juan-morel-leg-day" alt="300lb Bodybuilder Juan Morel’s Mixed Volume Leg Workout" title="300lb Bodybuilder Juan Morel’s Mixed Volume Leg Workout">
-                                    <div class="nodeImgWrap">
-                                        <div class="nodeImg ">
-                                            <img src="https://cdn.muscleandstrength.com/sites/default/files/styles/400x250/public/field/image/workout/leg-day-thumb.jpg?itok=iEyaA7ZL" width="400" height="250" alt="300lb Bodybuilder Juan Morel’s Mixed Volume Leg Workout" /></div>
-                                    </div>
-                                    <div class="nodeData">
-                                        <div class="nodeTitle">
-                                            300lb Bodybuilder Juan Morel’s Mixed Volume Leg Workout        </div>
-                                    </div>
-                                </a>
-                                <div class="stats-wrap">
-
-                                    <div class="posted-in">Posted in: Workout Routines</div>    </div>
-                            </div>
-                        </div>
-
-                        <div class="item">
-                            <div class="inner-wrap">
-                                <a href="/workouts/full-body-blast-off-workout" alt="Explosive Gains! The Full Body Blast Off Workout" title="Explosive Gains! The Full Body Blast Off Workout">
-                                    <div class="nodeImgWrap">
-                                        <div class="nodeImg ">
-                                            <img src="https://cdn.muscleandstrength.com/sites/default/files/styles/400x250/public/field/image/workout/full-body-blast-off-thumb.jpg?itok=8gOfOxvV" width="400" height="250" alt="Full Body Blast Off Workout - The Best Full Body Routine" /></div>
-                                    </div>
-                                    <div class="nodeData">
-                                        <div class="nodeTitle">
-                                            Explosive Gains! The Full Body Blast Off Workout        </div>
-                                    </div>
-                                </a>
-                                <div class="stats-wrap">
-
-                                    <div class="posted-in">Posted in: Workout Routines</div>    </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>              
             </div>

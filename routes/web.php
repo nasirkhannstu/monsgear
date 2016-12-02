@@ -31,11 +31,28 @@ Route::get('/remove/{id}', ['uses' => 'ProductController@getRemoveItem', 'as' =>
 
 Route::get('/shopping-cart', ['uses' => 'ProductController@getCart', 'as' => 'product.shoppingCart']);
 
+
 //Pages
 Route::get('/', ['uses' => 'PagesController@getIndex', 'as' => 'pages.index']);
 // Route::get('/single/{id}', ['uses' => 'PagesController@getSingle', 'as' => 'pages.single']);
 
+Route::get('checkout', ['uses' => 'PagesController@getCheckout', 'as' => 'product.checkout']);
+
+Route::post('coupon', ['uses' => 'PagesController@getCoupon', 'as' => 'product.coupon']);
+
 Route::get('p/{slug}', ['uses' => 'PagesController@getSingleProduct', 'as' => 'blog.single'])->where('slug', '[\w\d\-\_]+');
+Route::get('b/{slug}', ['uses' => 'PagesController@getSingleBlog', 'as' => 'sBlog.single'])->where('slug', '[\w\d\-\_]+');
+
+//Comments
+Route::post('comments/{blog_id}', ['uses' =>'CommentController@store', 'as' => 'comments.store']);
+Route::put('comments/{id}', ['uses' =>'CommentController@update', 'as' => 'comment.update']);
+Route::delete('destroy/{id}', ['uses' =>'CommentController@destroy', 'as' => 'comment.destroy']);
+Route::get('comment', ['uses' =>'CommentController@index', 'as' => 'comments.index']);
+
+//Categories
+Route::resource('categories', 'CategoryController', ['except' => 'create']);
+
+Route::resource('coupons', 'CouponController');
 
 //Admin Panel
 Route::get('/adminpanel','AdminpanelController@getIndex');

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Cart;
 use App\Product;
+use App\Category;
 use Image;
 use Storage;
 use Session;
@@ -84,7 +85,9 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('product.create');    }
+        $categories = Category::all();
+        return view('product.create')->withCategories($categories);    
+    }
 
     /**
      * Store a newly created resource in storage.
@@ -96,17 +99,23 @@ class ProductController extends Controller
     {
         $this->validate($request, array(
                 'name'          => 'required|max:255',
-                'slug'           => 'required|alpha_dash|min:5|max:255|unique:products,slug',
+                'slug'           => 'required|alpha_dash|max:255|unique:products,slug',
+                'category_id'       => 'required|integer',
                 'body'           => 'required',
-                'price'           => 'required',
+                'price'           => 'required|integer',
+                'status'           => 'required',
+                'shortdes'           => 'required',
                 'image'          => 'sometimes|image'
             ));
         //Store in the database
         $product = new Product;
         $product->name = $request->name;
         $product->slug = $request->slug;
-        $product->price = $request->price;
+        $product->category_id = $request->category_id;
         $product->body = $request->body;
+        $product->price = $request->price;
+        $product->status = $request->status;
+        $product->shortdes = $request->shortdes;
 
         if($request->hasFile('image')){
            $image = $request->file('image');
@@ -147,7 +156,12 @@ class ProductController extends Controller
     public function edit($id)
     {
         $product = Product::find($id);
-        return view('product.edit')->withProduct($product);    }
+        $categories = Category::all();
+        $cats = array();
+        foreach ( $categories as $category ){
+            $cats[$category->id] = $category->name;
+        }
+        return view('product.edit')->withProduct($product)->withCategories($cats);    }
 
     /**
      * Update the specified resource in storage.
@@ -164,8 +178,11 @@ class ProductController extends Controller
         $this->validate($request, array(
             'name'          => 'required|max:255',
             'slug'           => 'required|alpha_dash|min:5|max:255|unique:products,slug,$id',
+            'category_id'       => 'required|integer',
             'body'           => 'required',
-            'price'           => 'required',
+            'price'           => 'required|integer',
+            'status'           => 'required',
+            'shortdes'           => 'required',
             'image'          => 'image'
         ));
 
@@ -174,6 +191,9 @@ class ProductController extends Controller
         $product->slug = $request->input('slug');
         $product->body = $request->input('body');
         $product->price = $request->input('price');
+        $product->status = $request->input('status');
+        $product->shortdes = $request->input('shortdes');
+        $product->category_id = $request->input('category_id');
 
         if($request->hasFile('image')){
            $image = $request->file('image');

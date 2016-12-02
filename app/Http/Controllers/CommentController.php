@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Comment;
+use App\Blog;
+use Session;
+
 class CommentController extends Controller
 {
     /**
@@ -13,7 +17,9 @@ class CommentController extends Controller
      */
     public function index()
     {
-        //
+        $comments = Comment::orderBy('id','desc')->paginate(10);
+
+        return view('comment.index')->withComments($comments);
     }
 
     /**
@@ -32,26 +38,31 @@ class CommentController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $blog_id)
     {
         $this->validate($request, array(
-                'title'          => 'required|max:255',
-                'slug'           => 'required|alpha_dash|max:255|unique:blogs,slug',
+                'name'          => 'required|max:255',
+                'email'           => 'required|max:255',
                 'body'           => 'required'
             ));
-        //Store in the database
-        $blog = new Blog;
-        $blog->title = $request->title;
-        $blog->slug = $request->slug;
-        $blog->body = $request->body;
 
-        $blog->save();
+        $blog = Blog::find($blog_id);
+        //Store in the database
+        $comment = new Comment;
+        $comment->name = $request->name;
+        $comment->email = $request->email;
+        $comment->body = $request->body;
+        $comment->visibility = 'notVisible';
+        $comment->blog()->associate($blog); //commetn model theke asche
+
+        $comment->save();
 
 
         Session::flash('success','The blog post was successfully saved!');
 
         //redirect to another page
-        return redirect()->route('blog.show', $blog->id);    }
+        return redirect()->route('sBlog.single', [$blog->slug]);    
+    }
 
     /**
      * Display the specified resource.
@@ -72,7 +83,7 @@ class CommentController extends Controller
      */
     public function edit($id)
     {
-        //
+        
     }
 
     /**
@@ -84,7 +95,14 @@ class CommentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $comment = Comment::find($id);
+        $comment->visibility = 'visible';
+
+        $comment->save();
+
+        Session::flash('success', 'This Comment Get Approved.');
+        return redirect()->route('comments.index'); 
+
     }
 
     /**
@@ -95,6 +113,9 @@ class CommentController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $comment = Comment::find($id);
+        $comment->delete();
+        Session::flash('success', 'The Product was successfully deleted.');
+        return redirect()->route('comments.index'); 
     }
 }

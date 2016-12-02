@@ -21,8 +21,4 @@ class PagesController extends Controller
     	$product = Product::where('slug', "=", $slug)->first();
         return view('pages.single')->withProduct($product);
     }
-    public function custregister()
-    {
-        return view('pages/register');
-    }
 }
