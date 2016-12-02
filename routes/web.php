@@ -38,8 +38,26 @@ Route::get('/', ['uses' => 'PagesController@getIndex', 'as' => 'pages.index']);
 Route::get('p/{slug}', ['uses' => 'PagesController@getSingleProduct', 'as' => 'blog.single'])->where('slug', '[\w\d\-\_]+');
 
 //Admin Panel
-Route::get('/adminpanel', 'AdminpanelController@getIndex');
+Route::get('/adminpanel','AdminpanelController@getIndex');
+
+Auth::routes();
+
+Route::get('/home','HomeController@index');
+Route::get('/customerregistration', 'PagesController@custregister');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+Route::get('/customer_home', 'CustomerController@index');
+
+Auth::routes();
+Route::get('customer_login','CustomerAuth\LoginController@showLoginForm');
+Route::post('customer_login','CustomerAuth\LoginController@login');
+Route::get('customer_logout','CustomerAuth\LoginController@logout');
+Route::get('customer_password/email','CustomerAuth\ForgotPasswordController@sendResetLinkEmail');
+Route::get('customer_password/reset','CustomerAuth\ForgotPasswordController@showLinkRequestForm');
+Route::post('customer_password/reset','CustomerAuth\ResetPasswordController@reset');
+Route::get('customer_password/reset/{token}','CustomerAuth\ForgotPasswordController@showResetForm');
+Route::get('customer_register','CustomerAuth\RegisterController@showRegisterForm');
+Route::post('customer_register','CustomerAuth\RegisterController@register');
+

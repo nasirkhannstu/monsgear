@@ -272,7 +272,7 @@
 
 
                     <div class="user-login">
-                        <form class="pre-validate" action="https://www.muscleandstrength.com/store/customer/account/loginPost/" method="post" id="user-login" >
+                        <form class="pre-validate" action="" method="post" id="user-login" >
                             <div class="invalid-message message red"></div>
                             <div class="form-item form-type-textfield form-item-name">
                                 <input type="email" placeholder="email" name="login[username]" class="input-text" required/>
@@ -291,7 +291,7 @@
                                     <image style="width:.8em; height:.8em;"
                                            src="https://cdn.muscleandstrength.com/images/fallback/update-white.png"/>
                                 </svg></span> Loading...</span></button>
-                                <a rel="nofollow" class="btn btn-flat-gray btn-lg form-button" href="https://www.muscleandstrength.com/store/customer/account/create/">Register</a>
+                                <a rel="nofollow" class="btn btn-flat-gray btn-lg form-button" href="/customerregistration">Register</a>
                             </div>
 
                         </form>
