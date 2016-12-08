@@ -223,47 +223,56 @@
 			
 			<div class="body">
 				
-<div class="orderTotals" id="shopping-cart-totals-table">
-        
-    <div class="row">
-        <div class="price-label">
-            Points Earned        </div>
-        <div class="price-wrap">
-            451 points        </div>
-    </div>
+				<div class="orderTotals" id="shopping-cart-totals-table">
+				    <div class="row">
+				        <div class="price-label">
+				            Cart Total:
+				        </div>
+				        <div class="price-wrap">
+				            {{ $totalPrice }}
+				        </div>
+				    </div>
 
-        <div class="row">
-        <div class="price-label">
-            Bonus Points Earned        </div>
-        <div class="price-wrap">
-            75 points        </div>
-    </div>
-    
-
-
-
-<div class="row">
-            <div style="" class="price-label">
-            Subtotal        </div>
-        <div style="" class="price-wrap">
-            <span class="price">$225.78</span>        </div>
-    </div>
-    
-<div class="row grand">
-            <div style="" class="price-label">
-            <strong>Grand Total</strong>
-        </div>
-        <div style="" class="price-wrap">
-            <strong><span class="price">{{ $totalPrice }}</span></strong>
-        </div>
-    </div></div>
-				
-									
-					<div class="checkoutBtnWrapper checkout-types">
-						<button class="btn btn-green proceedCheckout aloading floatRight" onclick="location='https://www.muscleandstrength.com/store/checkout/onepage/'"><span class="init">Proceed to Checkout</span><span class="loading"><span class="svg-wrap"><svg width="15" height="15"><use xlink:href="#icon-update-white"></use><image width="15" height="15" src="/store/skin/frontend/mnsv4/default/images/fallback/update-white.png"></image></svg></span> Loading...</span></button>
+			        <div class="row">
+			        	<div class="price-label">
+			            	Coupon({{ $coupon->name }}):
+			            </div>
+			        	<div class="price-wrap">
+			            	@if(isset($coupon) && $coupon->dtype == 'cart')
+			            		-{{ $coupon->amount }}
+			            	@endif
+			            	@if(isset($coupon) && $coupon->dtype == 'percent')
+			            		%{{ $coupon->amount }}
+			            	@endif
+			            </div>
+			    	</div>
+					<div class="row">
+					    <div style="" class="price-label">
+					            Free sheep:
+					    </div>
+					    <div style="" class="price-wrap">
+					        <span class="price">
+					        @if(isset($coupon) && $coupon->freeship == 'yes')
+			            		Yes
+			            	@endif
+					        </span>
+					    </div>
 					</div>
+					<div class="row grand">
+					    <div style="" class="price-label">
+					        <strong>Grand Total</strong>
+					    </div>
+					    <div style="" class="price-wrap">
+					        <strong><span class="price">{{ $couponTotal }}</span></strong>
+					    </div>
+					</div>
+    			</div>
+							
+				<div class="checkoutBtnWrapper checkout-types">
+					<button class="btn btn-green proceedCheckout aloading floatRight" onclick="location='https://www.muscleandstrength.com/store/checkout/onepage/'"><span class="init">Proceed to Checkout</span><span class="loading"><span class="svg-wrap"><svg width="15" height="15"><use xlink:href="#icon-update-white"></use><image width="15" height="15" src="/store/skin/frontend/mnsv4/default/images/fallback/update-white.png"></image></svg></span> Loading...</span></button>
+				</div>
 					
-							</div>
+			</div>
 			
 			<div class="payment-methods">
 				<div class="payment-icon"><img alt="paypal" src="https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/payment-icons/paypal.png"></div>

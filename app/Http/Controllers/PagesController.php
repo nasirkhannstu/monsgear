@@ -40,10 +40,11 @@ class PagesController extends Controller
         return view('pages.checkout', ['products' => $cart->items, 'totalPrice' => $cart->totalPrice]);
     }
 // amount,freeship,minspent,excludcat,limit,expire,dtype
-    public function getCoupon(Request $request){
-        if(Coupon::where('name', '=', $request->coupon)->exists()){
 
-            $coupon = Coupon::where('name', "=", $request->coupon)->first();
+    public function calCoupon($coupon){
+        if(Coupon::where('name', '=', $coupon)->exists()){
+
+            $coupon = Coupon::where('name', "=", $coupon)->first();
             if(!Session::has('cart')){
                 return view('pages.checkout');
             }
@@ -73,26 +74,35 @@ class PagesController extends Controller
                         }else{
                             $withCat += ($withCat*$coupon->amount) / 100;
                         }
-                        $withoutCat.' ';
-                        $withCat.' ';
+
                         $total = $withoutCat+$withCat;
+
                         if($coupon->freeship == 'yes'){
                             $total = $total - 25;
                         }
-                        echo $total;
+                        return $total;
                     }else{
-                        echo 'Min Spent: failed';
+                        return $msg = 'Min Spent: failed';
                     }
                 }else{
-                    echo 'Coupon limit failed';
+                    return $msg =  'Coupon limit failed';
                 }
             }else{
-                echo "Expired!!";
-            }
-            
+                return $msg =  "Expired!!";
+            }  
         }else{
-
-            return 'false';
+            return $msg =  'Invalid Coupon';
         }
+    }
+    public function getCoupon(Request $request){
+        $getCoupon = $this->calCoupon($request->coupon);
+        $coupon = Coupon::where('name', "=", $request->coupon)->first();
+
+        if(!Session::has('cart')){
+            return view('pages.welcome');
+        }
+        $oldCart = Session::get('cart');
+        $cart = new Cart($oldCart);
+        return view('pages.cart', ['products' => $cart->items, 'totalPrice' => $cart->totalPrice, 'coupon' => $coupon, 'couponTotal' => $getCoupon]);
     }
 }
