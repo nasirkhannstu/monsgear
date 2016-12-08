@@ -163,7 +163,7 @@
                                 </a>
                                 <div class="stats-wrap">
 
-                                    <div class="posted-in">{!! $blog->body !!} </div>    </div>
+                                    <div class="posted-in">{{ $blog->body }} </div>    </div>
                             </div>
                         </div>
                         @endforeach

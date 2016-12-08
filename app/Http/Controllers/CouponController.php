@@ -46,7 +46,7 @@ class CouponController extends Controller
                 'dtype'           => 'max:255',
                 'amount'          => 'integer',
                 'freeship'        => 'max:255',
-                'minspent'        => 'integer|max:10',
+                'minspent'        => 'integer',
                 'excludcat'       => 'max:255',
                 'limit'           => 'integer',
                 'expire'          => 'integer'
@@ -60,6 +60,7 @@ class CouponController extends Controller
         $coupon->minspent = $request->minspent;
         $coupon->excludcat = $request->excludcat;
         $coupon->limit = $request->limit;
+        $coupon->created = time();
         $coupon->expire = $request->expire;
 
         $coupon->save();

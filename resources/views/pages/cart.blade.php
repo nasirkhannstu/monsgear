@@ -95,7 +95,7 @@
 				<div class="price-wrap">
 					<div class="padding">
 							<div class="item-subtotal">
-								<span class="price">{{ $product['price'] }}</span>
+								<span class="price">${{ $product['price'] }}</span>
 							</div>
 					</div>
 				</div>          

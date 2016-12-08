@@ -52,11 +52,44 @@ class PagesController extends Controller
             $totalPrice = $cart->totalPrice;
             $products = $cart->items;
 
-             if($coupon->dtype == 'cart'){
-                return $newTotal = $totalPrice - $coupon->amount;
-             }else{
-                return $newTotal = ($totalPrice*$coupon->amount) / 100;
-             }
+            $exp = $coupon->expire * 60 * 60;
+            if($exp <= time()){
+                if($coupon->limit <= $coupon->limit){
+                    if($totalPrice >= $coupon->minspent){
+                        $withCat = 0;
+                        $withoutCat = 0;
+                        foreach($products as $product){
+                            $prodictId = $product['item']['id'];
+                            $mProduct = Product::find($prodictId);
+                            if($mProduct->category->id == $coupon->excludcat){
+                                $withoutCat += $product['price'];
+                                
+                            }else{
+                                $withCat += $product['price'];
+                            }
+                        }
+                        if($coupon->dtype == 'cart'){
+                            $withCat = $withCat - $coupon->amount;
+                        }else{
+                            $withCat += ($withCat*$coupon->amount) / 100;
+                        }
+                        $withoutCat.' ';
+                        $withCat.' ';
+                        $total = $withoutCat+$withCat;
+                        if($coupon->freeship == 'yes'){
+                            $total = $total - 25;
+                        }
+                        echo $total;
+                    }else{
+                        echo 'Min Spent: failed';
+                    }
+                }else{
+                    echo 'Coupon limit failed';
+                }
+            }else{
+                echo "Expired!!";
+            }
+            
         }else{
 
             return 'false';

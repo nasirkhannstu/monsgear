@@ -30,7 +30,7 @@ $( "#datepicker" ).datepicker();
 
 				{{Form::label('freeship','Free Shipping:')}}
 				<select class="form-control" name="freeship">
-					<option value="No">No</option>
+					<option value="no">No</option>
 					<option value="yes">Yes</option>
 				</select>
 
@@ -39,6 +39,7 @@ $( "#datepicker" ).datepicker();
 
 				{{Form::label('excludcat','Exclude Category:')}}
 				<select class="form-control" name="excludcat">
+					<option value="NULL">NULL</option>
 					@foreach($categories as $category)
 						<option value="{{ $category->id }}">{{ $category->name }}</option>
 					@endforeach
@@ -49,7 +50,6 @@ $( "#datepicker" ).datepicker();
 				  
 				{{Form::label('expire','Expiration(In hour):')}}
 				{{Form::text('expire',null,array('class' => 'form-control','maxlength'=>'255', 'id' => 'datepicker'))}}
-				<p>Date: <input type="text" id="datepicker"></p>
 				
 				{{Form::submit('Create Coupon',array('class' => 'btn btn-success btn-lg btn-block','style'=>'margin-top:20px'))}}
 				

@@ -121,7 +121,7 @@ class ProductController extends Controller
            $image = $request->file('image');
            $filename = time() . '.' . $image->getClientOriginalExtension();
            $location = public_path('uploads/product/'. $filename);
-           Image::make($image)->save($location);
+           Image::make($image)->resize(800, 400)->save($location);
 
            $product->image = $filename;
         }
