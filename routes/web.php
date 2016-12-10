@@ -30,8 +30,6 @@ Route::get('/reduceC/{id}', ['uses' => 'ProductController@getReduceByOneC', 'as'
 Route::get('/remove/{id}', ['uses' => 'ProductController@getRemoveItem', 'as' => 'product.remove']);
 
 Route::get('/shopping-cart', ['uses' => 'ProductController@getCart', 'as' => 'product.shoppingCart']);
-
-
 //Pages
 Route::get('/', ['uses' => 'PagesController@getIndex', 'as' => 'pages.index']);
 // Route::get('/single/{id}', ['uses' => 'PagesController@getSingle', 'as' => 'pages.single']);

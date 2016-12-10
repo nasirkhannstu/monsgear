@@ -9,21 +9,7 @@
             </div>
 
             <ul class="scroll-menu">
-                <li>
-                    <a href="/store">Store</a>
-                </li>
-                <li>
-                    <a href="/articles">Training</a>
-                </li>
-                <li>
-                    <a href="/nutrition">Nutrition</a>
-                </li>
-                <li>
-                    <a href="/motivation">Motivation</a>
-                </li>
-                <li>
-                    <a href="/lifestyle">Lifestyle</a>
-                </li>
+
                 <li>
                     <a href="/articles/women">For Women</a>
                 </li>
@@ -89,38 +75,8 @@
                     </div>
 
                 </div>
-                <div class="store-action rewards has-dropdown">
-                    <a class="dtap" href="/store/rewards">
-                        <svg style="width:2em; height:2em; max-width:100%;margin-bottom: -.2em;margin-top: .2em;" >
-                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-mns-rewards"></use>
-                            <image style="width:2em; height:2em; max-width:100%;margin-bottom: -.2em;margin-top: .2em;"   src="https://cdn.muscleandstrength.com/images/fallback/mns-rewards.png"></image>
-                        </svg>
-                    </a>
 
-                    <div class="store-dropdown">
-                        <ul class="nested-menu">
-                            <li class="noborder"><a class="rewards-catalog-link" href="/store/rewards/catalog">
-                                <img src="https://cdn.muscleandstrength.com/sites/all/themes/mnsnew/images/rewards/apparel-banner-sm.jpg" alt="apparel banner">
-                                View Rewards Catalog</a></li>
-                            <a rel="nofollow" href="/store/rewards/customer/" class="border-wrap reward-balance-wrap show-auth">
-                                <div class="balance-text">Your Balance:</div>
-                                <svg style="width:1.3em; height:1.3em; margin-left:-.3em; margin-bottom: -0.25em; margin-right: 0.1em;">
-                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-mns-coin"></use>
-                                    <image style="width:1.3em; height:1.3em; margin-left:-.3em; margin-bottom: -0.25em; margin-right: 0.1em;" src="https://cdn.muscleandstrength.com/images/fallback/mns-coin.png"></image>
-                                </svg> <span>0 points</span>
-                            </a>
-                            <li class="hide-auth"><a rel="nofollow" href="/store/customer/account/create/"><svg style="width:1.3em; height:1.3em; margin-left:-.3em; margin-bottom: -0.25em; margin-right: 0.1em;">
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-referral-program"></use>
-                                <image style="width:1.3em; height:1.3em; margin-left:-.3em; margin-bottom: -0.25em; margin-right: 0.1em;" src="https://cdn.muscleandstrength.com/images/fallback/referral-program.png"></image>
-                            </svg> Signup for rewards</a></li>
-                            <li class="last"><a href="/store/rewards"><svg style="width:1.3em; height:1.3em; margin-left:-.3em; margin-bottom: -0.25em; margin-right: 0.1em;">
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-question-mark"></use>
-                                <image style="width:1.3em; height:1.3em; margin-left:-.3em; margin-bottom: -0.25em; margin-right: 0.1em;" src="https://cdn.muscleandstrength.com/images/fallback/question-mark.png"></image>
-                            </svg> How to earn points</a></li>
-                        </ul>
-                    </div>
 
-                </div>
                 <div class="store-action cart">
                     <a href="/store/checkout/cart/">
 

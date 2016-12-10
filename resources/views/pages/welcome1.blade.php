@@ -2,47 +2,8 @@
 @section('title', '| Moonster-Gear')
 @section('stylsheets')
     {!! Html::style('css/cart/app.css') !!}
-    <script type="text/javascript">var formkey = 'YXRhZHJlbW90c3Vj';</script>
-
-    <script type="text/javascript" src="https://cdn.muscleandstrength.com/sites/default/files/js/js_gPM6NXOQjN2XM2JWQGfy07nKmcdDFrL289YA7h80ySs.js"></script>
-    <script type="text/javascript" src="https://cdn.muscleandstrength.com/sites/default/files/js/js_kIJpnEMnW5f4EAtz80Ykb6NZ675-qA3yRB2v8hNGjZI.js"></script>
-    <script type="text/javascript" src="https://cdn.muscleandstrength.com/sites/default/files/js/js_oAkBmJinRzPp-BAX5BN1RUSIVX-h2DwuQTQCDBfD3ZA.js"></script>
-    <script type="text/javascript">
-        <!--//--><![CDATA[//><!--
-        var googletag = googletag || {};
-        googletag.cmd = googletag.cmd || [];
-        (function() {
-            var gads = document.createElement('script');
-            gads.async = true;
-            gads.type = 'text/javascript';
-            var useSSL = 'https:' == document.location.protocol;
-            gads.src = (useSSL ? 'https:' : 'http:') +
-                    '//www.googletagservices.com/tag/js/gpt.js';
-            var node = document.getElementsByTagName('script')[0];
-            node.parentNode.insertBefore(gads, node);
-        })();
-
-        googletag.cmd.push(function() {
-            var content_path = window.location.pathname.split('/');
-            var sizeMapping = googletag.sizeMapping().
-            addSize([0, 0], []).
-            addSize([785, 200], [302, 370]).
-            build();
-            googletag.pubads().setTargeting('contenturl', content_path[content_path.length -1]);
-            googletag.defineSlot('/9172182/MNS_Site_Sidebar_Top', [302, 370], 'div-gpt-ad-1423352102131-0').
-            setCollapseEmptyDiv(true).
-            defineSizeMapping(sizeMapping).
-            addService(googletag.pubads());
-            googletag.defineSlot('/9172182/MNS_Site_Sidebar_Bottom', [302, 370], 'div-gpt-ad-1421356883797-0').
-            setCollapseEmptyDiv(true).
-            defineSizeMapping(sizeMapping).
-            addService(googletag.pubads());
-        });
-        //--><!]]>
-    </script>
 @endsection
 @section('content')
-
     <div id="main-wrap">
         <div class="header-content">
             <div class="row">

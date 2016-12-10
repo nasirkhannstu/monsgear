@@ -145,7 +145,10 @@
         <br>
         <h3 class="title">Payment Method</h3>
         <div class="input-box">
-            
+            <h3>Westurn Union</h3><br>
+            <input type="radio" value="WU" name="pm"><br />
+            <h3>Money Gram</h3><br>
+            <input type="radio" value="MG"  name="pm"s>
         </div>
         </div>
     </li>

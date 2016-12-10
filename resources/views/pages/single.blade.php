@@ -202,25 +202,7 @@
             </div>
         </div>
     </div>
-</div>        <div class="deals-coupons-section solo">
-        <div class="section-inner-wrap">
-            <h3 class="deals-coupons-title">
-                <svg class="svg-icon" style="width: 1em; height: 1em; margin-bottom: -0.15em; margin-right: .3em;"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-deal-white"></use><image style="width: 1em; height: 1em; margin-bottom: -0.15em; margin-right: .3em;" src="/store/skin/frontend/mnsv4/default/images/fallback/deal-white.png"></image>
-                </svg> Deals
-            </h3>
-            <div class="deals-swiper-container">
-                <div class="swiper-wrapper">
-                                                                    <div class="swiper-slide">
-                            <img class="deal-image" src="https://cdn.muscleandstrength.com/store/media/mnsresized/promos/3cac4e/200/200/creactor_2_29.jpg" alt="Buy 1 Get 1 FREE" />
-                            <div class="deal-info-wrap">
-                                <div class="deal-label">Buy 1 Get 1 FREE</div>
-                                <div class="deal-desc">Buy 1 MuscleTech Creactor and get 1 absolutely FREE! Limited time only.</div>
-                            </div>
-                        </div>
-                                    </div>
-            </div>
-                    </div>
-    </div>
+</div>
 </div>
 <div class="aside aside-after">
   <div class="product-shop">
@@ -324,180 +306,7 @@
     </div>
     <div class="product-aside">
                             </div>
-            <div class="product-nutrition">
-            <div class="section-title">Nutrition Info</div>
-            <div class="section-inner-wrap">
-                        <div class="panelSelector">
-            <a name="GRP4143" id="GRP4143"></a>
-            <form name="nutrinfo-selector" id="nutrinfo-selector">
-                <select name="nutrition-info-selector" id="nutrition-info-selector">
-                                            <option id="option-mt0300" value="nutrition-info-mt0300">120 Servings Blue Raspberry</option>
-                                            <option id="option-mt0299" value="nutrition-info-mt0299">120 Servings Fruit Punch</option>
-                                            <option id="option-mt0248" value="nutrition-info-mt0248">120 Servings Lemon Lime</option>
-                                            <option id="option-mt0247" value="nutrition-info-mt0247">120 Servings Unflavored</option>
-                                    </select>
-            </form>
-        </div>
-        <div class="panel-wrap">
-            <div class="show-more-mask">
-            </div>
-            <div class="nutrition-info-inner">
-                
-                    <div class="nutrition-panel" id="nutrition-info-mt0300">
 
-                                                    <div class="nutrition-panel-inner">
-                                <h4>120 Servings Blue Raspberry</h4>
-                                <div class="serving thickline">
-                                    Serving Size: 1 Scoop (2g)<br />
-                                    Servings Per Container: About 120                                </div>
-                                <div id="nutrition-info-table">
-                                    <div class="item thinline">
-                                        <div class="col-1 ">Amount Per Serving</div>
-                                        <div class="col-2">Amt</div>
-                                        <div class="col-3">%DV</div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="item hairline"><div class="col-1">Creatine HCl </div><div class="col-2">750mg</div><div class="col-3"> &dagger;</div></div>
-<div class="item hairline"><div class="col-1">Free-acid Creatine </div><div class="col-2">750mg</div><div class="col-3"> &dagger;</div></div>
-                                        <div class="item thickline-top">
-                                            * % Daily Value is based on a 2,000 calorie diet. Your daily values may be higher or lower based on your calorie needs.<br />
-                                            &dagger; Daily Value (DV) not established.
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div><!-- End nutritionPanelInner -->
-                                                            <div class="ingredients-heading">Ingredients</div>
-                                <div class="ingredients">Natural and Artificial Flavors, Citric Acid, Malic Acid, Acesulfame-Potassium, Sucralose, Silicon Dioxide, Calcium Silicate, FD&C Blue No. 1.</div>
-                                                                                        <div class="ingredients-heading">Allergen Warning</div>
-                                <div class="ingredients">Processed in a facility that processes milk, egg, wheat, soy, peanut, tree nut, fish and shellfish ingredients.</div>
-                                                    
-                        <span class="item-directions-note hide"><p>Mix 1 serving (1 scoop) with 8 oz. of water and consume two times daily. On workout days, consume immediately after your workout. Do not exceed 2 servings in a 24-hour period. Drink 8 to 10 glasses of water daily for general good health. Read the entire label before use and follow directions provided.</p></span>
-                        <span class="item-warning-note hide"><p></p></span>
-                    </div>
-
-                                    
-                    <div class="nutrition-panel" id="nutrition-info-mt0299">
-
-                                                    <div class="nutrition-panel-inner">
-                                <h4>120 Servings Fruit Punch</h4>
-                                <div class="serving thickline">
-                                    Serving Size: 1 Scoop (2g)<br />
-                                    Servings Per Container: About 120                                </div>
-                                <div id="nutrition-info-table">
-                                    <div class="item thinline">
-                                        <div class="col-1 ">Amount Per Serving</div>
-                                        <div class="col-2">Amt</div>
-                                        <div class="col-3">%DV</div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="item hairline"><div class="col-1">Creatine HCl </div><div class="col-2">750mg</div><div class="col-3"> &dagger;</div></div>
-<div class="item hairline"><div class="col-1">Free-acid Creatine </div><div class="col-2">750mg</div><div class="col-3"> &dagger;</div></div>
-                                        <div class="item thickline-top">
-                                            * % Daily Value is based on a 2,000 calorie diet. Your daily values may be higher or lower based on your calorie needs.<br />
-                                            &dagger; Daily Value (DV) not established.
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div><!-- End nutritionPanelInner -->
-                                                            <div class="ingredients-heading">Ingredients</div>
-                                <div class="ingredients">Natural and Artificial Flavors, Citric Acid, Malic Acid, Acesulfame-Potassium, Sucralose, Silicon Dioxide, Calcium Silicate, FD&C Blue No. 1.</div>
-                                                                                        <div class="ingredients-heading">Allergen Warning</div>
-                                <div class="ingredients">Processed in a facility that processes milk, egg, wheat, soy, peanut, tree nut, fish and shellfish ingredients.</div>
-                                                    
-                        <span class="item-directions-note hide"><p>Mix 1 serving (1 scoop) with 8 oz. of water and consume two times daily. On workout days, consume immediately after your workout. Do not exceed 2 servings in a 24-hour period. Drink 8 to 10 glasses of water daily for general good health. Read the entire label before use and follow directions provided.</p></span>
-                        <span class="item-warning-note hide"><p></p></span>
-                    </div>
-
-                                    
-                    <div class="nutrition-panel" id="nutrition-info-mt0248">
-
-                                                    <div class="nutrition-panel-inner">
-                                <h4>120 Servings Lemon Lime</h4>
-                                <div class="serving thickline">
-                                    Serving Size: 1 Scoop (1.7g)<br />
-                                    Servings Per Container: About 120                                </div>
-                                <div id="nutrition-info-table">
-                                    <div class="item thinline">
-                                        <div class="col-1 ">Amount Per Serving</div>
-                                        <div class="col-2">Amt</div>
-                                        <div class="col-3">%DV</div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="item hairline"><div class="col-1">Creatine HCl </div><div class="col-2">750mg</div><div class="col-3"> &dagger;</div></div>
-<div class="item hairline"><div class="col-1">Free-acid Creatine </div><div class="col-2">750mg</div><div class="col-3"> &dagger;</div></div>
-                                        <div class="item thickline-top">
-                                            * % Daily Value is based on a 2,000 calorie diet. Your daily values may be higher or lower based on your calorie needs.<br />
-                                            &dagger; Daily Value (DV) not established.
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div><!-- End nutritionPanelInner -->
-                                                            <div class="ingredients-heading">Ingredients</div>
-                                <div class="ingredients">Other Ingredients: Natural Flavors, Citric Acid, Acesulfame-Potassium, Calcium Silicate, Silicon Dioxide, Sucralose, Maltodextrin, Tri-Calcium Phosphate, FD&C Yellow No. 5, FD&C Blue No. 1.</div>
-                                                                                        <div class="ingredients-heading">Allergen Warning</div>
-                                <div class="ingredients">Processed in a facility that processes milk, egg, wheat, soy, peanut, tree nut, fish and shellfish ingredients.</div>
-                                                    
-                        <span class="item-directions-note hide"><p>Mix 1 serving (1 scoop) with 8 oz. of water and consume two times daily. On workout days, consume immediately after your workout. Do not exceed 2 servings in a 24-hour period. Drink 8 to 10 glasses of water daily for general good health. Read the entire label before use and follow directions provided.</p></span>
-                        <span class="item-warning-note hide"><p></p></span>
-                    </div>
-
-                                    
-                    <div class="nutrition-panel" id="nutrition-info-mt0247">
-
-                                                    <div class="nutrition-panel-inner">
-                                <h4>120 Servings Unflavored</h4>
-                                <div class="serving thickline">
-                                    Serving Size: 1 Scoop (1.7g)<br />
-                                    Servings Per Container: About 120                                </div>
-                                <div id="nutrition-info-table">
-                                    <div class="item thinline">
-                                        <div class="col-1 ">Amount Per Serving</div>
-                                        <div class="col-2">Amt</div>
-                                        <div class="col-3">%DV</div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="item hairline"><div class="col-1">Creatine HCl </div><div class="col-2">750mg</div><div class="col-3"> &dagger;</div></div>
-<div class="item hairline"><div class="col-1">Free-acid Creatine </div><div class="col-2">750mg</div><div class="col-3"> &dagger;</div></div>
-                                        <div class="item thickline-top">
-                                            * % Daily Value is based on a 2,000 calorie diet. Your daily values may be higher or lower based on your calorie needs.<br />
-                                            &dagger; Daily Value (DV) not established.
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div><!-- End nutritionPanelInner -->
-                                                            <div class="ingredients-heading">Ingredients</div>
-                                <div class="ingredients">Other Ingredients: Natural Flavor, Calcium Silicate, Silicon Dioxide, Acesulfame-Potassium, Sucralose.</div>
-                                                                                        <div class="ingredients-heading">Allergen Warning</div>
-                                <div class="ingredients">Processed in a facility that processes milk, egg, wheat, soy, peanut, tree nut, fish and shellfish ingredients.</div>
-                                                    
-                        <span class="item-directions-note hide"><p>Mix 1 serving (1 scoop) with 8 oz. of water and consume two times daily. On workout days, consume immediately after your workout. Do not exceed 2 servings in a 24-hour period. Drink 8 to 10 glasses of water daily for general good health. Read the entire label before use and follow directions provided.</p></span>
-                        <span class="item-warning-note hide"><p></p></span>
-                    </div>
-
-                                    
-
-            </div>
-            <div class="directions-warning">
-                <div id="directions">
-                    <div class="title">Directions</div>
-                    <div id="directions-note" class="smallerFont"></div>
-                </div>
-                <div id="warnings">
-                    <div class="title">Warnings</div>
-                    <div id="warning-note" class="smallerFont"></div>
-                </div>
-            </div>
-        </div>
-
-                <div class="expand-wrap">
-                    <div class="expand-btn btn btn-flat-blue btn-small">Expand Info</div>
-                </div>
-            </div>
-        </div>
     </div>
 <div class="main-content continued">
     <div class="recommended-products-section" style="display:none;">
@@ -527,38 +336,8 @@
         <style type="text/css">
 .creactorBlue {color:#009bb4;}
 </style>
-
-<p><img title="MuscleTech Creactor" src="https://cdn.muscleandstrength.com/store/media/wysiwyg/Products/C/CreactorHeader.jpg" alt="MuscleTech Creactor is a free-acid creatine formula" /></p>
-<h3 class="hstyle-three creactorBlue">Max Potency Free-Acid Creatine Formula</h3>
-<p>Creactor&trade; is a scientifically advanced creatine that delivers a potent, micro-dose of creatine. Each serving delivers 750mg of 100% ultra-pure, laboratory-tested creatine hydrochloride (creatine HCl). Plus 750mg of free-acid creatine &mdash; the purest form of creatine, free of acids and salts. This powerful never-before-seen ratio of creatine molecules delivers an ehnanced creatine experience!*</p>
-
-<h5 class="hstyle-three creactorBlue">Amplified ATP Synthesis</h5>
-<p>Creactor™ rapidly enhances your muscle cells’ ability to regenerate Adenosine Triphosphate (ATP).* ATP is your primary source of anaerobic energy, so you can recover faster between sets. During high intensity training, ATP from muscle stores is utilized first. Once this store has been diminished, you need to start generating your own ATP.  At high intensities of exercise, this ATP production occurs with the breakdown of phosphocreatine in your muscles.</p>
-
-<p><iframe width="560" height="315" src="https://www.youtube.com/embed/0ylfuR-ulnI?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe></p>
-
-<p>As we only have a set amount of creatine in our muscles, this method of ATP production runs out rather fast too – and results in fatigue and eventually muscle failure. That’s where Creactor™ comes into play. The powerful creatine molecules in Creactor™ are changed into a molecule called phosphocreatine which serves as a storage reservoir for regenerating ATP. With higher ATP levels, you’ll be able to train harder and recover faster and that means bigger and stronger gains!*</p>
-
-<p class="acenter"><img src="https://cdn.muscleandstrength.com/store/media/wysiwyg/Products/C/PhosphocreatineGraphic.jpg" alt="Creactor yields Phosphocreatine" /></p>
-<p class="caption nomargin">CREACTOR™ contains a unique combination of free-acid creatine and creatine HCL molecules that maximize levels of phosphocreatine, which then reacts with ADP to form ATP during exercise.</p>
-
-<h5 class="hstyle-three creactorBlue">Ehnanced Solubility with Creactor</h5>
-<div class="row">
-  <div class="qg-half">
-    <p><img src="https://cdn.muscleandstrength.com/store/media/wysiwyg/Products/C/CreactorShakerGraphic.jpg" alt="Solubility of Creactor" /></p>
-      </div>
-
-  <div class="qg-half">
-    <p>Both forms of creatine in Creactor™ are engineered for increased solubility. You’ll notice this the very first time you mix a delicious serving of Creactor™ in water. It mixes almost instantly with no sedimentation so that no particles are sitting in the bottom of the glass. With Creactor™, you get high-quality, 100% ultra-pure creatine HCl and free-acid creatine with absolutely zero fillers, carbs, sugar or fat.*</p>
-  </div>
+Product Description
 </div>
-
-<h5 class="hstyle-three creactorBlue">Boosts Gains in Size & Strength and Speeds Recovery</h5>
-<p>The key ingredient in Creactor™ is clinically proven to jack up muscle strength, increase performance and enhance muscle size with just 2 super-concentrated scoops a day.*  Research published in the Journal of Applied Physiology found that dosages as low as 3 grams of creatine daily for about a month can saturate muscles. There is also no need to cycle and it won’t cause stomach bloating!*</p>
-
-<h3 class="acenter hstyle-three creactorBlue">The Creactor Advantage</h3>
-<p><img title="Creactor Advantage" src="https://cdn.muscleandstrength.com/store/media/wysiwyg/Products/C/AdvantageGraphs.jpg" alt="A better creatine: More Servings, More Active Ingredients" /></p>    </div>
-                    </div>
     </div>
     
 
