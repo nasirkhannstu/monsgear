@@ -32,12 +32,20 @@ class PagesController extends Controller
         return view('pages.singleBlog')->withBlog($blog);
     }
     public function getCheckout(){
+        if(Session::has('coupon')){
+            $coupon = Session::get('coupon');
+            $couponTotal = $this->calCoupon($coupon->name);
+        }else{
+            $coupon = false;
+            $couponTotal = false;
+        }
+        
         if(!Session::has('cart')){
             return view('pages.checkout');
         }
         $oldCart = Session::get('cart');
         $cart = new Cart($oldCart);
-        return view('pages.checkout', ['products' => $cart->items, 'totalPrice' => $cart->totalPrice]);
+        return view('pages.checkout', ['products' => $cart->items, 'totalPrice' => $cart->totalPrice, 'coupon' => $coupon, 'couponTotal' => $couponTotal]);
     }
 // amount,freeship,minspent,excludcat,limit,expire,dtype
 
@@ -45,8 +53,11 @@ class PagesController extends Controller
         if(Coupon::where('name', '=', $coupon)->exists()){
 
             $coupon = Coupon::where('name', "=", $coupon)->first();
+            Session::put('coupon', $coupon);
+            $coupon = Session::get('coupon');
+
             if(!Session::has('cart')){
-                return view('pages.checkout');
+                return view('pages.welcome');
             }
             $oldCart = Session::get('cart');
             $cart = new Cart($oldCart);
@@ -79,30 +90,49 @@ class PagesController extends Controller
 
                         if($coupon->freeship == 'yes'){
                             $total = $total - 25;
+                        }else{
+                            $total = $total + 25;
                         }
                         return $total;
                     }else{
-                        return $msg = 'Min Spent: failed';
+                        Session::flash('couponmsg','Min Spent: failed!');
+                        return false;
                     }
                 }else{
-                    return $msg =  'Coupon limit failed';
+                    Session::flash('couponmsg','Coupon limit failed!');
+                        return false;
                 }
             }else{
-                return $msg =  "Expired!!";
+                Session::flash('couponmsg','Expired!');
+                        return false;
             }  
         }else{
-            return $msg =  'Invalid Coupon';
+            Session::flash('couponmsg','Invalid Coupon!');
+                        return false;
         }
     }
     public function getCoupon(Request $request){
-        $getCoupon = $this->calCoupon($request->coupon);
-        $coupon = Coupon::where('name', "=", $request->coupon)->first();
+        if($getCoupon = $this->calCoupon($request->coupon)){
 
-        if(!Session::has('cart')){
-            return view('pages.welcome');
+            // $coupon = Coupon::where('name', "=", $request->coupon)->first();
+            $coupon = Session::get('coupon');
+            
+            if(!Session::has('cart')){
+                return view('pages.welcome');
+            }
+            $oldCart = Session::get('cart');
+            $cart = new Cart($oldCart);
+
+            return view('pages.cart', ['products' => $cart->items, 'totalPrice' => $cart->totalPrice, 'coupon' => $coupon, 'couponTotal' => $getCoupon]);
+        }else{
+            $coupon = Coupon::where('name', "=", $request->coupon)->first();
+
+            if(!Session::has('cart')){
+                return view('pages.welcome');
+            }
+            $oldCart = Session::get('cart');
+            $cart = new Cart($oldCart);
+            return redirect()->route('product.shoppingCart')->withProducts($cart->items)->withTotalPrice($cart->totalPrice);
         }
-        $oldCart = Session::get('cart');
-        $cart = new Cart($oldCart);
-        return view('pages.cart', ['products' => $cart->items, 'totalPrice' => $cart->totalPrice, 'coupon' => $coupon, 'couponTotal' => $getCoupon]);
     }
 }
