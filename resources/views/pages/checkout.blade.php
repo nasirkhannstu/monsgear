@@ -16,7 +16,6 @@
         <div id="checkout-progress-wrapper">
             <div class="checkoutProgressWrapper">
                 <h3 class="title">Your Order</h3>
-
                 <div class="block-progress opc-block-progress">
                     <div class="block-content checkoutProgress">
                         <dl>
@@ -31,30 +30,58 @@
                             <br>
                             <hr>
                             <br>
-                            <div id="shipping_method-progress-opcheckout">
-                                <h4>
+                            <div>
+                                <p>
                                     Cart Total-
                                     <span class="floatRight">${{ $totalPrice }}</span>
-                                </h4>
+                                <p>
                             </div>
-                
+                            @if($coupon)
                             <div id="payment-progress-opcheckout">
-                                <h4>
-                                    Coupone-
-                                    <span class="floatRight">$0</span>
-                                </h4>
+                                <p>
+                                    Coupone({{ $coupon->name }})
+                                    <span class="floatRight">
+                                        @if($coupon->dtype == 'cart')
+                                            -{{ $coupon->amount }}
+                                        @endif
+                                        @if($coupon->dtype == 'percent')
+                                            %{{ $coupon->amount }}
+                                        @endif
+                                    </span>
+                                <p>
                             </div>
+                            @endif
                             <div id="payment-progress-opcheckout">
-                                <h4>
+                                <p>
                                     Shipping Cost-
-                                    <span class="floatRight">$0</span>
-                                </h4>
+                                    <span class="floatRight">
+                                @if($coupon)
+                                    @if($coupon->freeship == 'yes')
+                                        $0
+                                    @endif
+                                @elseif($totalPrice >= 500)
+                                    $0
+                                @else
+                                    $25
+                                @endif
+                                    </span>
+                                <p>
                             </div>
                             <div id="payment-progress-opcheckout">
-                                <h4>
+                                <p>
                                     Order Total-
-                                    <span class="floatRight">$0</span>
-                                </h4>
+                                    <span class="floatRight">
+                                        @if($couponTotal)
+                                            ${{ $couponTotal }}
+                                        @else
+                                            @if($totalPrice <= 500)
+                                                ${{ $totalPrice + 25 }}
+                                            @else
+                                                ${{ $totalPrice }}
+                                            @endif
+                                        @endif
+                                    </span>
+                                <p>
                             </div>
                         </dl>
                     </div>
@@ -85,8 +112,7 @@
             </div>
         </div>
         <div id="checkout-step-billing" class="step a-item" style="">
-            
-            <form id="co-billing-form" action="" autocomplete="on">
+            {!! Form::open(array('route' => 'order.store','data-parsley-validate'=>'')) !!}
                 <fieldset class="group-select">
                 <ul>
                     <li id="billing-new-address-form">
@@ -131,18 +157,28 @@
                                     {{Form::text('board',null,array('class' => 'input-text', 'required'=>'','maxlength'=>'255'))}}
                                 </div>
                                 <div class="input-box">
-                                    <label for="info">Additional Information<span class="required">*</span></label><br>
+                                    <label for="info">Additional Information</label><br>
                                     {{Form::text('info',null,array('class' => 'input-text', 'required'=>'','maxlength'=>'255'))}}
                                 </div>
+                                <br>
+                                <h3 class="title">Payment Method</h3>
+                                <input name="method" value="wu" class="radio" type="radio"><label>Western Union(WU)</label>
+
+                                <input name="method" value="mg" class="radio" type="radio"><label>Money Gram(MG)</label>
+
+                                <input name="method" value="bc" class="radio" type="radio"><label>Bit Coin</label>
+
+                                {{Form::submit('Order Now',array('class' => 'btn btn-success btn-sm', 'style'=>'margin-top:20px'))}} 
                             </li>
                         </ul>
                         </fieldset>
-                    </li>
+                    </li> 
                 </ul>
     
                 </fieldset>
             {!! Form::close() !!}
         <br>
+<<<<<<< HEAD
         <h3 class="title">Payment Method</h3>
         <div class="input-box">
             <h3>Westurn Union</h3><br>
@@ -150,6 +186,8 @@
             <h3>Money Gram</h3><br>
             <input type="radio" value="MG"  name="pm"s>
         </div>
+=======
+>>>>>>> cfa9dc0fbeb3c2fe92c9667aed69b518c94c6676
         </div>
     </li>
 </ol>

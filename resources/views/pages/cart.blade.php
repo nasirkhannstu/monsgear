@@ -14,7 +14,7 @@
 	<h1 class=" cart-title"><span class="cart-header-text">Your Shopping Cart</span>
 	</h1>
 	 <div class="checkout-types">
-	 <a href="/checkout"><button class="btn btn-green proceedCheckout aloading"><span class="init">Proceed to Checkout</span></button></a>
+	 	<a href="{{ route('product.checkout') }}"><button class="btn btn-green proceedCheckout aloading"><span class="init">Proceed to Checkout</span></button></a>
 	
 </div>
 		<a href="/"><button type="button" class="btn btn-white btn-sm btn-auto btn-shop">Continue Shopping</button></a>
@@ -235,7 +235,9 @@
 
 			        <div class="row">
 			        	<div class="price-label">
-			            	Coupon({{ $coupon->name }}):
+			        		@if(isset($coupon) && $coupon->dtype == 'cart')
+			            		Coupon({{ $coupon->name }}):
+			            	@endif
 			            </div>
 			        	<div class="price-wrap">
 			            	@if(isset($coupon) && $coupon->dtype == 'cart')
@@ -248,12 +250,16 @@
 			    	</div>
 					<div class="row">
 					    <div style="" class="price-label">
-					            Free sheep:
+					            Shipping Cost:
 					    </div>
 					    <div style="" class="price-wrap">
 					        <span class="price">
 					        @if(isset($coupon) && $coupon->freeship == 'yes')
-			            		Yes
+			            		0
+			            	@elseif($totalPrice >= 500)
+			            		0
+			            	@else
+			            		$25
 			            	@endif
 					        </span>
 					    </div>
@@ -263,7 +269,17 @@
 					        <strong>Grand Total</strong>
 					    </div>
 					    <div style="" class="price-wrap">
-					        <strong><span class="price">{{ $couponTotal }}</span></strong>
+					        <strong><span class="price">
+					        	@if(isset($couponTotal))
+					        		{{ $couponTotal }}
+			            		@else
+			            			@if($totalPrice <= 500)
+			            				{{ $totalPrice + 25 }}
+			            			@else
+			            				{{ $totalPrice }}
+			            			@endif
+			            		@endif
+					        </span></strong>
 					    </div>
 					</div>
     			</div>
@@ -291,4 +307,10 @@
 			</div>
 			
 		</div>
+
+@if (Session::has('couponmsg'))
+	<script>
+		alert('{{ Session::get('couponmsg') }}');
+	</script>
+@endif
 @endsection

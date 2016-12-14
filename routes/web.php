@@ -41,6 +41,9 @@ Route::post('coupon', ['uses' => 'PagesController@getCoupon', 'as' => 'product.c
 Route::get('p/{slug}', ['uses' => 'PagesController@getSingleProduct', 'as' => 'blog.single'])->where('slug', '[\w\d\-\_]+');
 Route::get('b/{slug}', ['uses' => 'PagesController@getSingleBlog', 'as' => 'sBlog.single'])->where('slug', '[\w\d\-\_]+');
 
+//Order
+Route::resource('order', 'OrderController', ['except' => 'create']);
+
 //Comments
 Route::post('comments/{blog_id}', ['uses' =>'CommentController@store', 'as' => 'comments.store']);
 Route::put('comments/{id}', ['uses' =>'CommentController@update', 'as' => 'comment.update']);
@@ -67,6 +70,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 Route::get('/customer_home', 'CustomerController@index');
+
+
+
+
 
 Auth::routes();
 Route::get('customer_login','CustomerAuth\LoginController@showLoginForm');
