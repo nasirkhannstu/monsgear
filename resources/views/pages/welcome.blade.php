@@ -2,134 +2,112 @@
 @section('title', '| Moonster-Gear')
 @section('stylsheets')
     {!! Html::style('css/cart/app.css') !!}
-    <script type="text/javascript">var formkey = 'YXRhZHJlbW90c3Vj';</script>
 
-    <script type="text/javascript" src="https://cdn.muscleandstrength.com/sites/default/files/js/js_gPM6NXOQjN2XM2JWQGfy07nKmcdDFrL289YA7h80ySs.js"></script>
-    <script type="text/javascript" src="https://cdn.muscleandstrength.com/sites/default/files/js/js_kIJpnEMnW5f4EAtz80Ykb6NZ675-qA3yRB2v8hNGjZI.js"></script>
-    <script type="text/javascript" src="https://cdn.muscleandstrength.com/sites/default/files/js/js_oAkBmJinRzPp-BAX5BN1RUSIVX-h2DwuQTQCDBfD3ZA.js"></script>
-    <script type="text/javascript">
-        <!--//--><![CDATA[//><!--
-        var googletag = googletag || {};
-        googletag.cmd = googletag.cmd || [];
-        (function() {
-            var gads = document.createElement('script');
-            gads.async = true;
-            gads.type = 'text/javascript';
-            var useSSL = 'https:' == document.location.protocol;
-            gads.src = (useSSL ? 'https:' : 'http:') +
-                    '//www.googletagservices.com/tag/js/gpt.js';
-            var node = document.getElementsByTagName('script')[0];
-            node.parentNode.insertBefore(gads, node);
-        })();
+        <!-- for nivo slider -->
+<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/nivo/default/default.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/nivo/light/light.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/nivo/dark/dark.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/nivo/bar/bar.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/nivo/nivo-slider.css" type="text/css" media="screen" />
 
-        googletag.cmd.push(function() {
-            var content_path = window.location.pathname.split('/');
-            var sizeMapping = googletag.sizeMapping().
-            addSize([0, 0], []).
-            addSize([785, 200], [302, 370]).
-            build();
-            googletag.pubads().setTargeting('contenturl', content_path[content_path.length -1]);
-            googletag.defineSlot('/9172182/MNS_Site_Sidebar_Top', [302, 370], 'div-gpt-ad-1423352102131-0').
-            setCollapseEmptyDiv(true).
-            defineSizeMapping(sizeMapping).
-            addService(googletag.pubads());
-            googletag.defineSlot('/9172182/MNS_Site_Sidebar_Bottom', [302, 370], 'div-gpt-ad-1421356883797-0').
-            setCollapseEmptyDiv(true).
-            defineSizeMapping(sizeMapping).
-            addService(googletag.pubads());
-        });
-        //--><!]]>
-    </script>
+<link rel="stylesheet" href="css/demo/style.css" type="text/css" media="screen" />
+
+
+
+
+    <!-- bxSlider CSS file -->
+
+
+
+
+
+
 @endsection
 @section('content')
 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
+
+    <script type="text/javascript">
+        $(window).load(function() {
+            $('#slider').nivoSlider();
+        });
+    </script>
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-36251023-1']);
+        _gaq.push(['_setDomainName', 'jqueryscript.net']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+
+
+
+
     <div id="main-wrap">
+
         <div class="header-content">
             <div class="row">
-                <div class="home-carousel clearfix">
-                    <div class="view view-homepage-carousel view-id-homepage_carousel view-display-id-homepage view-dom-id-ecc783cc31406a37babac0b3a72a8a4c">
+                <div >
+                    <div id="wrapper">
+                        <div class="slider-wrapper theme-default">
+                            <div id="slider" class="nivoSlider"> <img src="uploads/demo/images/slider1.jpg" data-thumb="uploads/demo/images/slider1.jpg" alt="" /> <a href="http://dev7studios.com"><img src="uploads/demo/images/slider2.jpg" data-thumb="uploads/demo/images/slider2.jpg" alt="" title="This is an example of a caption" /></a> <img src="uploads/demo/images/slider3.jpg" data-thumb="uploads/demo/images/slider3.jpg" alt="" data-transition="sliceDown" /> <img src="uploads/demo/images/slider4.jpg" data-thumb="uploads/demo/images/slider4.jpg" alt="" title="#htmlcaption" /> </div>
+                            <div id="htmlcaption" class="nivo-html-caption"> <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>. </div>
+                        </div>
+                    </div>
+                </div>
 
-
-
-                        <div class="view-content slick-initialized slick-slider">
-                            <div tabindex="0" aria-live="polite" class="slick-list draggable"><div style="opacity: 1; width: 4416px; transform: translate3d(-736px, 0px, 0px);" class="slick-track"><div style="width: 736px;" aria-hidden="true" data-slick-index="-1" class="views-row views-row-4 views-row-even views-row-last slick-slide slick-cloned">
-                                        <div class="nodeListWrapper">
-                                            <a href="/articles/unlimited-diet-plan" class="nodeImg ">
-                                                <img src="https://cdn.muscleandstrength.com/sites/default/files/field/slide-image/unlimiteddiet.jpg" alt="" height="500" width="800">			</a>
-                                        </div>  </div><div style="width: 736px;" aria-hidden="false" data-slick-index="0" class="views-row views-row-1 views-row-odd views-row-first slick-slide slick-active">
-                                        <div class="nodeListWrapper">
-                                            <a href="/workouts/4-cardio-workouts-using-weights" class="nodeImg ">
-                                                <img src="https://cdn.muscleandstrength.com/sites/default/files/field/slide-image/cardiodeck.jpg" alt="" height="500" width="800">			</a>
-                                        </div>  </div><div style="width: 736px;" aria-hidden="true" data-slick-index="1" class="views-row views-row-2 views-row-even slick-slide">
-                                        <div class="nodeListWrapper">
-                                            <a href="/articles/5-exercises-increase-athletic-performance" class="nodeImg ">
-                                                <img src="https://cdn.muscleandstrength.com/sites/default/files/field/slide-image/5exercises.jpg" alt="" height="500" width="800">			</a>
-                                        </div>  </div><div style="width: 736px;" aria-hidden="true" data-slick-index="2" class="views-row views-row-3 views-row-odd slick-slide">
-                                        <div class="nodeListWrapper">
-                                            <a href="/articles/4-new-core-exercises" class="nodeImg ">
-                                                <img src="https://cdn.muscleandstrength.com/sites/default/files/field/slide-image/corestrength3.jpg" alt="" height="500" width="800">			</a>
-                                        </div>  </div><div style="width: 736px;" aria-hidden="true" data-slick-index="3" class="views-row views-row-4 views-row-even views-row-last slick-slide">
-                                        <div class="nodeListWrapper">
-                                            <a href="/articles/unlimited-diet-plan" class="nodeImg ">
-                                                <img src="https://cdn.muscleandstrength.com/sites/default/files/field/slide-image/unlimiteddiet.jpg" alt="" height="500" width="800">			</a>
-                                        </div>  </div><div style="width: 736px;" aria-hidden="true" data-slick-index="4" class="views-row views-row-1 views-row-odd views-row-first slick-slide slick-cloned">
-                                        <div class="nodeListWrapper">
-                                            <a href="/workouts/4-cardio-workouts-using-weights" class="nodeImg ">
-                                                <img src="https://cdn.muscleandstrength.com/sites/default/files/field/slide-image/cardiodeck.jpg" alt="" height="500" width="800">			</a>
-                                        </div>  </div></div></div>
-
-
-
-                            <ul style="display: block;" class="slick-dots"><li aria-hidden="false" class="slick-active"><button type="button" data-role="none">1</button></li><li aria-hidden="true"><button type="button" data-role="none">2</button></li><li aria-hidden="true"><button type="button" data-role="none">3</button></li><li aria-hidden="true"><button type="button" data-role="none">4</button></li></ul></div>
-
-
-
-
-
-
-                    </div>			</div><!-- End homeSlider -->
+                <!-- End homeSlider -->
                 <div class="ad-space">
                     <p><a href="/workout-routines"><img alt="Free Workouts" src="https://cdn.muscleandstrength.com/sites/default/files/images/findafreeworkout.jpg"></a></p>
                     <div class="social">
 
                         <ul class="follow">
-                            <li><a rel="nofollow" href="http://www.facebook.com/muscleandstrength">
+                            <li><a rel="nofollow" href="">
                                     <svg width="25" height="25">
                                         <use xlink:href="#icon-facebook-brand"></use>
                                         <image width="25" height="25" src="https://cdn.muscleandstrength.com/images/fallback/facebook-brand.png"></image>
                                     </svg>
                                 </a></li>
-                            <li><a rel="nofollow" href="http://www.twitter.com/Muscle_Strength">
+                            <li><a rel="nofollow" href="">
                                     <svg width="25" height="25">
                                         <use xlink:href="#icon-twitter-brand"></use>
                                         <image width="25" height="25" src="https://cdn.muscleandstrength.com/images/fallback/twitter-brand.png"></image>
                                     </svg>
                                 </a></li>
-                            <li><a rel="nofollow" href="http://www.youtube.com/muscleandstrength">
+                            <li><a rel="nofollow" href="">
                                     <svg width="25" height="25">
                                         <use xlink:href="#icon-youtube-brand"></use>
                                         <image width="25" height="25" src="https://cdn.muscleandstrength.com/images/fallback/youtube-brand.png"></image>
                                     </svg>
                                 </a></li>
-                            <li><a rel="nofollow" href="http://instagram.com/muscleandstrength">
+                            <li><a rel="nofollow" href="">
                                     <svg width="25" height="25">
                                         <use xlink:href="#icon-instagram-brand"></use>
                                         <image width="25" height="25" src="https://cdn.muscleandstrength.com/images/fallback/instagram-brand.png"></image>
                                     </svg>
                                 </a></li>
-                            <li><a href="https://plus.google.com/+muscleandstrength" rel="publisher">
+                            <li><a href="" rel="publisher">
                                     <svg width="25" height="25">
                                         <use xlink:href="#icon-google-brand"></use>
                                         <image width="25" height="25" src="https://cdn.muscleandstrength.com/images/fallback/google-brand.png"></image>
                                     </svg>
                                 </a></li>
-                            <li><a rel="nofollow" href="http://pinterest.com/musclestrength/">
+                            <li><a rel="nofollow" href="">
                                     <svg width="25" height="25">
                                         <use xlink:href="#icon-pinterest-brand"></use>
                                         <image width="25" height="25" src="https://cdn.muscleandstrength.com/images/fallback/pinterest-brand.png"></image>
                                     </svg>
                                 </a></li>
-                            <li><a rel="nofollow" href="http://musclestrength.tumblr.com/">
+                            <li><a rel="nofollow" href="">
                                     <svg width="25" height="25">
                                         <use xlink:href="#icon-tumblr-brand"></use>
                                         <image width="25" height="25" src="https://cdn.muscleandstrength.com/images/fallback/tumblr-brand.png"></image>
@@ -151,6 +129,9 @@
                 <div class="product-grid-4up">
 
                     @foreach ($products as $key => $product)
+                        @if($product->category->name == "oral")
+
+                            @endid
                         <li class="item id-{{ $key + 1 }}">
 
                             <div class="inner-wrap">
@@ -158,6 +139,7 @@
                                 <div class="grid-product-header">
                                     <h4 class="product-name">
                                         <a href="{{ url('p/'.$product->slug)}}">{{ $product->name}}</a>
+
                                     </h4>
                                     <!-- <div class="promoLabel">
                                         <span class="label success">
@@ -180,7 +162,7 @@
                                         <span class="price">${{ $product->price}}</span>
                                     </div>
                                     <div class="savings">
-                                        <a href="{{ route('product.addToCart', ['id' => $product->id]) }}" class="btn btn-success" role="button">Add To Cart</a>
+                                        <a href="{{ route('product.addToCart', ['id' => $product->id]) }}" class="btn btn-lg btn-flat-blue aloading basic-load validate-rating" role="button">Add To Cart</a>
                                     </div>
 
                                 </div>

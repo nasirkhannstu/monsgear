@@ -17,46 +17,53 @@
             }());
             //--><!]]>
         </script>
-        <nav id="menu">
+        <nav id="menu"  >
             <ul>
 
-                <li>
+                <li><a href="/">
                     <span>
                         <svg class="icon">
                             <use xlink:href="#icon-store-shop-bag"/>
                             <image class="icon" src="https://cdn.muscleandstrength.com/images/fallback/store-shop-bag.png"/>
                         </svg>
 
-                   Store
+                  Home
+
                     </span>
-                    <ul class="sub-menu">
-                        </ul>
-                        </li>
+                    </a>
 
-
-                    </ul>
                 </li>
 
 
 
                 <li>
-                    <a href="/articles/women">
+                    <a href="/about">
                         <svg class="icon">
                             <use xlink:href="#icon-woman"/>
                             <image class="icon" src="https://cdn.muscleandstrength.com/images/fallback/woman.png"/>
                         </svg>
 
-                        For Women
+                        About
                     </a>
                 </li>
                 <li>
-                    <a href="/forum/">
+                    <a href="/blog">
                         <svg class="icon">
                             <use xlink:href="#icon-form-comment"/>
                             <image class="icon" src="https://cdn.muscleandstrength.com/images/fallback/form-comment.png"/>
                         </svg>
 
-                        Forum
+                        Blog
+                    </a>
+                </li>
+                <li>
+                    <a href="/contact">
+                        <svg class="icon">
+                            <use xlink:href="#icon-form-comment"/>
+                            <image class="icon" src="https://cdn.muscleandstrength.com/images/fallback/form-comment.png"/>
+                        </svg>
+
+                        Contact Us
                     </a>
                 </li>
                 <div class="customer-support-wrap">

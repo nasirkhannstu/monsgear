@@ -1,3 +1,10 @@
+<script>
+    window.Laravel = <?php echo json_encode([
+            'csrfToken' => csrf_token(),
+    ]); ?>
+</script>
+
+<script src="/js/app.js"></script>
 <div class="website-header">
 
         <div class="menu-button">
@@ -24,9 +31,9 @@
 
 
             <div class="mobile-search">
-                <form action="/search/query" method="GET" class="google-form" id="google-cse-searchbox-form">
+                <form action="" method="GET" class="google-form" id="google-cse-searchbox-form">
 
-                    <input id="appendedInputButton" type="text" name="terms" placeholder="Search Muscle &amp; Strength..." autocomplete="on">
+                    <input id="appendedInputButton" type="text" name="terms" placeholder="Search Monster gear..." autocomplete="on">
 
 
                     <button class="search-button" type="submit">
@@ -38,8 +45,7 @@
 
                     <div class="search-toggle">
                         <select name='options'>
-                            <option value='/search/query'>all</option>
-                            <option value='/store/catalogsearch/result/'>store</option>
+
                         </select>
                     </div>
                 </form>
@@ -49,7 +55,7 @@
 
 
         <div class="logo">
-            <a href="/" alt="Muscle &amp; Strength">
+            <a href="/" alt="Monster Gear">
                 <svg style="width:6em; height:3.5em; max-width:100%;">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-logo"></use>
                     <image style="width:6em; height:3.5em; max-width:100%;" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://cdn.muscleandstrength.com/images/logo.png"></image>
@@ -57,7 +63,7 @@
             </a>
         </div>
         <div class="mobile-logo">
-            <a href="/" alt="Muscle &amp; Strength">
+            <a href="/" alt="monster-gear">
                 <svg style="width:4.5em; height:2.5em; max-width:100%;">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-logo"></use>
                     <image style="width:4.5em; height:2.5em; max-width:100%;" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://cdn.muscleandstrength.com/images/logo.png"></image>
@@ -65,9 +71,9 @@
             </a>
         </div>
         <div class="search">
-            <form action="/search/query" method="GET" class="google-form" id="google-cse-searchbox-form">
+            <form action="" method="GET" class="google-form" id="google-cse-searchbox-form">
 
-                <input id="appendedInputButton" type="text" name="terms" placeholder="Search Muscle &amp; Strength..." autocomplete="on">
+                <input id="appendedInputButton" type="text" name="terms" placeholder="Search Monster gear ..." autocomplete="on">
 
 
                 <button class="search-button" type="submit">
@@ -78,10 +84,7 @@
                 </button>
 
                 <div class="search-toggle">
-                    <select name='options'>
-                        <option value='/search/query'>all</option>
-                        <option value='/store/catalogsearch/result/'>store</option>
-                    </select>
+
                 </div>
             </form>
         </div>
@@ -178,28 +181,44 @@
         </span>
 
                 <div class="store-dropdown">
-                    <div class="user-account">
+                    @if(!Auth::guest())
+                    <div class="user-account" style="display:block">
                         <div class="welcome">
-                            Welcome
+                            Welcome ,  {{ Auth::user()->name }}
                         </div>
 
                         <ul class="account-menu">
                             <li><a rel="nofollow" href="https://www.muscleandstrength.com/store/customer/account/"><svg style="width:1.3em; height:1.3em; margin-bottom:-.3em; margin-right: 0.1em;"><use xlink:href="#icon-account"/><image style="width:1.3em; height:1.3em; margin-bottom:-.3em; margin-right: 0.1em;" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" menu-data-src="https://cdn.muscleandstrength.com/images/fallback/account.png"/></svg> My Account</a></li>
+
                             <li><a rel="nofollow" href="https://www.muscleandstrength.com/store/sales/order/history/"><svg style="width:1.3em; height:1.3em; margin-bottom:-.3em; margin-right: 0.1em;"><use xlink:href="#icon-history"/><image style="width:1.3em; height:1.3em; margin-bottom:-.3em; margin-right: 0.1em;" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" menu-data-src="https://cdn.muscleandstrength.com/images/fallback/history.png"/></svg> Order History</a></li>
-                            <li class="logout"><a rel="nofollow" href="https://www.muscleandstrength.com/store/customer/account/logout/" rel="nofollow"><svg style="width:1.3em; height:1.3em; margin-bottom:-.3em; margin-right: 0.1em;"><use xlink:href="#icon-logout"/><image style="width:1.3em; height:1.3em; margin-bottom:-.3em; margin-right: 0.1em;" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" menu-data-src="https://cdn.muscleandstrength.com/images/fallback/logout.png"/></svg> Log Out</a></li>
+                            <li>
+                                <a href="{{ url('/logout') }}"
+                                   onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();"><svg style="width:1.3em; height:1.3em; margin-bottom:-.3em; margin-right: 0.1em;"><use xlink:href="#icon-logout"/><image style="width:1.3em; height:1.3em; margin-bottom:-.3em; margin-right: 0.1em;" /></svg>
+                                    Logout
+                                </a>
+
+                                <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                                    {{ csrf_field() }}
+                                </form>
+                            </li>
                         </ul>
+
                     </div>
+                    @else
+
+                    <div class="user-login"  style="display:block">
 
 
-                    <div class="user-login">
-                        <form class="pre-validate" action="" method="post" id="user-login" >
+                        <form class="pre-validate" action="{{ url('/login') }}" method="post" id="user-login" >
+                            {{ csrf_field() }}
                             <div class="invalid-message message red"></div>
                             <div class="form-item form-type-textfield form-item-name">
-                                <input type="email" placeholder="email" name="login[username]" class="input-text" required/>
+                                <input type="email" placeholder="email" name="email" value="{{ old('email') }}" class="input-text" required/>
                             </div>
 
                             <div class="form-item form-type-password form-item-pass">
-                                <input type="password" placeholder="password" name="login[password]" class="input-text" />
+                                <input type="password" placeholder="password" name="password" class="input-text" />
                             </div>
 
                             <input type="hidden" value="" name="current_url" />
@@ -211,14 +230,15 @@
                                     <image style="width:.8em; height:.8em;"
                                            src="https://cdn.muscleandstrength.com/images/fallback/update-white.png"/>
                                 </svg></span> Loading...</span></button>
-                                <a rel="nofollow" class="btn btn-flat-gray btn-lg form-button" href="/customerregistration">Register</a>
+                                <a rel="nofollow" class="btn btn-flat-gray btn-lg form-button" href="/register">Register</a>
                             </div>
 
                         </form>
 
-                        <a rel="nofollow" class="forgot-text" href="https://www.muscleandstrength.com/store/customer/account/forgotpassword/">Forgot Password?</a>
+                        <a rel="nofollow" class="forgot-text" href="/password/reset">Forgot Password?</a>
 
                     </div>
+                        @endif
 
 
                 </div>
@@ -226,21 +246,24 @@
         </div>
         <div class="navigation">
             <ul class="nav-tree">
-
-
+                <li>
+                    <a class="branch-link" href="/">Home
+                    </a>
+                </li>
 
                 <li>
-                    <a class="branch-link" href="/lifestyle">Lifestyle
+                    <a class="branch-link" href="/blog">Blog
                     </a>
                 </li>
                 <li>
-                    <a class="branch-link" href="/articles/women">For Women
+                    <a class="branch-link" href="/about">About
                     </a>
                 </li>
                 <li>
-                    <a class="branch-link" href="http://forum.muscleandstrength.com/">Forum
+                    <a class="branch-link" href="/contact">Contact Us
                     </a>
                 </li>
+
             </ul>
         </div>
     </div>

@@ -9,7 +9,7 @@
     <head>
         @include ('partials._head')
     </head>
-    <body class="html front not-logged-in one-sidebar sidebar-second page-node"  itemscope itemtype="http://schema.org/WebPage">
+    <body class="html not-front not-logged-in one-sidebar sidebar-second page-node page-node- page-node-4733 node-type-webform"  itemscope="" itemtype="http://schema.org/WebPage">
         <div id="mns-page" class="mm-page">
             <div style="display:none;">
                 @include('partials._displayNone') 

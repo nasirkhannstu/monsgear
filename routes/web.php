@@ -59,6 +59,9 @@ Auth::routes();
 
 Route::get('/home','HomeController@index');
 Route::get('/customerregistration', 'PagesController@custregister');
+Route::get('/contact', 'PagesController@showContact');
+Route::post('/contact', 'PagesController@postContact');
+Route::get('/about', 'PagesController@showAbout');
 
 Auth::routes();
 

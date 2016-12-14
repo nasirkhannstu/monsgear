@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests;
 
 use App\Product;
 use App\Blog;
 use App\Cart;
 use App\Coupon;
 use Session;
+use Mail;
 
 class PagesController extends Controller
 {
@@ -105,4 +107,41 @@ class PagesController extends Controller
         $cart = new Cart($oldCart);
         return view('pages.cart', ['products' => $cart->items, 'totalPrice' => $cart->totalPrice, 'coupon' => $coupon, 'couponTotal' => $getCoupon]);
     }
+
+    public function showContact(){
+        return view('pages.contact');
+    }
+    public function showAbout(){
+        return view('pages.about');
+    }
+
+    public function postContact(Request $request)
+    {
+        $this->validate($request, [
+            'email' => 'required|email',
+            'name' => 'required',
+            'order_number' => 'min:1',
+            'subject' => 'min:3',
+            'message' => 'min:10'
+        ]);
+        $data = array(
+            'email' => $request->email,
+            'subject' => $request->subject,
+            'order_number' => $request->order_number,
+            'name' => $request->name,
+            'bodyMessage' => $request->message
+
+        );
+
+        Mail::send('email.contact', $data, function ($message) use ($data) {
+            $message ->from($data['email']);
+            $message->to('t@sectorbravo1.com');
+            $message->subject($data['subject']);
+        });
+        Session::flash('success', 'Your Email was sent! ');
+        return redirect('/');
+
+    }
+
+
 }
