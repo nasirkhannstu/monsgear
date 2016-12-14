@@ -47,6 +47,9 @@ class PagesController extends Controller
         }
         $oldCart = Session::get('cart');
         $cart = new Cart($oldCart);
+        
+        Session::put('newcart', $cart);
+
         return view('pages.checkout', ['products' => $cart->items, 'totalPrice' => $cart->totalPrice, 'coupon' => $coupon, 'couponTotal' => $couponTotal]);
     }
 // amount,freeship,minspent,excludcat,limit,expire,dtype
@@ -66,7 +69,7 @@ class PagesController extends Controller
             $totalPrice = $cart->totalPrice;
             $products = $cart->items;
 
-            $exp = $coupon->expire * 60 * 60;
+            $exp = $coupon->created +($coupon->expire * 60 * 60);
             if($exp <= time()){
                 if($coupon->limit <= $coupon->limit){
                     if($totalPrice >= $coupon->minspent){
@@ -85,31 +88,29 @@ class PagesController extends Controller
                         if($coupon->dtype == 'cart'){
                             $withCat = $withCat - $coupon->amount;
                         }else{
-                            $withCat += ($withCat*$coupon->amount) / 100;
+                            $withCat = $withCat - (($withCat*$coupon->amount) / 100) ;
                         }
 
                         $total = $withoutCat+$withCat;
 
-                        if($coupon->freeship == 'yes'){
-                            $total = $total - 25;
-                        }else{
+                        if($coupon->freeship == 'No' && $totalPrice <= 500){
                             $total = $total + 25;
                         }
                         return $total;
                     }else{
-                        Session::flash('couponmsg','Min Spent: failed!');
+                        Session::flash('err','Min Spent: failed!');
                         return false;
                     }
                 }else{
-                    Session::flash('couponmsg','Coupon limit failed!');
+                    Session::flash('err','Coupon limit failed!');
                         return false;
                 }
             }else{
-                Session::flash('couponmsg','Expired!');
+                Session::flash('err','Coupon Expired!');
                         return false;
             }  
         }else{
-            Session::flash('couponmsg','Invalid Coupon!');
+            Session::flash('err','Invalid Coupon!');
                         return false;
         }
     }

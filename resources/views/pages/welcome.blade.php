@@ -180,7 +180,7 @@
                             @foreach ($blogs as $key => $blog)
                                 <div class="item">
                                     <div class="inner-wrap">
-                                        <a href="/workouts/fast-mass-program" alt="Fast Mass Program: The 4 Day Superset Split Workout" title="Fast Mass Program: The 4 Day Superset Split Workout">
+                                        <a href="{{ url('b/'.$blog->slug)}}" title="Fast Mass Program: The 4 Day Superset Split Workout">
                                             <div class="nodeImgWrap">
                                                 <div class="nodeImg ">
                                                     <img src="{{ asset('uploads/blogimg/'. $blog->image) }}" width="400" height="250" alt="Fast Mass Program: The 4 Day Superset Split Workout" /></div>

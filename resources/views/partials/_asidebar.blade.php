@@ -15,7 +15,10 @@
 				<a href="/categories">Category</a>
 			</li>
 			<li>
-				<a href="{{ route('comments.index') }}">Comments</a>
+				<a href="{{ route('comments.index') }}">Blog Comments</a>
+			</li>
+			<li>
+				<a href="{{ route('pcomments.index') }}">Product Comments</a>
 			</li>
 			<li>
 				<a href="/coupons">Coupons</a>

@@ -32,6 +32,7 @@ Route::get('/remove/{id}', ['uses' => 'ProductController@getRemoveItem', 'as' =>
 Route::get('/shopping-cart', ['uses' => 'ProductController@getCart', 'as' => 'product.shoppingCart']);
 //Pages
 Route::get('/', ['uses' => 'PagesController@getIndex', 'as' => 'pages.index']);
+
 // Route::get('/single/{id}', ['uses' => 'PagesController@getSingle', 'as' => 'pages.single']);
 
 Route::get('checkout', ['uses' => 'PagesController@getCheckout', 'as' => 'product.checkout']);
@@ -41,14 +42,26 @@ Route::post('coupon', ['uses' => 'PagesController@getCoupon', 'as' => 'product.c
 Route::get('p/{slug}', ['uses' => 'PagesController@getSingleProduct', 'as' => 'blog.single'])->where('slug', '[\w\d\-\_]+');
 Route::get('b/{slug}', ['uses' => 'PagesController@getSingleBlog', 'as' => 'sBlog.single'])->where('slug', '[\w\d\-\_]+');
 
-//Order
+//Order 
 Route::resource('order', 'OrderController', ['except' => 'create']);
+Route::get('/showorder/{id}', ['uses' => 'OrderController@getShowOrder', 'as' => 'pages.showorder']);
+Route::post('addproduct/{prod_id}', ['uses' =>'OrderController@getAddprod', 'as' => 'product.add']);
+Route::post('addstatus/{id}', ['uses' =>'OrderController@getAddstatus', 'as' => 'status.add']);
+Route::post('addcoupon/{id}', ['uses' =>'OrderController@getAddcoupon', 'as' => 'coupon.add']);
+Route::post('addquantity/{id}', ['uses' =>'OrderController@getAddquantity', 'as' => 'quantity.update']);
+Route::post('updateaddress/{id}', ['uses' =>'OrderController@getAddaddress', 'as' => 'address.update']);
 
-//Comments
+//Comments 
 Route::post('comments/{blog_id}', ['uses' =>'CommentController@store', 'as' => 'comments.store']);
 Route::put('comments/{id}', ['uses' =>'CommentController@update', 'as' => 'comment.update']);
 Route::delete('destroy/{id}', ['uses' =>'CommentController@destroy', 'as' => 'comment.destroy']);
 Route::get('comment', ['uses' =>'CommentController@index', 'as' => 'comments.index']);
+
+//Pcomments
+Route::post('pcomments/{product_id}', ['uses' =>'PcommentController@store', 'as' => 'pcomments.store']);
+Route::put('pcomments/{id}', ['uses' =>'PcommentController@update', 'as' => 'pcomment.update']);
+Route::delete('pdestroy/{id}', ['uses' =>'PcommentController@destroy', 'as' => 'pcomment.destroy']);
+Route::get('pcomment', ['uses' =>'PcommentController@index', 'as' => 'pcomments.index']);
 
 //Categories
 Route::resource('categories', 'CategoryController', ['except' => 'create']);

@@ -26,6 +26,9 @@ class AddCreatedAndUsedToCoupon extends Migration
      */
     public function down()
     {
-        //
+        Schema::table('coupons', function (Blueprint $table) {
+            $table->dropColumn('created');
+            $table->dropColumn('used');
+        });
     }
 }
