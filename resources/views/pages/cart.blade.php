@@ -5,21 +5,17 @@
 @endsection
 @section('content')
 <div id="main-wrap" class="wide-format">
-		 	
-
-
-		  	<div class="main-content wide-format">
-			    			    
-<div class="cartHeader clearfix">
-	<h1 class=" cart-title"><span class="cart-header-text">Your Shopping Cart</span>
-	</h1>
-	 <div class="checkout-types">
-	 	<a href="{{ route('product.checkout') }}"><button class="btn btn-green proceedCheckout aloading"><span class="init">Proceed to Checkout</span></button></a>
-	
-</div>
-		<a href="/"><button type="button" class="btn btn-white btn-sm btn-auto btn-shop">Continue Shopping</button></a>
-	 	 
-	 </div>
+	<div class="main-content wide-format">
+		@include('partials._messages')
+		<div class="cartHeader clearfix">
+			<h1 class=" cart-title">
+				<span class="cart-header-text">Your Shopping Cart</span>
+			</h1>
+			<div class="checkout-types">
+			 	<a href="{{ route('product.checkout') }}"><button class="btn btn-green proceedCheckout aloading"><span class="init">Proceed to Checkout</span></button></a>
+			</div>
+			<a href="/"><button type="button" class="btn btn-white btn-sm btn-auto btn-shop">Continue Shopping</button></a> 
+	 	</div>
 
 <div class="cart">
    
@@ -55,9 +51,9 @@
     
 				<div class="item-info">
 				    <span class="product-name">
-				        <a href="https://www.muscleandstrength.com/store/universal-animal-whey.html">{{ $product['item']['name'] }}</a>
+				        <a href="{{ url('p/'.$product['item']['slug'])}}">{{ $product['item']['name'] }}</a>
 					</span>
-				    <span class="price">$4.99</span>				
+				    <span class="price">$4.99</span>			
 				    <div class="options_messages">
 					
 					</div>

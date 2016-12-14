@@ -2,14 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Functionss;
 use Illuminate\Http\Request;
-
 use App\Cart;
 use App\Product;
 use App\Category;
 use App\Userinfo;
 use App\Cartproduct;
-use App\order;
+use App\Order;
+use App\Coupon;
 use Session;
 
 class OrderController extends Controller
@@ -21,7 +22,9 @@ class OrderController extends Controller
      */
     public function index()
     {
-        //
+        $orders = Order::orderBy('id','desc')->paginate(10);
+
+        return view('order.index')->withOrders($orders);
     }
 
     /**
@@ -56,13 +59,27 @@ class OrderController extends Controller
                 'method'          => 'required'
             ));
         
+        if(!Session::has('cart')){
+            return view('pages.cart');
+        }
+        $oldCart = Session::get('cart');
+        $cart = new Cart($oldCart);
+        $totalPrice = $cart->totalPrice;
+        $products = $cart->items;
         if(Session::has('coupon')){
             $coupon = Session::get('coupon');
             $couponid = $coupon->id;
         }else{
             $couponid = 'NULL';
         }
+
+
+        $status = "Processing";
+        $userid = "Guest";
         $order = new Order;
+        $order->status = $status;
+        $order->user_id = $userid;
+        $order->total = $totalPrice;
         $order->method = $request->method;
         $order->coupon = $couponid;
         $order->save();
@@ -70,6 +87,7 @@ class OrderController extends Controller
         $userId = "guest";
         $userinfo = new Userinfo;
         $userinfo->userId = $userId;
+        $userinfo->order_id = $order->id;
         $userinfo->fname = $request->fname;
         $userinfo->lname = $request->lname;
         $userinfo->company = $request->company;
@@ -83,15 +101,6 @@ class OrderController extends Controller
         $userinfo->save();
 
 
-        if(!Session::has('cart')){
-            return view('pages.cart');
-        }
-        $oldCart = Session::get('cart');
-        $cart = new Cart($oldCart);
-        $totalPrice = $cart->totalPrice;
-        $products = $cart->items;
-
-
         foreach($products as $product){
             $cartproducts = new Cartproduct;
             $cartproducts->order_id = $order->id;
@@ -102,10 +111,31 @@ class OrderController extends Controller
         }
 
 
-        Session::flash('success','The Order has successfully saved!');
-
+        Session::flash('success','The Order has successfully Placed!');
+        $total = 12;
         //redirect to another page
-        return redirect()->route('product.checkout');
+        return redirect()->route('pages.showorder', $order->id);
+    }
+
+    public function getShowOrder($id){
+        $order = Order::find($id);
+        $cartProducts = Cartproduct::where('order_id', "=", $order->id)->first();
+        $userInfo = Userinfo::where('order_id', "=", $order->id)->first();
+
+        $cart = Session::get('newcart');
+
+        if(Session::has('coupon')){
+            $coupon = Session::get('coupon');
+            $getTotal = new Functionss;
+            $couponTotal = $getTotal->calCoupon($coupon->name);
+        }else{
+            $coupon = false;
+            $couponTotal = false;
+        }
+        Session::forget('cart');
+        return view('pages.showorder', ['products' => $cart->items, 'totalPrice' => $cart->totalPrice, 'coupon' => $coupon, 'couponTotal' => $couponTotal, 'order' => $order, 'info' => $userInfo]);
+
+        // return view('pages.showorder')->withOrder($order)->withProducts($cartProducts)->withInfo($userInfo);
     }
 
     /**
@@ -116,7 +146,14 @@ class OrderController extends Controller
      */
     public function show($id)
     {
-        //
+        $order = Order::find($id);
+
+        $info = Userinfo::where('order_id', "=", $order->id)->first();
+
+        $cartproducts = Cartproduct::where('order_id', "=", $order->id)->get();
+        $mproducts = Product::all();
+
+        return view('order.show')->withOrder($order)->withCartproducts($cartproducts)->withInfo($info)->withMproducts($mproducts);
     }
 
     /**
@@ -127,9 +164,102 @@ class OrderController extends Controller
      */
     public function edit($id)
     {
-        //
+        $order = Order::find($id);
+
+        $coupons = Coupon::all();
+        if($order->coupon != "NULL"){
+            $couponsel = Coupon::where('id', "=", $order->coupon)->first();
+            $function = new Functionss;
+            $grandtotal = $function->grandtotal($order->id);
+        }else{
+            $couponsel = false;
+            $grandtotal = $order->total;
+        }
+
+        $info = Userinfo::where('order_id', "=", $order->id)->first();
+
+        $cartproducts = Cartproduct::where('order_id', "=", $order->id)->get();
+        $mproducts = Product::all();
+
+        return view('order.edit')->withOrder($order)->withCartproducts($cartproducts)->withInfo($info)->withMproducts($mproducts)->withCoupons($coupons)->withCouponsel($couponsel)->withGrandtotal($grandtotal);
     }
 
+    public function getAddprod(Request $request, $id)
+    {
+        $selproduct = Product::find($request->selprod);
+        $cartproducts = Cartproduct::where('order_id', "=", $id)->get();
+        $cartprods = Cartproduct::all();
+        // dd($cartprods);
+
+        foreach($cartproducts as $cartproduct){
+            if($cartproduct->product_id == $selproduct->id){
+                Session::flash('success','This Product is already ordered. Please Add Quantity!');
+                return redirect()->back();
+            }else{
+                $ok = "ok";
+            }
+        }
+        if($ok = "ok"){
+
+            $addproduct = new Cartproduct;
+            $addproduct->order_id = $id;
+            $addproduct->product_id = $request->selprod;
+            $addproduct->product_amount = 1;
+            $addproduct->totalprice = 'Null';
+            $addproduct->save();
+
+            $order = Order::find($id);
+            $order->total = $order->total + $selproduct->price;
+            $order->save(); 
+        }
+        
+        return redirect()->back();
+    }
+    public function getAddstatus(Request $request, $id)
+    {
+        $order = Order::find($id);
+        $order->status = $request->selstatus;
+        $order->save();
+        return redirect()->back();
+    }
+
+    public function getAddcoupon(Request $request, $id)
+    {
+        $order = Order::find($id);
+        $order->coupon = $request->selcoupon;
+        $order->save();
+        return redirect()->back();
+    }
+    public function getAddquantity(Request $request, $id)
+    {
+        
+        $quantityadd = Cartproduct::find($request->product_id);
+        $quantityadd->product_amount = $request->product_amount;
+        $quantityadd->save();
+
+        $newprods = Cartproduct::where('order_id', "=", $id)->get();
+        $newTotal = 0;
+        foreach($newprods as $newprods){
+            $product = Product::find($newprods->product_id);
+            $newTotal +=  $newprods->product_amount*$product->price;
+        }
+        $order = Order::find($id);
+        $order->total = $newTotal;
+        $order->save();
+        return redirect()->back();
+    }
+    public function getAddaddress(Request $request, $id)
+    {
+        $info = Userinfo::where('order_id', "=", $id)->first();
+
+        $info->address = $request->address;
+        $info->city = $request->city;
+        $info->state = $request->state;
+        $info->state = $request->state;
+        $info->zip = $request->zip;
+        $info->save();
+        return redirect()->back();
+    }
     /**
      * Update the specified resource in storage.
      *

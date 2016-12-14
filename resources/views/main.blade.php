@@ -24,7 +24,7 @@
                 </a>
 
                 @include('partials._header')
-                @include('partials._messages')
+                
                 @yield('content')
                 @include('partials._others')
             </div>

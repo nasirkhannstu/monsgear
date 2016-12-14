@@ -8,6 +8,7 @@
 <div id="main-wrap">
             
     <div class="clearfix cartHeader">
+        @include('partials._messages')
         <h1 class="cart-title">
             <span class="cart-header-text">Secure Checkout</span>
         </h1>
@@ -56,13 +57,15 @@
                                     Shipping Cost-
                                     <span class="floatRight">
                                 @if($coupon)
-                                    @if($coupon->freeship == 'yes')
+                                    @if($coupon->freeship == 'No' && $totalPrice <= 500)
+                                        + $25
+                                    @else
                                         $0
                                     @endif
-                                @elseif($totalPrice >= 500)
-                                    $0
+                                @elseif($totalPrice <= 500)
+                                    +$25
                                 @else
-                                    $25
+                                    $0
                                 @endif
                                     </span>
                                 <p>
@@ -104,12 +107,6 @@
                 </svg>
                 </span>
             </h3>
-            <div class="editLink ">
-                <svg width="13" height="13">
-                <use xlink:href="#icon-edit-blue"></use>
-                <image width="13" height="13" src="/store/skin/frontend/mnsv4/default/images/fallback/edit-blue.png"></image>
-                </svg> Edit
-            </div>
         </div>
         <div id="checkout-step-billing" class="step a-item" style="">
             {!! Form::open(array('route' => 'order.store','data-parsley-validate'=>'')) !!}
@@ -130,7 +127,7 @@
                                 </div>
                                 <div class="input-box">
                                     <label for="company">Company Name</label><br>
-                                    {{Form::text('company',null,array('class' => 'input-text', 'required'=>'','maxlength'=>'255'))}}
+                                    {{Form::text('company',null,array('class' => 'input-text','maxlength'=>'255'))}}
                                 </div>
                                 <div class="input-box">
                                     <label for="address">Address<span class="required">*</span></label><br>
@@ -154,11 +151,11 @@
                                 </div>
                                 <div class="input-box">
                                     <label for="board">Board Id<span class="required">*</span></label><br>
-                                    {{Form::text('board',null,array('class' => 'input-text', 'required'=>'','maxlength'=>'255'))}}
+                                    {{Form::text('board',null,array('class' => 'input-text','maxlength'=>'255'))}}
                                 </div>
                                 <div class="input-box">
                                     <label for="info">Additional Information</label><br>
-                                    {{Form::text('info',null,array('class' => 'input-text', 'required'=>'','maxlength'=>'255'))}}
+                                    {{Form::text('info',null,array('class' => 'input-text','maxlength'=>'255'))}}
                                 </div>
                                 <br>
                                 <h3 class="title">Payment Method</h3>
@@ -178,16 +175,6 @@
                 </fieldset>
             {!! Form::close() !!}
         <br>
-<<<<<<< HEAD
-        <h3 class="title">Payment Method</h3>
-        <div class="input-box">
-            <h3>Westurn Union</h3><br>
-            <input type="radio" value="WU" name="pm"><br />
-            <h3>Money Gram</h3><br>
-            <input type="radio" value="MG"  name="pm"s>
-        </div>
-=======
->>>>>>> cfa9dc0fbeb3c2fe92c9667aed69b518c94c6676
         </div>
     </li>
 </ol>

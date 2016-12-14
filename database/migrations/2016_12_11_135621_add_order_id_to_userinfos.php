@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateOrdersTable extends Migration
+class AddOrderIdToUserinfos extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,8 @@ class CreateOrdersTable extends Migration
      */
     public function up()
     {
-        Schema::create('orders', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('method');
-            $table->string('coupon')->nullable();
-            $table->timestamps();
+        Schema::table('userinfos', function (Blueprint $table) {
+            $table->text('order_id')->nullable()->after('userId');
         });
     }
 
@@ -28,6 +25,8 @@ class CreateOrdersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('orders');
+        Schema::table('userinfos', function (Blueprint $table) {
+            $table->dropColumn('order_id');
+        });
     }
 }

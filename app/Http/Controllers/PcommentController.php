@@ -4,11 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Comment;
-use App\Blog;
+use App\Pcomment;
+use App\Product;
 use Session;
 
-class CommentController extends Controller
+class PcommentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,9 +17,9 @@ class CommentController extends Controller
      */
     public function index()
     {
-        $comments = Comment::orderBy('id','desc')->paginate(10);
+        $pcomments = Pcomment::orderBy('id','desc')->paginate(10);
 
-        return view('comment.index')->withComments($comments);
+        return view('pcomment.index')->withPcomments($pcomments);
     }
 
     /**
@@ -38,7 +38,7 @@ class CommentController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, $blog_id)
+    public function store(Request $request, $product_id)
     {
         $this->validate($request, array(
                 'name'          => 'required|max:255',
@@ -46,22 +46,23 @@ class CommentController extends Controller
                 'body'           => 'required'
             ));
 
-        $blog = Blog::find($blog_id);
+        $product = Product::find($product_id);
         //Store in the database
-        $comment = new Comment;
-        $comment->name = $request->name;
-        $comment->email = $request->email;
-        $comment->body = $request->body;
-        $comment->visibility = 'notVisible';
-        $comment->blog()->associate($blog); //commetn model theke asche
+        $pcomment = new Pcomment;
+        $pcomment->name = $request->name;
+        $pcomment->email = $request->email;
+        $pcomment->body = $request->body;
+        $pcomment->rating = 4;
+        $pcomment->visibility = 'notVisible';
+        $pcomment->product()->associate($product); //commetn model theke asche
 
-        $comment->save();
+        $pcomment->save();
 
 
         Session::flash('success','Your comment has been queued for review by site administrators and will be published after approval.');
 
         //redirect to another page
-        return redirect()->route('sBlog.single', [$blog->slug]);    
+        return redirect()->route('blog.single', [$product->slug]);    
     }
 
     /**
@@ -83,7 +84,7 @@ class CommentController extends Controller
      */
     public function edit($id)
     {
-        
+        //
     }
 
     /**
@@ -95,14 +96,13 @@ class CommentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $comment = Comment::find($id);
-        $comment->visibility = 'visible';
+        $pcomment = Pcomment::find($id);
+        $pcomment->visibility = 'visible';
 
-        $comment->save();
+        $pcomment->save();
 
-        Session::flash('success', 'This Comment Get Approved.');
-        return redirect()->route('comments.index'); 
-
+        Session::flash('success', 'This Product Comment Get Approved.');
+        return redirect()->route('pcomments.index'); 
     }
 
     /**
@@ -113,9 +113,9 @@ class CommentController extends Controller
      */
     public function destroy($id)
     {
-        $comment = Comment::find($id);
-        $comment->delete();
+        $pcomment = Pcomment::find($id);
+        $pcomment->delete();
         Session::flash('success', 'The Product was successfully deleted.');
-        return redirect()->route('comments.index'); 
+        return redirect()->route('pcomments.index'); 
     }
 }

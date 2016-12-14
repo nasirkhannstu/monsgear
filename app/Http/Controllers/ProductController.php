@@ -27,7 +27,7 @@ class ProductController extends Controller
         $cart->add($products, $products->id);
 
         $request->session()->put('cart', $cart);
-        return redirect()->route('pages.index');
+        return back();
     }
     public function getAddToCartC( Request $request, $id )
     {

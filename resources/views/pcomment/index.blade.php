@@ -18,15 +18,15 @@
 					</tr> 
 				</thead> 
 				<tbody>
-				@foreach ($comments as $comment)
+				@foreach ($pcomments as $pcomment)
 					<tr>
-						<th scope="row">{{ $comment->id }}</th>
-						<td>{{ $comment->email }}</td>
-						<td>{{ $comment->body }}</td>
-						<td>{{ date('M j, Y', strtotime($comment->created_at)) }}</td>
+						<th scope="row">{{ $pcomment->id }}</th>
+						<td>{{ $pcomment->email }}</td>
+						<td>{{ $pcomment->body }}</td>
+						<td>{{ date('M j, Y', strtotime($pcomment->created_at)) }}</td>
 						<td>
-							@if($comment->visibility == 'notVisible')
-							{!! Form::open(['route' => ['comment.update', $comment->id], 'method' => 'PUT']) !!}
+							@if($pcomment->visibility == 'notVisible')
+							{!! Form::open(['route' => ['pcomment.update', $pcomment->id], 'method' => 'PUT']) !!}
 
 								{!! Form::submit('Approve', ['class' => 'btn btn-success btn-sm']) !!}
 
@@ -36,7 +36,7 @@
 							@endif
 						</td>
 						<td>
-							{!! Form::open(['route' => ['comment.destroy', $comment->id], 'method' => 'DELETE']) !!}
+							{!! Form::open(['route' => ['pcomment.destroy', $pcomment->id], 'method' => 'DELETE']) !!}
 
 								{!! Form::submit('Delete', ['class' => 'btn btn-danger btn-sm']) !!}
 
@@ -51,7 +51,7 @@
 		</div>
 
 		<div class="text-center">
-			{!! $comments->links() !!}
+			{!! $pcomments->links() !!}
 		</div>
 	</div>
 @endsection

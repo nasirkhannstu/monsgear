@@ -1,7 +1,7 @@
 @extends('main')
 @section('title', '| Moonster-Gear')
 @section('stylsheets')
-    <!-- {!! Html::style('css/cart/app.css') !!}  -->
+
 @endsection
 @section('content')
 <div id="main-wrap">
@@ -149,29 +149,19 @@ googletag.cmd.push(function() { jQuery('#div-gpt-ad-1421356883797-0').rad({ allo
           </div>
     <div class="aside-shadow" style="top: 169.083px;"> </div>
     <div class="main-content">
-                    <div id="messages"><div class="section clearfix">
-                    <div class="messages status">
-<h2 class="element-invisible">Status message</h2>
-Your comment has been queued for review by site administrators and will be published after approval.
-</div>
-                </div></div> <!-- /.section, /#messages -->
+      @include('partials._messages') <!-- /.section, /#messages -->
+      <div class="tabs clearfix"></div> <!-- /#tabs -->
         
-        
-                    <div class="tabs clearfix">
-                            </div> <!-- /#tabs -->
-        
-                    <div class="contentMain">
-                  <div class="region region-content">
-    <div id="block-system-main" class="block block-system">
-
+      <div class="contentMain">
+        <div class="region region-content">
+          <div id="block-system-main" class="block block-system">
+            <div class="content">
     
-  <div class="content">
-    
-<div id="node-48424" class="node node-article clearfix">
+              <div id="node-48424" class="node node-article clearfix">
 
-  <div class="nodeHeader">
+                <div class="nodeHeader">
 
-    <h1>{{ $blog->title }}</h1>
+                  <h1>{{ $blog->title }}</h1>
     
 	<div class="socialButtons">
 		<div class="addthis_sharing_toolbox"></div>
