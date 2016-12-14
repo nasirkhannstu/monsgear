@@ -42,6 +42,22 @@
 						</p>
 					</dl>
 					<dl class="dl-horizontal">
+						<label>Ship Cost:</label>
+						<p>
+							@if($couponsel)
+                                @if($couponsel->freeship == 'No' && $order->total <= 500)
+                                    + $25
+                                @else
+                                    $0
+                                @endif
+                            @elseif($order->total <= 500)
+                                +$25
+                            @else
+                                $0
+                            @endif
+						</p>
+					</dl>
+					<dl class="dl-horizontal">
 						<label>Grand Total:</label>
 						<p>
 							{{ $grandtotal }}

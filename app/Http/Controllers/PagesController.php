@@ -5,12 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 
+use App\Userinfo;
 use App\Product;
 use App\Blog;
 use App\Cart;
 use App\Coupon;
 use Session;
 use Mail;
+use Auth;
 
 class PagesController extends Controller
 {
@@ -43,14 +45,23 @@ class PagesController extends Controller
         }
         
         if(!Session::has('cart')){
-            return view('pages.checkout');
+            return redirect()->route('pages.index');
         }
         $oldCart = Session::get('cart');
         $cart = new Cart($oldCart);
         
         Session::put('newcart', $cart);
 
-        return view('pages.checkout', ['products' => $cart->items, 'totalPrice' => $cart->totalPrice, 'coupon' => $coupon, 'couponTotal' => $couponTotal]);
+        if(!Auth::guest()){
+            $userId = Auth::user()->id;
+            if(Userinfo::where('userId', "=", $userId)->exists()){
+                $userInfo = Userinfo::where('userId', "=", $userId)->first();
+            }else{
+                $userInfo = false;
+            }
+         }
+
+        return view('pages.checkout', ['products' => $cart->items, 'totalPrice' => $cart->totalPrice, 'coupon' => $coupon, 'couponTotal' => $couponTotal, 'userInfo' => $userInfo]);
     }
 // amount,freeship,minspent,excludcat,limit,expire,dtype
 
@@ -62,7 +73,7 @@ class PagesController extends Controller
             $coupon = Session::get('coupon');
 
             if(!Session::has('cart')){
-                return view('pages.welcome');
+                return redirect()->route('pages.index');
             }
             $oldCart = Session::get('cart');
             $cart = new Cart($oldCart);
@@ -121,7 +132,7 @@ class PagesController extends Controller
             $coupon = Session::get('coupon');
             
             if(!Session::has('cart')){
-                return view('pages.welcome');
+                return redirect()->route('pages.index');
             }
             $oldCart = Session::get('cart');
             $cart = new Cart($oldCart);
@@ -131,7 +142,7 @@ class PagesController extends Controller
             $coupon = Coupon::where('name', "=", $request->coupon)->first();
 
             if(!Session::has('cart')){
-                return view('pages.welcome');
+                return redirect()->route('pages.index');
             }
             $oldCart = Session::get('cart');
             $cart = new Cart($oldCart);

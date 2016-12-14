@@ -64,7 +64,7 @@ class ProductController extends Controller
     public function getCart()
     {
         if(!Session::has('cart')){
-            return view('pages.cart');
+            return redirect()->route('pages.index');
         }
         $oldCart = Session::get('cart');
         $cart = new Cart($oldCart);

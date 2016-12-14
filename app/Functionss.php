@@ -39,7 +39,7 @@ class Functionss
                     if($coupon->dtype == 'cart'){
                         $withCat = $withCat - $coupon->amount;
                     }else{
-                        $withCat = $withCat - (($withCat*$coupon->amount) / 100) ;
+                        $withCat = $withCat - (($withCat*$coupon->amount) / 100);
                     }
 
                     $total = $withoutCat+$withCat;
@@ -50,15 +50,15 @@ class Functionss
                     return $total;
                 }else{
                     Session::flash('err','Min Spent: failed!');
-                    return redirect()->back();
+                    return false;
                 }
             }else{
                 Session::flash('err','Coupon limit failed!');
-                return redirect()->back();
+                return false;
             }
         }else{
             Session::flash('err','Coupon Expired!');
-            return redirect()->back();
+            return false;
         }
     }
 	public function calCoupon($coupon){

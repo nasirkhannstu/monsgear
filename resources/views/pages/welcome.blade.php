@@ -129,9 +129,7 @@
                 <div class="product-grid-4up">
 
                     @foreach ($products as $key => $product)
-                        @if($product->category->name == "oral")
-
-                            @endid
+                       
                         <li class="item id-{{ $key + 1 }}">
 
                             <div class="inner-wrap">

@@ -12,6 +12,7 @@ use App\Cartproduct;
 use App\Order;
 use App\Coupon;
 use Session;
+use Auth;
 
 class OrderController extends Controller
 {
@@ -60,7 +61,7 @@ class OrderController extends Controller
             ));
         
         if(!Session::has('cart')){
-            return view('pages.cart');
+            return redirect()->route('pages.index');
         }
         $oldCart = Session::get('cart');
         $cart = new Cart($oldCart);
@@ -72,19 +73,21 @@ class OrderController extends Controller
         }else{
             $couponid = 'NULL';
         }
-
-
+        if(!Auth::guest()){
+            $userId = Auth::user()->id;
+         }else{
+            $userId = "Guest";
+        }
         $status = "Processing";
-        $userid = "Guest";
         $order = new Order;
         $order->status = $status;
-        $order->user_id = $userid;
+        $order->user_id = $userId;
         $order->total = $totalPrice;
         $order->method = $request->method;
         $order->coupon = $couponid;
         $order->save();
 
-        $userId = "guest";
+         
         $userinfo = new Userinfo;
         $userinfo->userId = $userId;
         $userinfo->order_id = $order->id;
@@ -170,7 +173,16 @@ class OrderController extends Controller
         if($order->coupon != "NULL"){
             $couponsel = Coupon::where('id', "=", $order->coupon)->first();
             $function = new Functionss;
-            $grandtotal = $function->grandtotal($order->id);
+            if($function->grandtotal($order->id)){
+                $grandtotal = $function->grandtotal($order->id);
+            }elseif($order->total <= 500){
+                $grandtotal = $order->total + 25;
+                $couponsel = false;
+            }else{
+                $grandtotal = $order->total;
+                $couponsel = false;
+            }
+            
         }else{
             $couponsel = false;
             $grandtotal = $order->total;

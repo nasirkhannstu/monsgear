@@ -5,8 +5,7 @@
 @endsection
 @section('content')
 
-<div id="main-wrap">
-            
+<div id="main-wrap">         
     <div class="clearfix cartHeader">
         @include('partials._messages')
         <h1 class="cart-title">
@@ -119,43 +118,91 @@
                             <li class="clearfix">
                                 <div class="input-box">
                                     <label for="fname">First Name<span class="required">*</span></label><br>
+                                    @if($userInfo)
+                                    {{Form::text('fname',$userInfo->fname,array('class' => 'input-text', 'required'=>'','maxlength'=>'255'))}}
+                                    @else
                                     {{Form::text('fname',null,array('class' => 'input-text', 'required'=>'','maxlength'=>'255'))}}
+                                    @endif
                                 </div>
                                 <div class="input-box">
                                     <label for="lname">Last Name<span class="required">*</span></label><br>
+                                    @if($userInfo)
+                                    {{Form::text('lname',$userInfo->lname,array('class' => 'input-text', 'required'=>'','maxlength'=>'255'))}}
+                                    @else
                                     {{Form::text('lname',null,array('class' => 'input-text', 'required'=>'','maxlength'=>'255'))}}
+                                    @endif
                                 </div>
                                 <div class="input-box">
                                     <label for="company">Company Name</label><br>
+                                    @if($userInfo)
+                                    {{Form::text('company',$userInfo->company,array('class' => 'input-text','maxlength'=>'255'))}}
+                                    @else
                                     {{Form::text('company',null,array('class' => 'input-text','maxlength'=>'255'))}}
+                                    @endif
+                                    
                                 </div>
                                 <div class="input-box">
                                     <label for="address">Address<span class="required">*</span></label><br>
+                                    @if($userInfo)
+                                    {{Form::text('address',$userInfo->address,array('class' => 'input-text', 'required'=>'','maxlength'=>'255'))}}
+                                    @else
                                     {{Form::text('address',null,array('class' => 'input-text', 'required'=>'','maxlength'=>'255'))}}
+                                    @endif
+                                    
                                 </div>
                                 <div class="input-box">
                                     <label for="city">Town/City<span class="required">*</span></label><br>
+                                    @if($userInfo)
+                                    {{Form::text('city',$userInfo->city,array('class' => 'input-text', 'required'=>'','maxlength'=>'255'))}}
+                                    @else
                                     {{Form::text('city',null,array('class' => 'input-text', 'required'=>'','maxlength'=>'255'))}}
+                                    @endif
+                                    
                                 </div>
                                 <div class="input-box">
                                     <label for="state">State<span class="required">*</span></label><br>
+                                    @if($userInfo)
+                                    {{Form::text('state',$userInfo->state,array('class' => 'input-text', 'required'=>'','maxlength'=>'255'))}}
+                                    @else
                                     {{Form::text('state',null,array('class' => 'input-text', 'required'=>'','maxlength'=>'255'))}}
+                                    @endif
+                                    
                                 </div>
                                 <div class="input-box">
                                     <label for="zip">Zip<span class="required">*</span></label><br>
+                                    @if($userInfo)
+                                    {{Form::text('zip',$userInfo->zip,array('class' => 'input-text', 'required'=>'','maxlength'=>'255'))}}
+                                    @else
                                     {{Form::text('zip',null,array('class' => 'input-text', 'required'=>'','maxlength'=>'255'))}}
+                                    @endif
+                                    
                                 </div>
                                 <div class="input-box">
                                     <label for="email">Email Address<span class="required">*</span></label><br>
+                                    @if($userInfo)
+                                    {{Form::text('email',$userInfo->email,array('class' => 'input-text', 'required'=>'','maxlength'=>'255'))}}
+                                    @else
                                     {{Form::text('email',null,array('class' => 'input-text', 'required'=>'','maxlength'=>'255'))}}
+                                    @endif
+                                    
                                 </div>
                                 <div class="input-box">
                                     <label for="board">Board Id<span class="required">*</span></label><br>
+                                    @if($userInfo)
+                                    {{Form::text('board',$userInfo->board,array('class' => 'input-text','maxlength'=>'255'))}}
+                                    @else
                                     {{Form::text('board',null,array('class' => 'input-text','maxlength'=>'255'))}}
+                                    @endif
+                                    
                                 </div>
                                 <div class="input-box">
                                     <label for="info">Additional Information</label><br>
+                                    @if($userInfo)
+                                    {{Form::text('info',$userInfo->info,array('class' => 'input-text','maxlength'=>'255'))}}
+                                    @else
                                     {{Form::text('info',null,array('class' => 'input-text','maxlength'=>'255'))}}
+                                    @endif
+                                    
                                 </div>
                                 <br>
                                 <h3 class="title">Payment Method</h3>
