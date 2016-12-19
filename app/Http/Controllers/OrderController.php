@@ -136,6 +136,7 @@ class OrderController extends Controller
             $couponTotal = false;
         }
         Session::forget('cart');
+        //order email
         return view('pages.showorder', ['products' => $cart->items, 'totalPrice' => $cart->totalPrice, 'coupon' => $coupon, 'couponTotal' => $couponTotal, 'order' => $order, 'info' => $userInfo]);
 
         // return view('pages.showorder')->withOrder($order)->withProducts($cartProducts)->withInfo($userInfo);

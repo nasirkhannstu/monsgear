@@ -184,6 +184,9 @@ class PagesController extends Controller
         return redirect('/');
 
     }
+    public function showMyaccount(){
+        return view('account.index');
+    }
 
 
 }

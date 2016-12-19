@@ -160,7 +160,7 @@
                                         <span class="price">${{ $product->price}}</span>
                                     </div>
                                     <div class="savings">
-                                        <a href="{{ route('product.addToCart', ['id' => $product->id]) }}" class="btn btn-lg btn-flat-blue aloading basic-load validate-rating" role="button">Add To Cart</a>
+                                        <a href="{{ route('product.addToCart', ['id' => $product->id]) }}" class="btn btn-lg btn-flat-blue aloading basic-load validate-rating" style="font-size: .6em" role="button">Add To Cart</a>
                                     </div>
 
                                 </div>
