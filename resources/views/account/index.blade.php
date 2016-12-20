@@ -6,8 +6,6 @@
 @endsection
 @section('content')
 <div id="main-wrap">
-
-
     <div class="breadcrumb">
         <a href="https://www.muscleandstrength.com/" title="Home" id="bc-home" class="breadcrumb-0">
             Home »</a>

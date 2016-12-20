@@ -10,15 +10,14 @@
 		<div class="col-md-8">
 			<div class="panel panel-info">
 			<div class="panel-heading">
-				+ Add New Product:
+				Categories
 			</div>
 
 			<div class="panel-body">
 			<div class="table-responsive">
 				<table class="table table-hover">
-				<strong><a href="{{ route('product.create')}}"> + Add New Product</a></strong>
 				<thead> 
-					<tr> 
+					<tr>
 						<th>#</th>
 						<th>Name</th>
 						<th></th>
@@ -49,7 +48,7 @@
 		<div class="col-md-4">
 			<div class="panel panel-info">
 				<div class="panel-heading">
-					+ Add New Product:
+					+ Add New Category:
 				</div>
 
 				<div class="panel-body">
