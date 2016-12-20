@@ -188,9 +188,9 @@
                         </div>
 
                         <ul class="account-menu">
-                            <li><a rel="nofollow" href="https://www.muscleandstrength.com/store/customer/account/"><svg style="width:1.3em; height:1.3em; margin-bottom:-.3em; margin-right: 0.1em;"><use xlink:href="#icon-account"/><image style="width:1.3em; height:1.3em; margin-bottom:-.3em; margin-right: 0.1em;" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" menu-data-src="https://cdn.muscleandstrength.com/images/fallback/account.png"/></svg> My Account</a></li>
+                            <li><a rel="nofollow" href="{{url('myaccount')}}"><svg style="width:1.3em; height:1.3em; margin-bottom:-.3em; margin-right: 0.1em;"><use xlink:href="#icon-account"/><image style="width:1.3em; height:1.3em; margin-bottom:-.3em; margin-right: 0.1em;" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" menu-data-src="https://cdn.muscleandstrength.com/images/fallback/account.png"/></svg> My Account</a></li>
 
-                            <li><a rel="nofollow" href="https://www.muscleandstrength.com/store/sales/order/history/"><svg style="width:1.3em; height:1.3em; margin-bottom:-.3em; margin-right: 0.1em;"><use xlink:href="#icon-history"/><image style="width:1.3em; height:1.3em; margin-bottom:-.3em; margin-right: 0.1em;" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" menu-data-src="https://cdn.muscleandstrength.com/images/fallback/history.png"/></svg> Order History</a></li>
+                            <li><a rel="nofollow" href=""><svg style="width:1.3em; height:1.3em; margin-bottom:-.3em; margin-right: 0.1em;"><use xlink:href="#icon-history"/><image style="width:1.3em; height:1.3em; margin-bottom:-.3em; margin-right: 0.1em;" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" menu-data-src="https://cdn.muscleandstrength.com/images/fallback/history.png"/></svg> Order History</a></li>
                             <li>
                                 <a href="{{ url('/logout') }}"
                                    onclick="event.preventDefault();

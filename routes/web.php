@@ -98,4 +98,5 @@ Route::post('customer_password/reset','CustomerAuth\ResetPasswordController@rese
 Route::get('customer_password/reset/{token}','CustomerAuth\ForgotPasswordController@showResetForm');
 Route::get('customer_register','CustomerAuth\RegisterController@showRegisterForm');
 Route::post('customer_register','CustomerAuth\RegisterController@register');
+Route::get('myaccount','PagesController@showMyaccount');
 
