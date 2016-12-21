@@ -234,6 +234,9 @@
 			        		@if(isset($coupon) && $coupon->dtype == 'cart')
 			            		Coupon({{ $coupon->name }}):
 			            	@endif
+			            	@if(isset($coupon) && $coupon->dtype == 'percent')
+			            		Coupon({{ $coupon->name }}):
+			            	@endif
 			            </div>
 			        	<div class="price-wrap">
 			            	@if(isset($coupon) && $coupon->dtype == 'cart')
@@ -250,13 +253,17 @@
 					    </div>
 					    <div style="" class="price-wrap">
 					        <span class="price">
-					        @if(isset($coupon) && $coupon->freeship == 'yes')
-			            		0
-			            	@elseif($totalPrice >= 500)
-			            		0
-			            	@else
-			            		$25
-			            	@endif
+					        @if(isset($coupon))
+                                    @if($coupon->freeship == 'No' && $totalPrice <= 500)
+                                        + $25
+                                    @else
+                                        $0
+                                    @endif
+                                @elseif($totalPrice <= 500)
+                                    +$25
+                                @else
+                                    $0
+                                @endif
 					        </span>
 					    </div>
 					</div>

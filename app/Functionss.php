@@ -61,7 +61,7 @@ class Functionss
             return false;
         }
     }
-	public function calCoupon($coupon){
+    public function calCoupon($coupon){
         if(Coupon::where('name', '=', $coupon)->exists()){
 
             $coupon = Coupon::where('name', "=", $coupon)->first();
@@ -69,7 +69,67 @@ class Functionss
             $coupon = Session::get('coupon');
 
             if(!Session::has('cart')){
-                return view('pages.welcome');
+                return redirect()->route('pages.index');
+            }
+            $oldCart = Session::get('cart');
+            $cart = new Cart($oldCart);
+            $totalPrice = $cart->totalPrice;
+            $products = $cart->items;
+
+            $exp = $coupon->created +($coupon->expire * 60 * 60);
+            if($exp <= time()){
+                if($coupon->limit <= $coupon->limit){
+                    if($totalPrice >= $coupon->minspent){
+                        $withCat = 0;
+                        $withoutCat = 0;
+                        foreach($products as $product){
+                            $prodictId = $product['item']['id'];
+                            $mProduct = Product::find($prodictId);
+                            if($mProduct->category->id == $coupon->excludcat){
+                                $withoutCat += $product['price'];
+                                
+                            }else{
+                                $withCat += $product['price'];
+                            }
+                        }
+                        if($coupon->dtype == 'cart'){
+                            $withCat = $withCat - $coupon->amount;
+                        }else{
+                            $withCat = $withCat - (($withCat*$coupon->amount) / 100) ;
+                        }
+
+                        $total = $withoutCat+$withCat;
+
+                        if($coupon->freeship == 'No' && $totalPrice <= 500){
+                            $total = $total + 25;
+                        }
+                        return $total;
+                    }else{
+                        Session::flash('err','Min Spent: failed!');
+                        return false;
+                    }
+                }else{
+                    Session::flash('err','Coupon limit failed!');
+                        return false;
+                }
+            }else{
+                Session::flash('err','Coupon Expired!');
+                        return false;
+            }  
+        }else{
+            Session::flash('err','Invalid Coupon!');
+                        return false;
+        }
+    }
+	public function calCouponTest($coupon){
+        if(Coupon::where('name', '=', $coupon)->exists()){
+
+            $coupon = Coupon::where('name', "=", $coupon)->first();
+            Session::put('coupon', $coupon);
+            $coupon = Session::get('coupon');
+
+            if(!Session::has('cart')){
+                return redirect()->route('pages.index');
             }
             $oldCart = Session::get('cart');
             $cart = new Cart($oldCart);

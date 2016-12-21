@@ -22,6 +22,11 @@ class PagesController extends Controller
 
         return view('pages.welcome')->withProducts($products)->withBlogs($blogs);
     }
+    public function getAllblog(){
+        $blogs = Blog::orderBy('id','desc')->get();
+
+        return view('pages.allblogs')->withBlogs($blogs);
+    }
     // public function getSingle($id){
     // 	$product = Product::find($id);
     //     return view('pages.single')->withProduct($product);
@@ -39,6 +44,7 @@ class PagesController extends Controller
         if(Session::has('coupon')){
             $coupon = Session::get('coupon');
             $couponTotal = $this->calCoupon($coupon->name);
+            
         }else{
             $coupon = false;
             $couponTotal = false;
@@ -59,7 +65,9 @@ class PagesController extends Controller
             }else{
                 $userInfo = false;
             }
-         }
+        }else{
+            $userInfo = false;
+        }
 
         return view('pages.checkout', ['products' => $cart->items, 'totalPrice' => $cart->totalPrice, 'coupon' => $coupon, 'couponTotal' => $couponTotal, 'userInfo' => $userInfo]);
     }
@@ -127,7 +135,7 @@ class PagesController extends Controller
     }
     public function getCoupon(Request $request){
         if($getCoupon = $this->calCoupon($request->coupon)){
-
+            
             // $coupon = Coupon::where('name', "=", $request->coupon)->first();
             $coupon = Session::get('coupon');
             
@@ -184,9 +192,7 @@ class PagesController extends Controller
         return redirect('/');
 
     }
-    public function showMyaccount(){
-        return view('account.index');
-    }
+    
 
 
 }

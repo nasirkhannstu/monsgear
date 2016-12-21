@@ -57,7 +57,7 @@
 					{{Form::label('name','Name:')}}
 					{{Form::text('name',null,array('class' => 'form-control','required'=>'','maxlength'=>'255'))}}
 
-					{{Form::submit('Create Post',array('class' => 'btn btn-success btn-lg btn-block','style'=>'margin-top:20px'))}}
+					{{Form::submit('+ Add Category',array('class' => 'btn btn-success btn-lg btn-block','style'=>'margin-top:20px'))}}
 				{!! Form::close() !!}
 				</div>
 			</div>

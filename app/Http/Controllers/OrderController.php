@@ -131,6 +131,10 @@ class OrderController extends Controller
             $coupon = Session::get('coupon');
             $getTotal = new Functionss;
             $couponTotal = $getTotal->calCoupon($coupon->name);
+            //dd($couponTotal);
+            // Saving Grand total
+            $order->grandtotal = $couponTotal;
+            $order->save();
         }else{
             $coupon = false;
             $couponTotal = false;
@@ -184,10 +188,16 @@ class OrderController extends Controller
                 $couponsel = false;
             }
             
+        }elseif($order->total <= 500){
+            $grandtotal = $order->total + 25;
+            $couponsel = false;
         }else{
             $couponsel = false;
             $grandtotal = $order->total;
         }
+        //Saving grand total
+        $order->grandtotal = $grandtotal;
+        $order->save();
 
         $info = Userinfo::where('order_id', "=", $order->id)->first();
 

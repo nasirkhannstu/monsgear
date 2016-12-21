@@ -12,7 +12,7 @@
 						<th>Order Id</th>
 						<th>Status</th>
 						<th>Method</th>
-						<th>Total</th>
+						<th>Grand Total</th>
 						<th>coupon</th>
 						<th>Created At</th>
 						<th></th>
@@ -24,7 +24,7 @@
 						<th scope="row">{{ $order->id }}</th>
 						<td>{{ $order->status }}</td>
 						<td>{{ $order->method }}</td>
-						<td>{{ $order->total }}</td>
+						<td>{{ $order->grandtotal }}</td>
 						<td>{{ $order->coupon }}</td>
 						<td>{{ date('M j, Y', strtotime($order->created_at)) }}</td>
 						<td>

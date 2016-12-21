@@ -2,7 +2,6 @@
 @section('title', '| Moonster-Gear')
 @section('stylsheets')
     {!! Html::style('css/account.css') !!}
-
 @endsection
 @section('content')
     <div id="main-wrap">
@@ -24,62 +23,26 @@
                     <span class="inline-caret">›</span>
                 </span>
                 <div class="nav-wrap">
-                    <a class="dashboard" href="/store/customer/account/">
-                        <svg style="width:1.5em; height:1.5em; margin-bottom: -0.4em; margin-right: .5em;">
-                            <use xlink:href="#icon-account"></use>
-                            <image style="width:1.5em; height:1.5em; margin-bottom: -0.4em; margin-right: .5em;" src="https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/fallback/account.png"></image>
-                        </svg>
-                        Dashboard Home</a>
+                    <a class="dashboard" href="{{url('myaccount')}}">
+                    <svg style="width:1.5em; height:1.5em; margin-bottom: -0.4em; margin-right: .5em;">
+                        <use xlink:href="#icon-account"></use>
+                        <image style="width:1.5em; height:1.5em; margin-bottom: -0.4em; margin-right: .5em;" src="https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/fallback/account.png"></image>
+                    </svg>
+                    Your Home</a>
 
-                    <a class="orders" href="/store/sales/order/history/">
-                        <svg style="width:1.5em; height:1.5em; margin-bottom: -0.4em; margin-right: .5em;">
-                            <use xlink:href="#icon-history"></use>
-                            <image style="width:1.5em; height:1.5em; margin-bottom: -0.4em; margin-right: .5em;" src="https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/fallback/history.png"></image>
-                        </svg>
-                        Order History</a>
+                <a class="orders" href="{{url('account/showorder')}}">
+                    <svg style="width:1.5em; height:1.5em; margin-bottom: -0.4em; margin-right: .5em;">
+                        <use xlink:href="#icon-history"></use>
+                        <image style="width:1.5em; height:1.5em; margin-bottom: -0.4em; margin-right: .5em;" src="https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/fallback/history.png"></image>
+                    </svg>
+                    Order History</a>
 
-
-                    <a class="points" href="/store/rewards/customer/">
-                        <svg style="width:1.5em; height:1.5em; margin-bottom: -0.4em; margin-right: .5em;">
-                            <use xlink:href="#icon-mns-coin"></use>
-                            <image style="width:1.5em; height:1.5em; margin-bottom: -0.4em; margin-right: .5em;" src="https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/fallback/mns-coin.png"></image>
-                        </svg>
-                        Points &amp; Rewards</a>
-
-                    <a class="referral" href="/store/rewardsref/customer/">
-                        <svg style="width:1.5em; height:1.5em; margin-bottom: -0.4em; margin-right: .5em;">
-                            <use xlink:href="#icon-referral-program"></use>
-                            <image style="width:1.5em; height:1.5em; margin-bottom: -0.4em; margin-right: .5em;" src="https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/fallback/referral-program.png"></image>
-                        </svg>
-                        Referral Program</a>
-
-                    <a class="cards" href="/store/usaepay/manage/">
-                        <svg style="width:1.5em; height:1.5em; margin-bottom: -0.3em; margin-right: .5em;">
-                            <use xlink:href="#icon-saved-cards"></use>
-                            <image style="width:1.5em; height:1.5em; margin-bottom: -0.3em; margin-right: .5em;" src="https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/fallback/saved-cards.png"></image>
-                        </svg>
-                        Saved Credit Cards</a>
-
-                    <a class="address" href="/store/customer/address/">
-                        <svg style="width:1.5em; height:1.5em; margin-bottom: -0.3em; margin-right: .5em;">
-                            <use xlink:href="#icon-address-book"></use>
-                            <image style="width:1.5em; height:1.5em; margin-bottom: -0.3em; margin-right: .5em;" src="https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/fallback/address-book.png"></image>
-                        </svg>
-                        Address Book</a>
-
-                    <a class="update" href="/store/customer/account/edit/">
-                        <svg style="width:1.5em; height:1.5em; margin-bottom: -0.4em; margin-right: .5em;">
-                            <use xlink:href="#icon-cog"></use>
-                            <image style="width:1.5em; height:1.5em; margin-bottom: -0.4em; margin-right: .5em;" src="https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/fallback/cog.png"></image>
-                        </svg>
-                        Update Profile</a>
-
-                    <a class="subscriptions" href="/store/customer/subscriptions/">
-                        <svg style="width:1.5em; height:1.5em; margin-bottom: -0.4em; margin-right: .5em;">
-                            <use xlink:href="#icon-email"></use>
-                            <image style="width:1.5em; height:1.5em; margin-bottom: -0.4em; margin-right: .5em;" src="https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/fallback/email.png"></image>
-                        </svg>
-                        Manage Subscriptions</a>
+                <a class="referral" href="">
+                    <svg style="width:1.5em; height:1.5em; margin-bottom: -0.4em; margin-right: .5em;">
+                        <use xlink:href="#icon-referral-program"></use>
+                        <image style="width:1.5em; height:1.5em; margin-bottom: -0.4em; margin-right: .5em;" src="https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/fallback/referral-program.png"></image>
+                    </svg>
+                    Manage Account</a>
                 </div>
             </div>			
         </div>
@@ -89,38 +52,41 @@
             <div class="dashboard clearfix">
                 <div class="simple-card-wrap">
                     <div class="card">
-                        <div class="box-account box-info dashboard-points-summary inner-wrap">
-
-                            <div class="margBot10 card-header">
-                                <h3 class="bottomBorder">Reward Points</h3>
-                            </div>
-                            <div class="dashboard-points-wrap">
-                                <div class="currency-image-wrap">
-                                    <img src="https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/reward-program/RC_Coin-stack-coin-on-top.png" alt="currency">
-                                </div>
-                                <div class="points">
-                                    <span class="point-wrap">10</span>
-                                </div>
-                                <a class="btn btn-white btn-sm points-button" href="https://www.muscleandstrength.com/store/rewards/customer/">
-                                    View Rewards                    </a>
-
-                            </div>
-                        </div>        
-                    </div>
-                    <div class="card">
                         <div class="contactInfo inner-wrap">
                             <div class="margBot10 card-header"><h3 class="bottomBorder">Profile Info</h3></div>
                             <div class="margBot5 row qg-full">
                                 <div class="margBot10">
-                                    <div class="blue smaller upper">Contact Name</div> towhed rahman<br>
+                                    <div class="blue smaller upper">Contact Name</div>
+                                    {{Auth::user()->name}}<br>
                                 </div>
 
                                 <div class="margBot10 ellipsis">
-                                    <div class="blue smaller upper">Contact Email</div> towhedurrone93@gmail.com<br>
+                                    <div class="blue smaller upper">Contact Email</div> {{Auth::user()->email}}<br>
                                 </div>
                             </div>
                             <div class="buttons qg-full margBot20">
-                                <a class="btn btn-white btn-sm" href="https://www.muscleandstrength.com/store/customer/account/edit/">Edit Contact Info</a> <a class="btn btn-white btn-sm" href="https://www.muscleandstrength.com/store/customer/account/edit/changepass/1/">Change Password</a>
+                                <a class="btn btn-white btn-sm" href="https://www.muscleandstrength.com/store/customer/account/edit/">Change Account Info</a>
+                            </div>
+                        </div>       
+                    </div>
+                    <div class="card">
+                        <div class="contactInfo inner-wrap">
+                            <div class="margBot10 card-header"><h3 class="bottomBorder">Shipping Address</h3></div>
+                            <div class="margBot5 row qg-full">
+                                @if($userinfo)
+                                <div class="address">
+                                <b>{{ $userinfo->fname }}</b><br>
+                                {{ $userinfo->address }}<br>
+                                {{ $userinfo->city }}<br>
+                                {{ $userinfo->state }}<br>
+                                {{ $userinfo->zip }}<br>
+                                {{ $userinfo->email }}
+                                </div>
+                                @endif
+                                
+                            </div>
+                            <div class="buttons qg-full margBot20">
+                                <a class="btn btn-white btn-sm" href="{{url('account/address')}}">Add/Edit Contact Info</a>
                             </div>
                         </div>        
                     </div>

@@ -41,6 +41,7 @@ Route::post('coupon', ['uses' => 'PagesController@getCoupon', 'as' => 'product.c
 
 Route::get('p/{slug}', ['uses' => 'PagesController@getSingleProduct', 'as' => 'blog.single'])->where('slug', '[\w\d\-\_]+');
 Route::get('b/{slug}', ['uses' => 'PagesController@getSingleBlog', 'as' => 'sBlog.single'])->where('slug', '[\w\d\-\_]+');
+Route::get('allblogs', ['uses' => 'PagesController@getAllblog', 'as' => 'blog.all']);
 
 //Order 
 Route::resource('order', 'OrderController', ['except' => 'create']);
@@ -98,5 +99,10 @@ Route::post('customer_password/reset','CustomerAuth\ResetPasswordController@rese
 Route::get('customer_password/reset/{token}','CustomerAuth\ForgotPasswordController@showResetForm');
 Route::get('customer_register','CustomerAuth\RegisterController@showRegisterForm');
 Route::post('customer_register','CustomerAuth\RegisterController@register');
-Route::get('myaccount','PagesController@showMyaccount');
 
+//Customer Account
+Route::get('myaccount', ['uses' =>'AccountController@showMyaccount', 'as' => 'account.index']);
+Route::get('account/address', ['uses' =>'AccountController@showAddress', 'as' => 'account.address']);
+Route::post('account/saveaddress', ['uses' =>'AccountController@save', 'as' => 'account.saveaddress']);
+Route::get('account/showorder', ['uses' =>'AccountController@showOrder', 'as' => 'account.showorder']);
+Route::get('account/showproducts/{id}', ['uses' =>'AccountController@showProducts', 'as' => 'account.showproducts']);

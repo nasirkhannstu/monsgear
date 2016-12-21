@@ -120,39 +120,31 @@
                 </div>
             </div>
         </div>
-        {{--{{ asset('uploads/product/1479325384.png') }}--}}
         <div class="main-content wide-format">
             <div class="tabs">
             </div> <!-- /#tabs -->
             <div class="todays-deals clearfix">
-                <h2 class="hstyle-two">Supplement Deals <a href="/store/promos.html" class="inner-link">View all 600+ deals</a></h2>
+                <h2 class="hstyle-two">Supplement Deals</h2>
                 <div class="product-grid-4up">
-
+                    <div class="views-align-center">
+                        <h4>A</h4>
+                    </div>
                     @foreach ($products as $key => $product)
-                       
+                        @if($product->category->name == "A")
+
                         <li class="item id-{{ $key + 1 }}">
-
                             <div class="inner-wrap">
-
                                 <div class="grid-product-header">
                                     <h4 class="product-name">
                                         <a href="{{ url('p/'.$product->slug)}}">{{ $product->name}}</a>
-
                                     </h4>
-                                    <!-- <div class="promoLabel">
-                                        <span class="label success">
-                                            Buy 1 Get 1 FREE!
-                                        </span>
-                                    </div> -->
                                 </div>
-
                                 <div class="product-image">
                                     <a href="{{ url('p/'.$product->slug)}}" title="{{ $product->name}}">
                                         <img src="{{ asset('uploads/product/'. $product->image) }}" alt="{{ $product->name}}">
                                     </a>
                                 </div>
                                 <div class="prodDataWrap">
-
                                     <div class="price-box">
                                         <!-- <span class="retail-price">
                                             <del><span class="price">$25.99</span></del>
@@ -162,15 +154,85 @@
                                     <div class="savings">
                                         <a href="{{ route('product.addToCart', ['id' => $product->id]) }}" class="btn btn-lg btn-flat-blue aloading basic-load validate-rating" style="font-size: .6em" role="button">Add To Cart</a>
                                     </div>
-
                                 </div>
                             </div>
                         </li>
+                        @endif
+                    @endforeach
+                </div>
+                <div class="product-grid-4up">
+                    <div class="views-align-center">
+                        <h4>B</h4>
+                    </div>
+                    @foreach ($products as $key => $product)
+                        @if($product->category->name == "B")
+
+                        <li class="item id-{{ $key + 1 }}">
+                            <div class="inner-wrap">
+                                <div class="grid-product-header">
+                                    <h4 class="product-name">
+                                        <a href="{{ url('p/'.$product->slug)}}">{{ $product->name}}</a>
+                                    </h4>
+                                </div>
+                                <div class="product-image">
+                                    <a href="{{ url('p/'.$product->slug)}}" title="{{ $product->name}}">
+                                        <img src="{{ asset('uploads/product/'. $product->image) }}" alt="{{ $product->name}}">
+                                    </a>
+                                </div>
+                                <div class="prodDataWrap">
+                                    <div class="price-box">
+                                        <!-- <span class="retail-price">
+                                            <del><span class="price">$25.99</span></del>
+                                        </span> -->
+                                        <span class="price">${{ $product->price}}</span>
+                                    </div>
+                                    <div class="savings">
+                                        <a href="{{ route('product.addToCart', ['id' => $product->id]) }}" class="btn btn-lg btn-flat-blue aloading basic-load validate-rating" style="font-size: .6em" role="button">Add To Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        @endif
+                    @endforeach
+                </div>
+                <div class="product-grid-4up">
+                    <div class="views-align-center">
+                        <h4>C</h4>
+                    </div>
+                    @foreach ($products as $key => $product)
+                        @if($product->category->name == "C")
+
+                        <li class="item id-{{ $key + 1 }}">
+                            <div class="inner-wrap">
+                                <div class="grid-product-header">
+                                    <h4 class="product-name">
+                                        <a href="{{ url('p/'.$product->slug)}}">{{ $product->name}}</a>
+                                    </h4>
+                                </div>
+                                <div class="product-image">
+                                    <a href="{{ url('p/'.$product->slug)}}" title="{{ $product->name}}">
+                                        <img src="{{ asset('uploads/product/'. $product->image) }}" alt="{{ $product->name}}">
+                                    </a>
+                                </div>
+                                <div class="prodDataWrap">
+                                    <div class="price-box">
+                                        <!-- <span class="retail-price">
+                                            <del><span class="price">$25.99</span></del>
+                                        </span> -->
+                                        <span class="price">${{ $product->price}}</span>
+                                    </div>
+                                    <div class="savings">
+                                        <a href="{{ route('product.addToCart', ['id' => $product->id]) }}" class="btn btn-lg btn-flat-blue aloading basic-load validate-rating" style="font-size: .6em" role="button">Add To Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        @endif
                     @endforeach
                 </div>
             </div>
             <div class="new clearfix">
-                <h2 class="hstyle-two">New At Muscle &amp; Strength <a href="/new" class="inner-link">View all new</a></h2>
+                <h2 class="hstyle-two">New At Muscle &amp; Strength <a href="{{url('allblogs')}}" class="inner-link">View all</a></h2>
                 <div class="content-grid-3up">
                     <div class="view view-newest-content-by-type view-id-newest_content_by_type view-display-id-posted_in view-dom-id-3739d303609e7db5c7e0ee32613b6362">
 
@@ -178,10 +240,10 @@
                             @foreach ($blogs as $key => $blog)
                                 <div class="item">
                                     <div class="inner-wrap">
-                                        <a href="{{ url('b/'.$blog->slug)}}" title="Fast Mass Program: The 4 Day Superset Split Workout">
+                                        <a href="{{ url('b/'.$blog->slug)}}" title="{{ $blog->title }}">
                                             <div class="nodeImgWrap">
                                                 <div class="nodeImg ">
-                                                    <img src="{{ asset('uploads/blogimg/'. $blog->image) }}" width="400" height="250" alt="Fast Mass Program: The 4 Day Superset Split Workout" /></div>
+                                                    <img src="{{ asset('uploads/blogimg/'. $blog->image) }}" width="400" height="250" alt="{{ $blog->title }}" /></div>
                                             </div>
                                             <div class="nodeData">
                                                 <div class="nodeTitle">
