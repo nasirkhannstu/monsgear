@@ -70,7 +70,23 @@ Route::resource('categories', 'CategoryController', ['except' => 'create']);
 Route::resource('coupons', 'CouponController');
 
 //Admin Panel
-Route::get('/adminpanel','AdminpanelController@getIndex');
+
+
+    Route::get('/adminpanel','AdminpanelController@getIndex');
+
+
+//customer account route
+
+
+
+    Route::get('myaccount', ['uses' =>'AccountController@showMyaccount', 'as' => 'account.index']);
+    Route::get('account/address', ['uses' =>'AccountController@showAddress', 'as' => 'account.address']);
+    Route::post('account/saveaddress', ['uses' =>'AccountController@save', 'as' => 'account.saveaddress']);
+    Route::get('account/showorder', ['uses' =>'AccountController@showOrder', 'as' => 'account.showorder']);
+    Route::get('account/showproducts/{id}', ['uses' =>'AccountController@showProducts', 'as' => 'account.showproducts']);
+
+
+
 
 Auth::routes();
 
@@ -106,3 +122,4 @@ Route::get('account/address', ['uses' =>'AccountController@showAddress', 'as' =>
 Route::post('account/saveaddress', ['uses' =>'AccountController@save', 'as' => 'account.saveaddress']);
 Route::get('account/showorder', ['uses' =>'AccountController@showOrder', 'as' => 'account.showorder']);
 Route::get('account/showproducts/{id}', ['uses' =>'AccountController@showProducts', 'as' => 'account.showproducts']);
+

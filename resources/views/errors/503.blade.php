@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Be right back.</title>
-
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
-
+@extends('main')
+@section('title', '| About')
+@section('content')
+    <div id="main-wrap">
         <style>
             html, body {
                 height: 100%;
@@ -36,12 +33,11 @@
                 margin-bottom: 40px;
             }
         </style>
-    </head>
-    <body>
+
         <div class="container">
             <div class="content">
-                <div class="title">Be right back.</div>
+                <div class="title">404 ERROR</div>
             </div>
         </div>
-    </body>
-</html>
+    </div>
+@endsection

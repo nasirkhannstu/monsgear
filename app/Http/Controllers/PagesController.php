@@ -14,6 +14,7 @@ use Session;
 use Mail;
 use Auth;
 
+
 class PagesController extends Controller
 {
     public function getIndex(){
@@ -193,7 +194,7 @@ class PagesController extends Controller
         return redirect('/');
 
     }
-    
+
 
 
 }

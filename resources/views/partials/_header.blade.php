@@ -19,13 +19,13 @@
     <span class="white">
       <svg  style="width:1.5em; height:1.5em;">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search_bold"></use>
-          <image style="width:1.5em; height:1.5em;" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://cdn.muscleandstrength.com/images/fallback/search_bold.png"></image>
+          <image style="width:1.5em; height:1.5em;" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="{{asset('uploads/icon/search_bold.png')}}"></image>
       </svg>
     </span>
     <span class="blue">
     <svg style="width:1.5em; height:1.5em;">
         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search-bold-blue"></use>
-        <image style="width:1.5em; height:1.5em;" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://cdn.muscleandstrength.com/images/fallback/search-bold-blue.png"></image>
+        <image style="width:1.5em; height:1.5em;" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="{{asset('uploads/icon/search-bold-blue.png')}}"></image>
     </svg>
   </span>
 
@@ -39,7 +39,7 @@
                     <button class="search-button" type="submit">
                         <svg style="width:1em; height:1em;">
                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search_bold"></use>
-                            <image style="width:1em; height:1em;" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://cdn.muscleandstrength.com/images/fallback/search_bold.png"></image>
+                            <image style="width:1em; height:1em;" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="{{asset('uploads/icon/search_bold.png')}}"></image>
                         </svg>
                     </button>
 
@@ -79,7 +79,7 @@
                 <button class="search-button" type="submit">
                     <svg style="width:1em; height:1em;">
                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search_bold"></use>
-                        <image style="width:1em; height:1em;" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://cdn.muscleandstrength.com/images/fallback/search_bold.png"></image>
+                        <image style="width:1em; height:1em;" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="{{asset('uploads/icon/search_bold.png')}}"></image>
                     </svg>
                 </button>
 
@@ -94,19 +94,19 @@
                 <a class="dtap" href="/store/help">
                     <svg style="width:2em; height:2em; max-width:100%;margin-bottom: -.2em;margin-top: .2em;" >
                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-customer-support"></use>
-                        <image style="width:2em; height:2em; max-width:100%;margin-bottom: -.2em;margin-top: .2em;"   src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://cdn.muscleandstrength.com/images/fallback/customer-support.png"></image>
+                        <image style="width:2em; height:2em; max-width:100%;margin-bottom: -.2em;margin-top: .2em;"   src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="{{asset('uploads/icon/customer-support.png')}}"></image>
                     </svg>
         <span class="text">Help
           <span class="white">
             <svg style="width:.4em; height:.4em; margin-top:-.6em">
                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-caret-white"></use>
-                <image style="width:.4em; height:.4em; margin-top:-.6em"  src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://cdn.muscleandstrength.com/images/fallback/caret-white.png"></image>
+                <image style="width:.4em; height:.4em; margin-top:-.6em"  src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="{{asset('uploads/icon/caret-white.png')}}"></image>
             </svg>
           </span>
           <span class="blue">
             <svg style="width:.4em; height:.4em; margin-top:-.6em">
                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-caret-blue"></use>
-                <image style="width:.4em; height:.4em; margin-top:-.6em"  src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://cdn.muscleandstrength.com/images/fallback/caret-blue.png"></image>
+                <image style="width:.4em; height:.4em; margin-top:-.6em"  src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="{{asset('uploads/icon/caret-blue.png')}}"></image>
             </svg>
           </span>
         </span>
@@ -116,8 +116,8 @@
 
                     <div class="gray margTop10 acenter border-wrap"><svg style="width:1.3em; height:1.3em; margin-left:-.3em; margin-bottom: -0.25em; margin-right: 0.1em;">
                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-support"></use>
-                        <image style="width:1.3em; height:1.3em; margin-left:-.3em; margin-bottom: -0.25em;" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" menu-data-src="https://cdn.muscleandstrength.com/images/fallback/support.png"></image>
-                    </svg> <span class="number-font">1-800-537-9910</span></div>
+                        <image style="width:1.3em; height:1.3em; margin-left:-.3em; margin-bottom: -0.25em;" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" menu-data-src="{{asset('uploads/icon/support.png')}}"></image>
+                    </svg> <span class="number-font">1-phone-number-9910</span></div>
                 </div>
 
             </div>
@@ -133,7 +133,7 @@
 
                     <svg style="  width: 2em; height: 2em; max-width: 100%; margin-top: 0.45em; margin-bottom: -0.45em;margin-left: -0.2em;" >
                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-store-cart"></use>
-                        <image style="  width: 2em; height: 2em; max-width: 100%; margin-top: 0.45em; margin-bottom: -0.45em;margin-left: -0.2em;"   src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://cdn.muscleandstrength.com/images/fallback/store-cart.png"></image>
+                        <image style="  width: 2em; height: 2em; max-width: 100%; margin-top: 0.45em; margin-bottom: -0.45em;margin-left: -0.2em;"   src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="{{asset('uploads/icon/store-cart.png')}}"></image>
                     </svg>
                     <span class="text">Cart</span>
                 </a>
@@ -142,7 +142,7 @@
 
                 <svg class="default-user-image" style="width:2em; height:2em; max-width:100%; margin-top: .3em;margin-bottom: -.15em;" >
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-user-login"></use>
-                    <image style="width:2em; height:2em; max-width:100%; margin-top: .3em;margin-bottom: -.15em;"   src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://cdn.muscleandstrength.com/images/fallback/user-login.png"></image>
+                    <image style="width:2em; height:2em; max-width:100%; margin-top: .3em;margin-bottom: -.15em;"   src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="{{asset('uploads/icon/user-login.png')}}"></image>
                 </svg>
 
                 <img class="authenticated-user-image" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" >
@@ -152,13 +152,13 @@
           <span class="white">
             <svg style="width:.4em; height:.4em; margin-top:-.6em">
                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-caret-white"></use>
-                <image style="width:.4em; height:.4em; margin-top:-.6em"  src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" menu-data-src="https://cdn.muscleandstrength.com/images/fallback/caret-white.png"></image>
+                <image style="width:.4em; height:.4em; margin-top:-.6em"  src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" menu-data-src="{{asset('uploads/icon/caret-white.png')}}"></image>
             </svg>
           </span>
           <span class="blue">
             <svg style="width:.4em; height:.4em; margin-top:-.6em">
                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-caret-blue"></use>
-                <image style="width:.4em; height:.4em; margin-top:-.6em"  src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" menu-data-src="https://cdn.muscleandstrength.com/images/fallback/caret-blue.png"></image>
+                <image style="width:.4em; height:.4em; margin-top:-.6em"  src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" menu-data-src="{{asset('uploads/icon/caret-blue.png')}}"></image>
             </svg>
           </span>
         </span>
@@ -169,13 +169,13 @@
           <span class="white">
             <svg style="width:.4em; height:.4em; margin-top:-.6em">
                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-caret-white"></use>
-                <image style="width:.4em; height:.4em; margin-top:-.6em"  src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" menu-data-src="https://cdn.muscleandstrength.com/images/fallback/caret-white.png"></image>
+                <image style="width:.4em; height:.4em; margin-top:-.6em"  src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" menu-data-src="{{asset('uploads/icon/caret-white.png')}}"></image>
             </svg>
           </span>
           <span class="blue">
             <svg style="width:.4em; height:.4em; margin-top:-.6em">
                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-caret-blue"></use>
-                <image style="width:.4em; height:.4em; margin-top:-.6em"  src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" menu-data-src="https://cdn.muscleandstrength.com/images/fallback/caret-blue.png"></image>
+                <image style="width:.4em; height:.4em; margin-top:-.6em"  src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" menu-data-src="{{asset('uploads/icon/caret-blue.png')}}"></image>
             </svg>
           </span>
         </span>
@@ -188,9 +188,9 @@
                         </div>
 
                         <ul class="account-menu">
-                            <li><a rel="nofollow" href="{{url('myaccount')}}"><svg style="width:1.3em; height:1.3em; margin-bottom:-.3em; margin-right: 0.1em;"><use xlink:href="#icon-account"/><image style="width:1.3em; height:1.3em; margin-bottom:-.3em; margin-right: 0.1em;" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" menu-data-src="https://cdn.muscleandstrength.com/images/fallback/account.png"/></svg> My Account</a></li>
+                            <li><a rel="nofollow" href="{{url('myaccount')}}"><svg style="width:1.3em; height:1.3em; margin-bottom:-.3em; margin-right: 0.1em;"><use xlink:href="#icon-account"/><image style="width:1.3em; height:1.3em; margin-bottom:-.3em; margin-right: 0.1em;" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" menu-data-src="{{asset('uploads/icon/account.png')}}"/></svg> My Account</a></li>
 
-                            <li><a rel="nofollow" href=""><svg style="width:1.3em; height:1.3em; margin-bottom:-.3em; margin-right: 0.1em;"><use xlink:href="#icon-history"/><image style="width:1.3em; height:1.3em; margin-bottom:-.3em; margin-right: 0.1em;" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" menu-data-src="https://cdn.muscleandstrength.com/images/fallback/history.png"/></svg> Order History</a></li>
+                            <li><a rel="nofollow" href="{{url('account/showorder')}}"><svg style="width:1.3em; height:1.3em; margin-bottom:-.3em; margin-right: 0.1em;"><use xlink:href="#icon-history"/><image style="width:1.3em; height:1.3em; margin-bottom:-.3em; margin-right: 0.1em;" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" menu-data-src="{{asset('uploads/icon/history.png')}}"/></svg> Order History</a></li>
                             <li>
                                 <a href="{{ url('/logout') }}"
                                    onclick="event.preventDefault();
