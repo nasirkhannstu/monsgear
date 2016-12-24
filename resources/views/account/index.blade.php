@@ -91,7 +91,7 @@
                         </div>        
                     </div>
                 </div>
-                <div class="addressBook">
+                <!-- <div class="addressBook">
                     <h3 class="bottomBorder margBot15">Address Book</h3>
 
                     <div class="address-list">
@@ -138,7 +138,7 @@
                         </div>
                     </div>
 
-                </div>
+                </div> -->
                 <!--
             <div class="reviews">
             <div class="title-buttons">

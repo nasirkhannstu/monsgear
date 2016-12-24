@@ -20,7 +20,6 @@
         @endif
     </div>
     <div id="main-wrap">
-        <div class="breadcrumb"><a href="/">Home</a> » Contact Us</div>
         <div class="aside">
             <div class="region region-sidebar-second">
                 <div class="form aside-widget">

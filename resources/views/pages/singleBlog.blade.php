@@ -177,9 +177,10 @@ googletag.cmd.push(function() { jQuery('#div-gpt-ad-1421356883797-0').rad({ allo
         </div>
       </div>
 	
-        <div class="nodeSummary">
-      <div class="field field-name-field-summary field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even">Does rep tempo have an effect on your gains? If so, which is better, fast tempo or slow tempo? Read this article to find out everything about rep tempo!</div></div></div>    </div>
-      </div><!-- End Node Header -->
+      <!-- <div class="nodeSummary">
+        <div class="field field-name-field-summary field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even">Does rep tempo have an effect on your gains? If so, which is better, fast tempo or slow tempo? Read this article to find out everything about rep tempo!</div></div></div>    
+      </div> -->
+    </div><!-- End Node Header -->
 
   <article class="nodeBody" itemscope="" itemtype="http://schema.org/Article">
     <meta itemprop="name" content="Should You Use Fast or Slow Rep Tempo for Maximal Gains?">
@@ -201,7 +202,7 @@ googletag.cmd.push(function() { jQuery('#div-gpt-ad-1421356883797-0').rad({ allo
 
   </article><!-- End Node Body -->
 
-  <div class="nodeFooter">
+  <!-- <div class="nodeFooter">
 
     <div class="stats-wrap">
       <div class="share-wrap">
@@ -235,7 +236,7 @@ googletag.cmd.push(function() { jQuery('#div-gpt-ad-1421356883797-0').rad({ allo
               </div>
           </div>   
       </div>
-    </div>
+    </div> -->
 
     
 
@@ -243,10 +244,8 @@ googletag.cmd.push(function() { jQuery('#div-gpt-ad-1421356883797-0').rad({ allo
 
   <div id="comments" class="comment-wrapper">
 	   <div class="commentHeader">
-	       <h3 class="blueStripe">{{ count($blog->comment) }} Comments
-            <span class="show-hide">
-                <a class="inner-link" hide="+ Post Comment" hclass="" sclass="" key="new-comment-form">- Post Comment</a>
-            </span>
+	       <h3 class="blueStripe">
+          Comment           
          </h3>	
       </div>
 

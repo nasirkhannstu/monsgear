@@ -10,7 +10,7 @@
         <div class="message-wrap">
             <div id="messages_product_view"></div>
         </div>
-        <div class="product-header" itemscope itemtype="http://schema.org/Product">
+        <div class="product-header">
             <div class="product-title-wrap">
                 <h1 class="product-title" itemprop="name">
                     {{ $product->name }}
@@ -29,7 +29,7 @@
                 </div>     
               </span>
               <div class="tagline">
-                Unique Free-Acid Creatine To Boost Size &amp; Strength!*
+                {!! $product->shortdes !!}
               </div>
             </div>
         </div>
@@ -109,15 +109,15 @@
                     <style type="text/css">
                         .creactorBlue {color:#009bb4;}
                     </style>
-                    Product Description
+                    {!! $product->body !!}
                 </div>
             </div>
         </div>
         <div class="allReviews">
             <div class="review-wrapper" data-pagesize="10">
                 <br>
-                <a name="comment-form"></a>
-                <div class="comment-form-new clearfix">
+                <h2>Comments</h2>
+                <div class="comment-form-new clearfix" style="border:0px">
                 <div class="new-comment-form" style="">
                  @foreach($product->pcomment as $comment)
                  @if($comment->visibility == 'visible')
@@ -132,18 +132,29 @@
                               <div class="field-items">
                                   <div class="field-item even">
                                       <h6>Date: {{ $comment->created_at }}</h6>
-                                      {{ $comment->body }}
+                                      <p style="color:black">{{ $comment->body }}</p>
+                                      
                                   </div>
                               </div>
                           </div>
                       </div>
-                      <div class="link">
+                      <!-- <div class="link">
                           <a href="/authors/fredrik-tonstad-varvik">View all by Fredrik Tonstad Vårvik »</a>
-                      </div>
+                      </div> -->
                   </div>
                 </div>
                  @endif
                  @endforeach
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="allReviews">
+            <div class="review-wrapper" data-pagesize="10">
+                <br>
+                <a name="comment-form"></a>
+                <div class="comment-form-new clearfix">
+                <div class="new-comment-form" style="">
                 {!! Form::open(array('route' => ['pcomments.store', $product->id], 'data-parsley-validate'=>'', 'class' => 'comment-form user-info-from-cookie user-info-from-cookie-processed', 'id' => 'comment-form', 'accept-charset' => 'UTF-8')) !!}
                 <div>
                   <div class="form-item form-type-textfield form-item-name">

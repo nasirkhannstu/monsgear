@@ -125,6 +125,9 @@ class OrderController extends Controller
         $cartProducts = Cartproduct::where('order_id', "=", $order->id)->first();
         $userInfo = Userinfo::where('order_id', "=", $order->id)->first();
 
+        if(!Session::has('newcart')){
+            return redirect()->route('pages.index');
+        }
         $cart = Session::get('newcart');
 
         if(Session::has('coupon')){
@@ -138,7 +141,10 @@ class OrderController extends Controller
         }else{
             $coupon = false;
             $couponTotal = false;
+            $order->grandtotal = $cart->totalPrice;
+            $order->save();
         }
+        
         Session::forget('cart');
         //order email
         return view('pages.showorder', ['products' => $cart->items, 'totalPrice' => $cart->totalPrice, 'coupon' => $coupon, 'couponTotal' => $couponTotal, 'order' => $order, 'info' => $userInfo]);

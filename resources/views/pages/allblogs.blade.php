@@ -97,39 +97,19 @@ googletag.cmd.push(function() { jQuery('#div-gpt-ad-1423352102131-0').rad({ allo
     
   <div class="content">
     <div class="h3">Must Read Articles</div>
-
-<ul class="popular-list">
-<li>
-  <a href="/expert-guides/muscle-building" title="Complete Muscle Building Guide: Learn How To Build Muscle">
-    <img src="https://cdn.muscleandstrength.com/sites/default/files/styles/thumbnail_145/public/max-gym-450_0.jpg?itok=T0iWGKBF" alt="">
-    <span>Complete Muscle Building Guide: Learn How To Build Muscle</span>
-  </a>
-</li>
-<li>
-  <a href="/articles/50-unwritten-gym-rules" title="50 Unwritten Gym Rules Every Bro Should Know!">
-    <img src="https://cdn.muscleandstrength.com/sites/default/files/styles/thumbnail_145/public/bro.jpg?itok=-8FbDjoR" alt="">
-    <span>50 Unwritten Gym Rules Every Bro Should Know!</span>
-  </a>
-</li>
-<li>
-  <a href="/expert-guides/pre-workout" title="How To Maximize Results With Pre-Workout Supplements">
-    <img src="https://cdn.muscleandstrength.com/sites/default/files/styles/thumbnail_145/public/prewo.jpg?itok=y23I7Ap3" alt="">
-    <span>How To Maximize Results With Pre-Workout Supplements</span>
-  </a>
-</li>
-<li>
-  <a href="/articles/movie-muscle-38-greatest-male-hollywood-physiques" title="The 38 Greatest Male Hollywood Physiques Of All Time">
-    <img src="https://cdn.muscleandstrength.com/sites/default/files/styles/thumbnail_145/public/movie.jpg?itok=VYH32QEW" alt="">
-    <span>The 38 Greatest Male Hollywood Physiques Of All Time</span>
-  </a>
-</li>
-<li>
-  <a href="/expert-guides/whey-protein" title="The Essential Guide To Whey Protein Supplements">
-    <img src="https://cdn.muscleandstrength.com/sites/default/files/styles/thumbnail_145/public/suppreviews.jpg?itok=tY2p4GE7" alt="">
-    <span>The Essential Guide To Whey Protein Supplements</span>
-  </a>
-</li>
-  </ul></div>
+      <ul class="popular-list">
+      @foreach ($blogs as $key => $blog)
+      @if($key <= 4)
+        <li>
+          <a href="{{ url('b/'.$blog->slug)}}" title="{{ $blog->title }}">
+            <img src="{{ asset('uploads/blogimg/'. $blog->image) }}" alt="{{ $blog->title }}">
+            <span>{{ $blog->title }}</span>
+          </a>
+        </li>
+      @endif
+      @endforeach
+      </ul>
+  </div>
 </div>
 <div id="block-block-9" class="block block-block">
 
