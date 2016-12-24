@@ -144,7 +144,13 @@ class OrderController extends Controller
             $order->grandtotal = $cart->totalPrice;
             $order->save();
         }
-        
+        //email
+
+
+
+
+
+
         Session::forget('cart');
         //order email
         return view('pages.showorder', ['products' => $cart->items, 'totalPrice' => $cart->totalPrice, 'coupon' => $coupon, 'couponTotal' => $couponTotal, 'order' => $order, 'info' => $userInfo]);

@@ -8,30 +8,18 @@
                 <div class="form aside-widget">
                     <img alt="Build Muscle, Lose Fat &amp; Stay Motivated!" src="https://cdn.muscleandstrength.com/sites/all/themes/mnsnew/images/signupbanner.jpg">
                     <div class="wrap">
-                        <p>M&amp;S weekly email newsletter sends you workouts, articles and motivation based on your goal.</p>
+                        <p>Monster Gear weekly email newsletter sends you workouts, articles and motivation based on your goal.</p>
 
-                        <form method="post" action="https://news.muscleandstrength.com/newsletter/error.html" name="icpsignup" id="icpsignup6636" accept-charset="UTF-8" onsubmit="return verifyRequired6636();">
-                            <input name="redirect" value="https://news.muscleandstrength.com/newsletter/thankyou.html" type="hidden">
-                            <input name="errorredirect" value="https://news.muscleandstrength.com/newsletter/error.html" type="hidden">
+                        <form method="post" action="" name="icpsignup" id="icpsignup6636" accept-charset="UTF-8" onsubmit="return verifyRequired6636();">
+                            <input name="redirect" value="" type="hidden">
+                            <input name="errorredirect" value="" type="hidden">
                             <div class="qg-full">
                                 <input name="fields_fname" placeholder="first name" type="text">
                             </div>
                             <div class="qg-full">
                                 <input name="fields_email" placeholder="email" type="text">
                             </div>
-                            <div class="qg-half">
-                                <select class="half" name="fields_goal">
-                                    <option value="Build Muscle">Build Muscle</option>
-                                    <option value="Lose Fat">Lose Fat</option>
-                                    <option value="Increase Strength">Increase Strength</option>
-                                    <option value="Body Transformation">Body Transformation</option>
-                                    <option value="Improve Sport">Improve Sport</option>
-                                    <option value="Endurance">Endurance</option>
-                                    <option value="Healthy Lifestyle">Healthy Lifestyle</option>
-                                    <option value="Contest Prep">Contest Prep</option>
-                                    <option value="Other">Other</option>
-                                </select>
-                            </div>
+
                             <div class="qg-half">
                                 <button class="btn-icon-muscle btn btn-blue half" type="submit" onclick="ga('send', 'event', { eventCategory: 'email', eventAction: 'signup', eventLabel: 'sidebar'});">
                                     <span class="text">Sign up</span>
@@ -49,30 +37,7 @@
                     </div>
 
                 </div>
-                <script type="text/javascript">
 
-                    var icpForm6636 = document.getElementById('icpsignup6636');
-
-                    function verifyRequired6636() {
-                        if (icpForm6636["fields_fname"].value == "") {
-                            icpForm6636["fields_fname"].focus();
-                            alert("The First Name field is required.");
-                            return false;
-                        }
-                        if (icpForm6636["fields_email"].value == "") {
-                            icpForm6636["fields_email"].focus();
-                            alert("The Email field is required.");
-                            return false;
-                        }
-                        jQuery.get('/token.php', function(txt) {
-                            jQuery('#icpsignup6636').append('<input type="hidden" id="6636_ts" name="ts" value="'+txt+'" />');
-                            jQuery('#icpsignup6636').attr('action', 'https://news.muscleandstrength.com/subscriptions/subscribe');
-                            icpForm6636.submit();
-                        });
-
-                        return false;
-                    }
-                </script>
 
 
                 <div id="block-block-17" class="block block-block">
@@ -82,10 +47,7 @@
                         <div style="position: relative; width: 302px; height: 370px; max-width: 100%;" class="radWrapper">
                             <!-- MNS_Site_Sidebar_Top -->
                             <div data-google-query-id="CMyqjovc7dACFcgQaAodPC0FuQ" id="div-gpt-ad-1423352102131-0" style="width: 302px; height: 370px; transform-origin: 0px 0px 0px; position: absolute; transform: scale(0.999);">
-                                <script type="text/javascript">
-                                    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1423352102131-0'); });
-                                    googletag.cmd.push(function() { jQuery('#div-gpt-ad-1423352102131-0').rad({ allowBiggerSizing: 'true'}); });
-                                </script>
+
                                 <div style="border: 0pt none;" id="google_ads_iframe_/9172182/MNS_Site_Sidebar_Top_0__container__"><iframe srcdoc="" style="border: 0px none; vertical-align: bottom;" marginheight="0" marginwidth="0" scrolling="no" name="google_ads_iframe_/9172182/MNS_Site_Sidebar_Top_0" title="3rd party ad content" id="google_ads_iframe_/9172182/MNS_Site_Sidebar_Top_0" frameborder="0" height="370" width="302"></iframe></div><iframe srcdoc="" style="border: 0px none; vertical-align: bottom; visibility: hidden; display: none;" marginheight="0" marginwidth="0" scrolling="no" name="google_ads_iframe_/9172182/MNS_Site_Sidebar_Top_0__hidden__" title="" id="google_ads_iframe_/9172182/MNS_Site_Sidebar_Top_0__hidden__" frameborder="0" height="0" width="0"></iframe></div>
                         </div>  </div>
                 </div>
@@ -135,10 +97,7 @@
                         <div style="position: relative; width: 302px; height: 370px; max-width: 100%;" class="radWrapper">
                             <!-- MNS_Site_Sidebar_Bottom -->
                             <div data-google-query-id="CJqqkYvc7dACFc-kaAodfBIKHA" id="div-gpt-ad-1421356883797-0" style="width: 302px; height: 370px; transform-origin: 0px 0px 0px; position: absolute; transform: scale(0.999);">
-                                <script type="text/javascript">
-                                    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1421356883797-0'); });
-                                    googletag.cmd.push(function() { jQuery('#div-gpt-ad-1421356883797-0').rad({ allowBiggerSizing: 'true' }); });
-                                </script>
+
                                 <div style="border: 0pt none;" id="google_ads_iframe_/9172182/MNS_Site_Sidebar_Bottom_0__container__"><iframe srcdoc="" style="border: 0px none; vertical-align: bottom;" marginheight="0" marginwidth="0" scrolling="no" name="google_ads_iframe_/9172182/MNS_Site_Sidebar_Bottom_0" title="3rd party ad content" id="google_ads_iframe_/9172182/MNS_Site_Sidebar_Bottom_0" frameborder="0" height="370" width="302"></iframe></div><iframe srcdoc="" style="border: 0px none; vertical-align: bottom; visibility: hidden; display: none;" marginheight="0" marginwidth="0" scrolling="no" name="google_ads_iframe_/9172182/MNS_Site_Sidebar_Bottom_0__hidden__" title="" id="google_ads_iframe_/9172182/MNS_Site_Sidebar_Bottom_0__hidden__" frameborder="0" height="0" width="0"></iframe></div>
                         </div>
                     </div>
@@ -165,33 +124,18 @@
 
                                 <div class="nodeHeader">
 
-                                    <h1 class="no-header">Contact Us</h1>
+                                    <h1 class="no-header">About Us</h1>
                                 </div><!-- End Node Header -->
 
                                 <article class="nodeBody">
 
                                     <div class="content clearfix">
                                         <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even"><h4 class="hstyle-three">
-                                                        Contact M&amp;S By Phone</h4>
-                                                    <p>Muscle &amp; Strength has a fully trained, friendly, and enthusiastic store support team that can help you with any question you have about your order. We practice what we preach, and all our support team workout and take supplements, so we can help answer any questions you might have about our products.</p>
-                                                    <p>We can also take orders by phone, so call us if you want to speak to someone about placing an order!</p>
-                                                    <p><strong>Customer Service Numbers</strong>:</p>
-                                                    <p class="rteindent1">Toll free: 1-800-537-9910<br>
-                                                        International: +1 803-695-0558<br>
-                                                        Fax: +1 803 227 0147</p>
-                                                    <p><strong>Support Hours:</strong></p>
-                                                    <p class="rteindent1">Monday-Friday: 8am to 11pm EST<br>
-                                                        Saturday &amp; Sunday: 9am to 5pm EST</p>
-                                                    <h3 class="hstyle-three">
-                                                        M&amp;S Mailing Address</h3>
-                                                    <p>Need to send us something? Here's where to find us:</p>
-                                                    <p class="rteindent1">Muscle &amp; Strength<br>
-                                                        1180 First Street South<br>
-                                                        Columbia, SC, 29209<br>
-                                                        USA</p>
-                                                    <h3 class="hstyle-three">
-                                                        Contact M&amp;S Via Email</h3>
-                                                    <p>We answer emails 7 days a week. Our customer service team is very fast, most weekday inquiries are answered in around an hour! Some questions may be more complicated and take time to resolve. Please use the form below to contact us by email.</p>
+                                                        About Monster Gear</h4>
+                                                    <p>Products are anabolic steroids and all related hormones, peptides, sarms, ancillary products. Reliability is guaranteed quality is the highest and best in the industry, if you pay by bit coin we ship the same day if you pay by Western Union Money Gram we ship within three days.</p>
+                                                    <p>Our lab. Are headed up by Berkeley PhD, We use strict quality controls to guarantee the best product on the market.</p>
+
+
                                                 </div></div></div>		    <div class="qg-twothird">
 
                                     </div><!-- End content -->

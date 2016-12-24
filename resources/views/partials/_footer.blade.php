@@ -10,10 +10,10 @@
                 </ul>
             </div>
             <div class="f-rewards">
-                <div class="h3">M&amp;S Rewards</div>
+
 
                 <div class="f-connect">
-                    <div class="h3">Follow M&amp;S</div>
+                    <div class="h3">Follow Monster Gear</div>
                     <ul class="follow">
                         <li><a rel="nofollow" href="https://web.facebook.com/monster.mylabs/">
                             <svg style="width:1.2em; height:1.2em;">
