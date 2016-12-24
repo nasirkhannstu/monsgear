@@ -252,15 +252,15 @@
                 </li>
 
                 <li>
-                    <a class="branch-link" href="/blog">Blog
+                    <a class="branch-link" href="{{url('allblogs')}}">Blog
                     </a>
                 </li>
                 <li>
-                    <a class="branch-link" href="/about">About
+                    <a class="branch-link" href="{{url('about')}}">About
                     </a>
                 </li>
                 <li>
-                    <a class="branch-link" href="/contact">Contact Us
+                    <a class="branch-link" href="{{url('contact')}}">Contact Us
                     </a>
                 </li>
 

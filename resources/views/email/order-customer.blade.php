@@ -28,38 +28,88 @@
                                                                 the payment <span tabindex="0" class="aBn" data-term="goog_1254349789"><span class="aQJ">within 3 hours</span></span> if during normal business hours.</p>
 
 
-                                                            <h2 style="color:#505050;display:block;font-family:Arial;font-size:60px;font-weight:bold;margin-top:10px;margin-right:0;margin-bottom:10px;margin-left:0;text-align:left;line-height:150%">Order: #5168</h2>
+                                                            <h2 style="color:#505050;display:block;font-family:Arial;font-size:60px;font-weight:bold;margin-top:10px;margin-right:0;margin-bottom:10px;margin-left:0;text-align:left;line-height:150%">Order Number:{{$order->id}}</h2>
 
                                                             <table style="width:100%;border:1px solid #eee" border="1" cellpadding="6" cellspacing="0"><thead><tr><th scope="col" style="text-align:left;border:1px solid #eee">Product</th>
                                                                     <th scope="col" style="text-align:left;border:1px solid #eee">Quantity</th>
                                                                     <th scope="col" style="text-align:left;border:1px solid #eee">Price</th>
-                                                                </tr></thead><tbody><tr><td style="text-align:left;vertical-align:middle;border:1px solid #eee;word-wrap:break-word">No Minimum<br><small></small></td>
-                                                                    <td style="text-align:left;vertical-align:middle;border:1px solid #eee">1</td>
-                                                                    <td style="text-align:left;vertical-align:middle;border:1px solid #eee"><span class="m_7710281554876410320amount">$200</span></td>
-                                                                </tr><tr><td style="text-align:left;vertical-align:middle;border:1px solid #eee;word-wrap:break-word">MastNPP 200mg -
-                                                                        Monster<br><small></small></td>
-                                                                    <td style="text-align:left;vertical-align:middle;border:1px solid #eee">1</td>
-                                                                    <td style="text-align:left;vertical-align:middle;border:1px solid #eee"><span class="m_7710281554876410320amount">$60</span></td>
-                                                                </tr></tbody><tfoot><tr><th scope="row" colspan="2" style="text-align:left;border:1px solid #eee;border-top-width:4px">Cart Subtotal:</th>
-                                                                    <td style="text-align:left;border:1px solid #eee;border-top-width:4px"><span class="m_7710281554876410320amount">$260</span></td>
-                                                                </tr><tr><th scope="row" colspan="2" style="text-align:left;border:1px solid #eee">Shipping:</th>
-                                                                    <td style="text-align:left;border:1px solid #eee"><span class="m_7710281554876410320amount">$25</span>&nbsp;<small>via Flat Rate</small></td>
-                                                                </tr><tr><th scope="row" colspan="2" style="text-align:left;border:1px solid #eee">Payment Method:</th>
-                                                                    <td style="text-align:left;border:1px solid #eee">WU</td>
-                                                                </tr><tr><th scope="row" colspan="2" style="text-align:left;border:1px solid #eee">Order Total:</th>
-                                                                    <td style="text-align:left;border:1px solid #eee"><span class="m_7710281554876410320amount">$285</span></td>
-                                                                </tr></tfoot></table><h2 style="color:#505050;display:block;font-family:Arial;font-size:60px;font-weight:bold;margin-top:10px;margin-right:0;margin-bottom:10px;margin-left:0;text-align:left;line-height:150%"></h2>
-                                                            <p><strong>Note:</strong> Test order</p>
+                                                                </tr></thead><tbody>
+                                                                @foreach($products as $product)
+                                                                <tr>
+
+                                                                    <td style="text-align:left;vertical-align:middle;border:1px solid #eee;word-wrap:break-word">{{ $product['item']['name'] }}<br><small></small></td>
+                                                                    <td style="text-align:left;vertical-align:middle;border:1px solid #eee">{{ $product['qty'] }}</td>
+                                                                    <td style="text-align:left;vertical-align:middle;border:1px solid #eee"><span class="m_7710281554876410320amount">${{ $product['price'] }}</span></td>
+
+                                                                </tr>
+                                                                @endforeach
+                                                                </tbody>
+                                                                <tfoot>
+                                                                    <tr>
+                                                                        <th scope="row" colspan="2" style="text-align:left;border:1px solid #eee;border-top-width:4px">Cart Subtotal:</th>
+                                                                        <td style="text-align:left;border:1px solid #eee;border-top-width:4px"><span class="m_7710281554876410320amount">${{ $totalPrice }}</span></td>
+                                                                    </tr>
+                                                                    @if($coupon)
+                                                                    <tr>
+                                                                        <th scope="row" colspan="2" style="text-align:left;border:1px solid #eee">Coupone({{ $coupon->name }})</th>
+                                                                        <td style="text-align:left;border:1px solid #eee">
+                                                                            <span class="m_7710281554876410320amount">
+                                                                                @if($coupon->dtype == 'cart')
+                                                                                    -{{ $coupon->amount }}
+                                                                                @endif
+                                                                                @if($coupon->dtype == 'percent')
+                                                                                    %{{ $coupon->amount }}
+                                                                                @endif
+                                                                            </td>
+                                                                    </tr>
+                                                                    @endif
+                                                                    <tr>
+                                                                        <th scope="row" colspan="2" style="text-align:left;border:1px solid #eee">Shipping:</th>
+                                                                        <td style="text-align:left;border:1px solid #eee">
+                                                                            <span class="m_7710281554876410320amount">
+                                                                                @if($coupon)
+                                                                                    @if($coupon->freeship == 'No' && $totalPrice <= 500)
+                                                                                        + $25
+                                                                                    @else
+                                                                                        $0
+                                                                                    @endif
+                                                                                @elseif($totalPrice <= 500)
+                                                                                    +$25
+                                                                                @else
+                                                                                    $0
+                                                                                @endif
+                                                                            </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row" colspan="2" style="text-align:left;border:1px solid #eee">Payment Method:</th>
+                                                                        <td style="text-align:left;border:1px solid #eee">{{ $order->method }}</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row" colspan="2" style="text-align:left;border:1px solid #eee">Order Total:</th>
+                                                                        <td style="text-align:left;border:1px solid #eee"><span class="m_7710281554876410320amount">
+                                                                                @if($couponTotal)
+                                                                                    ${{ $couponTotal }}
+                                                                                @else
+                                                                                    @if($totalPrice <= 500)
+                                                                                        ${{ $totalPrice + 25 }}
+                                                                                    @else
+                                                                                        ${{ $totalPrice }}
+                                                                                    @endif
+                                                                                @endif</span></td>
+                                                                    </tr>
+                                                                </tfoot>
+                                                            </table>
+                                                            <h2 style="color:#505050;display:block;font-family:Arial;font-size:60px;font-weight:bold;margin-top:10px;margin-right:0;margin-bottom:10px;margin-left:0;text-align:left;line-height:150%"></h2>
+                                                            <p><strong>Note:</strong>{{ $info->info }}</p>
                                                             <h2 style="color:#505050;display:block;font-family:Arial;font-size:60px;font-weight:bold;margin-top:10px;margin-right:0;margin-bottom:10px;margin-left:0;text-align:left;line-height:150%">Customer details</h2>
 
-                                                            <p><strong>Email:</strong> <a href="mailto:towhedurrone93@gmail.com" target="_blank">towhedurrone93@gmail.com</a></p>
+                                                            <p><strong>Email:</strong> <a href="mailto:towhedurrone93@gmail.com" target="_blank">{{ $info->email }}</a></p>
 
                                                             <table style="width:100%;vertical-align:top" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td valign="top" width="50%">
 
-                                                                        <h3 style="color:#505050;display:block;font-family:Arial;font-size:26px;font-weight:bold;margin-top:10px;margin-right:0;margin-bottom:10px;margin-left:0;text-align:left;line-height:150%">Billing address</h3>
+                                                                        <h3 style="color:#505050;display:block;font-family:Arial;font-size:26px;font-weight:bold;margin-top:10px;margin-right:0;margin-bottom:10px;margin-left:0;text-align:left;line-height:150%">Shipping address</h3>
 
-                                                                        <p>tow rah<br>1111 E Sunrise Blvd<br>315 Ft lauderdale fl
-                                                                            33304<br>fl, FL 33304</p>
+                                                                        <p><br>{{ $info->address }}<br>{{ $info->city }}<br>{{ $info->state }}<br>{{ $info->zip }}</p>
 
                                                                     </td>
 

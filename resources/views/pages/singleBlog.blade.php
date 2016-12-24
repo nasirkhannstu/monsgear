@@ -10,29 +10,16 @@
     <div class="form aside-widget">
 	<img alt="Build Muscle, Lose Fat &amp; Stay Motivated!" src="https://cdn.muscleandstrength.com/sites/all/themes/mnsnew/images/signupbanner.jpg">
 	<div class="wrap">
-		<p>M&amp;S weekly email newsletter sends you workouts, articles and motivation based on your goal.</p>
+		<p>Keep Yourself Updated!!! Subscribe Now.</p>
 
-		<form method="post" action="https://news.muscleandstrength.com/newsletter/error.html" name="icpsignup" id="icpsignup6636" accept-charset="UTF-8" onsubmit="return verifyRequired6636();">
-			<input name="redirect" value="https://news.muscleandstrength.com/newsletter/thankyou.html" type="hidden">
-			<input name="errorredirect" value="https://news.muscleandstrength.com/newsletter/error.html" type="hidden">
+		<form method="post" action="" name="icpsignup" id="icpsignup6636" accept-charset="UTF-8">
+			<input name="redirect" value="" type="hidden">
+			<input name="errorredirect" value="" type="hidden">
 			<div class="qg-full">
 				<input name="fields_fname" placeholder="first name" type="text">
 			</div>
 			<div class="qg-full">
 				<input name="fields_email" placeholder="email" type="text">
-			</div>
-			<div class="qg-half">
-				<select class="half" name="fields_goal">
-					<option value="Build Muscle">Build Muscle</option>
-					<option value="Lose Fat">Lose Fat</option>
-					<option value="Increase Strength">Increase Strength</option>
-					<option value="Body Transformation">Body Transformation</option>
-					<option value="Improve Sport">Improve Sport</option>
-					<option value="Endurance">Endurance</option>
-					<option value="Healthy Lifestyle">Healthy Lifestyle</option>
-					<option value="Contest Prep">Contest Prep</option>
-					<option value="Other">Other</option>
-				</select>
 			</div>
 			<div class="qg-half">
 				<button class="btn-icon-muscle btn btn-blue half" type="submit" onclick="ga('send', 'event', { eventCategory: 'email', eventAction: 'signup', eventLabel: 'sidebar'});">
@@ -49,47 +36,6 @@
 			</div>
 		</form>	
 	</div>
-
-</div>
-<script type="text/javascript">
-
-var icpForm6636 = document.getElementById('icpsignup6636');
-
-function verifyRequired6636() {
-  if (icpForm6636["fields_fname"].value == "") {
-    icpForm6636["fields_fname"].focus();
-    alert("The First Name field is required.");
-    return false;
-  }
-  if (icpForm6636["fields_email"].value == "") {
-    icpForm6636["fields_email"].focus();
-    alert("The Email field is required.");
-    return false;
-  }
-  jQuery.get('/token.php', function(txt) {
-    jQuery('#icpsignup6636').append('<input type="hidden" id="6636_ts" name="ts" value="'+txt+'" />');
-    jQuery('#icpsignup6636').attr('action', 'https://news.muscleandstrength.com/subscriptions/subscribe');
-    icpForm6636.submit();
-  });
-
-  return false;
-}
-</script>
-		
-
-<div id="block-block-17" class="block block-block">
-
-    
-  <div class="content">
-    <div class="radWrapper" style="position: relative; width: 302px; height: 370px; max-width: 100%;">
-<!-- MNS_Site_Sidebar_Top -->
-<div id="div-gpt-ad-1423352102131-0" style="width: 302px; height: 370px; transform-origin: 0px 0px 0px; position: absolute; transform: scale(0.999);" data-google-query-id="CJSkv8SHzNACFVIWjwod9uEPqA">
-<script type="text/javascript">
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1423352102131-0'); });
-googletag.cmd.push(function() { jQuery('#div-gpt-ad-1423352102131-0').rad({ allowBiggerSizing: 'true'}); });
-</script><div id="google_ads_iframe_/9172182/MNS_Site_Sidebar_Top_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/9172182/MNS_Site_Sidebar_Top_0" title="3rd party ad content" name="google_ads_iframe_/9172182/MNS_Site_Sidebar_Top_0" scrolling="no" marginwidth="0" marginheight="0" style="border: 0px none; vertical-align: bottom;" srcdoc="" width="302" height="370" frameborder="0"></iframe></div><iframe id="google_ads_iframe_/9172182/MNS_Site_Sidebar_Top_0__hidden__" title="" name="google_ads_iframe_/9172182/MNS_Site_Sidebar_Top_0__hidden__" scrolling="no" marginwidth="0" marginheight="0" style="border: 0px none; vertical-align: bottom; visibility: hidden; display: none;" srcdoc="" width="0" height="0" frameborder="0"></iframe>
-</div>
-</div>  </div>
 </div>
 <div id="block-mnsblock-mnssidebar-content" class="block block-mnsblock">
 
@@ -98,53 +44,17 @@ googletag.cmd.push(function() { jQuery('#div-gpt-ad-1423352102131-0').rad({ allo
     <div class="h3">Must Read Articles</div>
 
 <ul class="popular-list">
-<li>
-  <a href="/expert-guides/muscle-building" title="Complete Muscle Building Guide: Learn How To Build Muscle">
-    <img src="https://cdn.muscleandstrength.com/sites/default/files/styles/thumbnail_145/public/max-gym-450_0.jpg?itok=T0iWGKBF" alt="">
-    <span>Complete Muscle Building Guide: Learn How To Build Muscle</span>
-  </a>
-</li>
-<li>
-  <a href="/articles/50-unwritten-gym-rules" title="50 Unwritten Gym Rules Every Bro Should Know!">
-    <img src="https://cdn.muscleandstrength.com/sites/default/files/styles/thumbnail_145/public/bro.jpg?itok=-8FbDjoR" alt="">
-    <span>50 Unwritten Gym Rules Every Bro Should Know!</span>
-  </a>
-</li>
-<li>
-  <a href="/expert-guides/pre-workout" title="How To Maximize Results With Pre-Workout Supplements">
-    <img src="https://cdn.muscleandstrength.com/sites/default/files/styles/thumbnail_145/public/prewo.jpg?itok=y23I7Ap3" alt="">
-    <span>How To Maximize Results With Pre-Workout Supplements</span>
-  </a>
-</li>
-<li>
-  <a href="/articles/movie-muscle-38-greatest-male-hollywood-physiques" title="The 38 Greatest Male Hollywood Physiques Of All Time">
-    <img src="https://cdn.muscleandstrength.com/sites/default/files/styles/thumbnail_145/public/movie.jpg?itok=VYH32QEW" alt="">
-    <span>The 38 Greatest Male Hollywood Physiques Of All Time</span>
-  </a>
-</li>
-<li>
-  <a href="/expert-guides/whey-protein" title="The Essential Guide To Whey Protein Supplements">
-    <img src="https://cdn.muscleandstrength.com/sites/default/files/styles/thumbnail_145/public/suppreviews.jpg?itok=tY2p4GE7" alt="">
-    <span>The Essential Guide To Whey Protein Supplements</span>
-  </a>
-</li>
+	@foreach ($sideblogs as $key => $blog)
+	<li>
+	  <a href="{{ url('b/'.$blog->slug)}}" title="{{ $blog->title }}">
+	    <img src="{{ asset('uploads/blogimg/'. $blog->image) }}" alt="{{ $blog->title }}">
+	    <span>{{ $blog->title }}</span>
+	  </a>
+	</li>
+	@endforeach
   </ul></div>
 </div>
-<div id="block-block-9" class="block block-block">
 
-    
-  <div class="content">
-    <div class="radWrapper" style="position: relative; width: 302px; height: 370px; max-width: 100%;">
-<!-- MNS_Site_Sidebar_Bottom -->
-<div id="div-gpt-ad-1421356883797-0" style="width: 302px; height: 370px; transform-origin: 0px 0px 0px; position: absolute; transform: scale(0.999);" data-google-query-id="CKGc4cSHzNACFYsTjwodkZANnw">
-<script type="text/javascript">
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1421356883797-0'); });
-googletag.cmd.push(function() { jQuery('#div-gpt-ad-1421356883797-0').rad({ allowBiggerSizing: 'true' }); });
-</script><div id="google_ads_iframe_/9172182/MNS_Site_Sidebar_Bottom_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/9172182/MNS_Site_Sidebar_Bottom_0" title="3rd party ad content" name="google_ads_iframe_/9172182/MNS_Site_Sidebar_Bottom_0" scrolling="no" marginwidth="0" marginheight="0" style="border: 0px none; vertical-align: bottom;" srcdoc="" width="302" height="370" frameborder="0"></iframe></div><iframe id="google_ads_iframe_/9172182/MNS_Site_Sidebar_Bottom_0__hidden__" title="" name="google_ads_iframe_/9172182/MNS_Site_Sidebar_Bottom_0__hidden__" scrolling="no" marginwidth="0" marginheight="0" style="border: 0px none; vertical-align: bottom; visibility: hidden; display: none;" srcdoc="" width="0" height="0" frameborder="0"></iframe>
-</div>
-</div>
-  </div>
-</div>
   </div>
           </div>
     <div class="aside-shadow" style="top: 169.083px;"> </div>
@@ -183,13 +93,14 @@ googletag.cmd.push(function() { jQuery('#div-gpt-ad-1421356883797-0').rad({ allo
     </div><!-- End Node Header -->
 
   <article class="nodeBody" itemscope="" itemtype="http://schema.org/Article">
-    <meta itemprop="name" content="Should You Use Fast or Slow Rep Tempo for Maximal Gains?">
-    <meta itemprop="headline" content="Should You Use Fast or Slow Rep Tempo for Maximal Gains?">
-    <meta itemprop="description" content="Does rep tempo have an effect on your gains? If so, which is better, fast tempo or slow tempo? Read this article to find out everything about rep tempo!">
-    <meta itemprop="image" content="https://cdn.muscleandstrength.com/sites/default/files/field/image/article/rep-tempo-thumb.jpg">
-    <meta itemprop="author" content="Fredrik Tonstad Vårvik">
-    <meta itemprop="datePublished" content="Nov 2016">
-    <div class="content clearfix" itemprop="articleBody">
+  <!-- FOR SEO  -->
+    <meta itemprop="name" content="">
+    <meta itemprop="headline" content="">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="">
+    <meta itemprop="author" content="">
+    <meta itemprop="datePublished" content="">
+    <div class="content clearfix" itemprop="">
       
       <div class="field field-name-body field-type-text-with-summary field-label-hidden">
         <div class="field-items">
@@ -268,9 +179,9 @@ googletag.cmd.push(function() { jQuery('#div-gpt-ad-1421356883797-0').rad({ allo
                   </div>
               </div>
           </div>
-          <div class="link">
+          <!-- <div class="link">
               <a href="/authors/fredrik-tonstad-varvik">View all by Fredrik Tonstad Vårvik »</a>
-          </div>
+          </div> -->
       </div>
     </div>
      @endif

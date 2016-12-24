@@ -13,9 +13,14 @@ use App\Order;
 use App\Coupon;
 use Session;
 use Auth;
+use Mail;
 
 class OrderController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('customer.auth', ['except' => ['getShowOrder', 'store']]);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -129,7 +134,7 @@ class OrderController extends Controller
             return redirect()->route('pages.index');
         }
         $cart = Session::get('newcart');
-
+        $subtotal = $cart->totalPrice;
         if(Session::has('coupon')){
             $coupon = Session::get('coupon');
             $getTotal = new Functionss;
@@ -141,18 +146,43 @@ class OrderController extends Controller
         }else{
             $coupon = false;
             $couponTotal = false;
-            $order->grandtotal = $cart->totalPrice;
-            $order->save();
+
+            if($subtotal <= 500){
+                $order->grandtotal = $subtotal + 25;
+                $order->save();
+            }else{
+                $order->grandtotal = $subtotal;
+                $order->save();
+            }
         }
         //email
 
+        $data1 = array(
+            'email' => $userInfo->email,
+            'subject' => 'Your Monster Gear Order Details',
 
+        );
 
+        Mail::send('email.order-customer', ['products' => $cart->items, 'totalPrice' => $cart->totalPrice, 'coupon' => $coupon, 'couponTotal' => $couponTotal, 'order' => $order, 'info' => $userInfo], function ($message) use ($data1) {
+            $message ->from('t@sectorbravo.com','Monster');
+            $message->to($data1['email']);
+            $message->subject($data1['subject']);
+        });
+//admin order email
+        $data2 = array(
+            'email' => 't@sectorbravo1.com',
+            'subject' => '[Monster Gear]New customer order #'.$order->id.',Date '.$order->created_at,
 
+        );
 
+        Mail::send('email.order-admin', ['products' => $cart->items, 'totalPrice' => $cart->totalPrice, 'coupon' => $coupon, 'couponTotal' => $couponTotal, 'order' => $order, 'info' => $userInfo], function ($message) use ($data2) {
+            $message ->from('t@sectorbravo.com');
+            $message->to($data2['email']);
+            $message->subject($data2['subject']);
+        });
 
         Session::forget('cart');
-        //order email
+
         return view('pages.showorder', ['products' => $cart->items, 'totalPrice' => $cart->totalPrice, 'coupon' => $coupon, 'couponTotal' => $couponTotal, 'order' => $order, 'info' => $userInfo]);
 
         // return view('pages.showorder')->withOrder($order)->withProducts($cartProducts)->withInfo($userInfo);

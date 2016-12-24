@@ -86,7 +86,8 @@
                             <div id="payment-progress-opcheckout">
                                 <p>
                                     Order Total-
-                                    <span class="floatRight">                                        @if($couponTotal)
+                                    <span class="floatRight">
+                                        @if($couponTotal)
                                             ${{ $couponTotal }}
                                         @else
                                             @if($totalPrice <= 500)

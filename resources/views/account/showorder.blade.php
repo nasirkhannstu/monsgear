@@ -29,13 +29,6 @@
                         <image style="width:1.5em; height:1.5em; margin-bottom: -0.4em; margin-right: .5em;" src="https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/fallback/history.png"></image>
                     </svg>
                     Order History</a>
-
-                <a class="referral" href="">
-                    <svg style="width:1.5em; height:1.5em; margin-bottom: -0.4em; margin-right: .5em;">
-                        <use xlink:href="#icon-referral-program"></use>
-                        <image style="width:1.5em; height:1.5em; margin-bottom: -0.4em; margin-right: .5em;" src="https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/fallback/referral-program.png"></image>
-                    </svg>
-                    Manage Account</a>
             </div>
         </div>			</div>
     <div style="top: 157.25px;" class="aside-shadow"></div>
@@ -46,11 +39,10 @@
         <table class="table table-hover">
         <thead> 
             <tr> 
-                <th>Order Id</th>
+                <th>Order Number</th>
                 <th>Order Status</th>
-                <th>Method</th>
                 <th>Total</th>
-                <th>Created At</th>
+                <th>Order Date</th>
                 <th></th>
             </tr> 
         </thead> 
@@ -59,7 +51,6 @@
             <tr>
                 <td scope="row">{{ $order->id }}</td>
                 <td>{{ $order->status }}</td>
-                <td>{{ $order->method }}</td>
                 <td>{{ $order->grandtotal }}</td>
                 <td>{{ date('M j, Y', strtotime($order->created_at)) }}</td>
                 <td>

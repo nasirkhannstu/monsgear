@@ -5,15 +5,6 @@
 @endsection
 @section('content')
     <div id="main-wrap">
-        <div class="breadcrumb">
-            <a href="https://www.muscleandstrength.com/" title="Home" id="bc-home" class="breadcrumb-0">
-                Home »</a>
-
-
-            <a href="https://www.muscleandstrength.com/store/" title="Store" id="bc-store" class="breadcrumb-1">
-                Store »</a>
-            My Account
-        </div>
 
         <!--[if (gte IE 9)|(gt IEMobile 7)]><!-->
         <!--<![endif]-->
@@ -36,13 +27,6 @@
                         <image style="width:1.5em; height:1.5em; margin-bottom: -0.4em; margin-right: .5em;" src="https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/fallback/history.png"></image>
                     </svg>
                     Order History</a>
-
-                <a class="referral" href="">
-                    <svg style="width:1.5em; height:1.5em; margin-bottom: -0.4em; margin-right: .5em;">
-                        <use xlink:href="#icon-referral-program"></use>
-                        <image style="width:1.5em; height:1.5em; margin-bottom: -0.4em; margin-right: .5em;" src="https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/fallback/referral-program.png"></image>
-                    </svg>
-                    Manage Account</a>
                 </div>
             </div>			
         </div>
@@ -63,9 +47,6 @@
                                 <div class="margBot10 ellipsis">
                                     <div class="blue smaller upper">Contact Email</div> {{Auth::user()->email}}<br>
                                 </div>
-                            </div>
-                            <div class="buttons qg-full margBot20">
-                                <a class="btn btn-white btn-sm" href="https://www.muscleandstrength.com/store/customer/account/edit/">Change Account Info</a>
                             </div>
                         </div>       
                     </div>

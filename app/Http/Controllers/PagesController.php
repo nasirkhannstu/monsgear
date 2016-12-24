@@ -25,7 +25,6 @@ class PagesController extends Controller
     }
     public function getAllblog(){
         $blogs = Blog::orderBy('id','desc')->get();
-
         return view('pages.allblogs')->withBlogs($blogs);
     }
     // public function getSingle($id){
@@ -39,7 +38,8 @@ class PagesController extends Controller
 
     public function getSingleBlog($slug){
         $blog = Blog::where('slug', "=", $slug)->first();
-        return view('pages.singleBlog')->withBlog($blog);
+        $sideblogs = Blog::orderBy('id','desc')->limit(5)->get();
+        return view('pages.singleBlog')->withBlog($blog)->withSideblogs($sideblogs);
     }
     public function getCheckout(){
         if(Session::has('coupon')){
@@ -160,7 +160,8 @@ class PagesController extends Controller
     }
 
     public function showContact(){
-        return view('pages.contact');
+        $sideblogs = Blog::orderBy('id','desc')->limit(5)->get();
+        return view('pages.contact')->withSideblogs($sideblogs);
     }
     public function showAbout(){
         return view('pages.about');
