@@ -12,6 +12,10 @@ use Session;
 
 class ProductController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('customer.auth', ['except' => ['getAddToCart', 'getAddToCartC', 'getReduceByOneC', 'getRemoveItem', 'getCart']]);
+    }
     /**
      * Display a listing of the resource.
      *

@@ -29,13 +29,6 @@
                         <image style="width:1.5em; height:1.5em; margin-bottom: -0.4em; margin-right: .5em;" src="https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/fallback/history.png"></image>
                     </svg>
                     Order History</a>
-
-                <a class="referral" href="">
-                    <svg style="width:1.5em; height:1.5em; margin-bottom: -0.4em; margin-right: .5em;">
-                        <use xlink:href="#icon-referral-program"></use>
-                        <image style="width:1.5em; height:1.5em; margin-bottom: -0.4em; margin-right: .5em;" src="https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/fallback/referral-program.png"></image>
-                    </svg>
-                    Manage Account</a>
             </div>
         </div>			</div>
     <div style="top: 157.25px;" class="aside-shadow"></div>
@@ -72,7 +65,7 @@
                         </label>
 
                         <span class="required-tag">*</span>
-                        @if(isset($userinfo))
+                        @if($userinfo)
                         {{Form::text('lname',$userinfo->lname,array('class' => 'input-text', 'required'=>'','maxlength'=>'255'))}}
                         @else
                         {{Form::text('lname',null,array('class' => 'input-text', 'required'=>'','maxlength'=>'255','placeholder' =>'Last Name'))}}
@@ -84,7 +77,7 @@
             <div class="section-break">&nbsp;</div>
 
             <div class="col-full">
-                @if(isset($userinfo))
+                @if($userinfo)
                 {{Form::text('company',$userinfo->company,array('class' => 'input-text','maxlength'=>'255'))}}
                 @else
                 {{Form::text('company',null,array('class' => 'input-text','maxlength'=>'255','placeholder' =>'Company'))}}
@@ -94,7 +87,7 @@
 
             <div class="col-full">
                 <span class="required-tag">*</span>
-                @if(isset($userinfo))
+                @if($userinfo)
                 {{Form::text('address',$userinfo->address,array('class' => 'input-text', 'required'=>'','maxlength'=>'255'))}}
                 @else
                 {{Form::text('address',null,array('class' => 'input-text', 'required'=>'','maxlength'=>'255','placeholder' =>'Address'))}}
@@ -104,14 +97,14 @@
             <div class="row">
                 <div class="input-box col-left">
                     <span class="required-tag">*</span>
-                    @if(isset($userinfo))
+                    @if($userinfo)
                     {{Form::text('city',$userinfo->city,array('class' => 'input-text', 'required'=>'','maxlength'=>'255'))}}
                     @else
                     {{Form::text('city',null,array('class' => 'input-text', 'required'=>'','maxlength'=>'255','placeholder' =>'City'))}}
                     @endif
                 </div>
                 <div class="input-box col-right">
-                    @if(isset($userinfo))
+                    @if($userinfo)
                     {{Form::text('state',$userinfo->state,array('class' => 'input-text', 'required'=>'','maxlength'=>'255'))}}
                     @else
                     {{Form::text('state',null,array('class' => 'input-text', 'required'=>'','maxlength'=>'255','placeholder' =>'State'))}}
@@ -122,7 +115,7 @@
             <div class="row">
                 <div class="input-box col-left">
                     <span class="required-tag">*</span>
-                    @if(isset($userinfo))
+                    @if($userinfo)
                     {{Form::text('zip',$userinfo->zip,array('class' => 'input-text', 'required'=>'','maxlength'=>'255'))}}
                     @else
                     {{Form::text('zip',null,array('class' => 'input-text', 'required'=>'','maxlength'=>'255','placeholder' =>'Zip Code'))}}
@@ -130,7 +123,7 @@
                 </div>
                 <div class="input-box col-right">
                     <span class="required-tag">*</span>
-                    @if(isset($userinfo))
+                    @if($userinfo)
                     {{Form::text('email',$userinfo->email,array('class' => 'input-text', 'required'=>'','maxlength'=>'255'))}}
                     @else
                     {{Form::text('email',null,array('class' => 'input-text', 'required'=>'','maxlength'=>'255','placeholder' =>'E-mail'))}}
@@ -140,14 +133,14 @@
             <div class="section-break">&nbsp;</div>
             <div class="row">
                 <div class="input-box col-left">
-                    @if(isset($userinfo))
+                    @if($userinfo)
                     {{Form::text('board',$userinfo->board,array('class' => 'input-text','maxlength'=>'255'))}}
                     @else
                     {{Form::text('board',null,array('class' => 'input-text','maxlength'=>'255','placeholder' =>'Board Id'))}}
                     @endif
                 </div>
                 <div class="input-box col-right">
-                    @if(isset($userinfo))
+                    @if($userinfo)
                     {{Form::text('info',$userinfo->info,array('class' => 'input-text','maxlength'=>'255'))}}
                     @else
                     {{Form::text('info',null,array('class' => 'input-text','maxlength'=>'255','placeholder' =>'Additional Information'))}}
@@ -163,7 +156,7 @@
                 <span class="required smaller">* Required Fields</span>
             </div> -->
             <div class="section-break">&nbsp;</div>
-            {{Form::submit('Order Now',array('class' => 'btn btn-blue btn-auto'))}}
+            {{Form::submit('Submit',array('class' => 'btn btn-blue btn-auto'))}}
 
         {!! Form::close() !!}
         </div>

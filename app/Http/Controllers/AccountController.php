@@ -15,6 +15,10 @@ use Auth;
 
 class AccountController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function showMyaccount(){
     	$userId = Auth::user()->id;
         if(Userinfo::where('userId', "=", $userId)->exists()){
@@ -101,8 +105,15 @@ class AccountController extends Controller
     public function showProducts($id){
         $order = Order::find($id);
         $cartproducts = Cartproduct::where('order_id', "=", $order->id)->get();
+        $userinfo = Userinfo::where('order_id', "=", $order->id)->first();
         $mproducts = Product::all();
-        return view('account.showproducts')->withCartproducts($cartproducts)->withMproducts($mproducts);
+        $couponsel = false;
+        if($order->coupon != "NULL"){
+            $couponsel = Coupon::where('id', "=", $order->coupon)->first();
+        }else{
+            $couponsel == false;
+        }
+        return view('account.showproducts')->withCartproducts($cartproducts)->withMproducts($mproducts)->withOrder($order)->withCouponsel($couponsel)->withUserinfo($userinfo);
     }
 
 }

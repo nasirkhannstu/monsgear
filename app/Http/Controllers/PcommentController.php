@@ -10,6 +10,10 @@ use Session;
 
 class PcommentController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('customer.auth', ['except' => 'store']);
+    }
     /**
      * Display a listing of the resource.
      *

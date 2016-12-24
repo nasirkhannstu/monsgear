@@ -29,25 +29,20 @@
                         <image style="width:1.5em; height:1.5em; margin-bottom: -0.4em; margin-right: .5em;" src="https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/fallback/history.png"></image>
                     </svg>
                     Order History</a>
-
-                <a class="referral" href="">
-                    <svg style="width:1.5em; height:1.5em; margin-bottom: -0.4em; margin-right: .5em;">
-                        <use xlink:href="#icon-referral-program"></use>
-                        <image style="width:1.5em; height:1.5em; margin-bottom: -0.4em; margin-right: .5em;" src="https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/fallback/referral-program.png"></image>
-                    </svg>
-                    Manage Account</a>
             </div>
         </div>			</div>
     <div style="top: 157.25px;" class="aside-shadow"></div>
 
     <div class="main-content">
-        <h1>Add/Edit Address</h1>
+        <h1>Order Details</h1>
+        <br>
+        <h6>Order #{{ $order->id }} was placed on {{$order->created_at}} and is Currently {{ $order->status }}</h6>
         <table  class="table table-hover">
         <thead> 
             <tr> 
                 <th>Product Name</th>
-                <th>Product Price</th>
                 <th>Product Quantity</th>
+                <th>Product Price</th>
             </tr> 
         </thead>
         <tbody>
@@ -57,9 +52,12 @@
                 <td>
                 @foreach ($mproducts as $mproduct)
                     @if($cartproduct->product_id == $mproduct->id)
-                    {{ $mproduct->name }}({{ $mproduct->category_id }})
+                    {{ $mproduct->name }}
                     @endif
                 @endforeach
+                </td>
+                <td>
+                    {{$cartproduct->product_amount}}
                 </td>
                 <td>
                 @foreach ($mproducts as $mproduct)
@@ -68,14 +66,57 @@
                     @endif
                 @endforeach
                 </td>
-                <td>
-                    {{$cartproduct->product_amount}}
-                </td>
             </tr>
         
         @endforeach
+            <tr><th>
+                Cart Subtotal
+                </th><td></td><th>
+                {{$order->total}}
+            </th></tr>
+            <tr><th>
+                Shipping
+                </th><td></td><th>
+                @if($couponsel)
+                    @if($couponsel->freeship == 'No' && $order->total <= 500)
+                        + $25
+                    @else
+                        $0
+                    @endif
+                @elseif($order->total <= 500)
+                    + $25
+                @else
+                    $0
+                @endif
+            </th></tr>
+            @if($couponsel)
+            <tr><th>
+                Coupon
+                </th><td></td><th>
+                {{ $couponsel->name }}
+            </th></tr>
+            @endif
+            <tr><th>
+                Payment Method
+                </th><td></td><th>
+                {{$order->method}}
+            </th></tr>
+            <tr><th>
+                Grand Total
+                </th><td></td><th>
+                {{$order->grandtotal}}
+            </th></tr>
         </tbody> 
         </table>
+
+        <h3>Customer Details</h3>
+        E-mail: {{ $userinfo->email }}
+
+        <h3>Customer Details</h3>
+        Address: {{ $userinfo->address }}<br>
+        City: {{ $userinfo->city }}<br>
+        State: {{ $userinfo->state }}<br>
+        Zip: {{ $userinfo->zip }}
     </div>
 
 </div>

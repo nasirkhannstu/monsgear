@@ -7,9 +7,7 @@
 @section('content')
 <div id="main-wrap" >
     <div class="main-content">
-        <div class="message-wrap">
-            <div id="messages_product_view"></div>
-        </div>
+        @include('partials._messages')
         <div class="product-header">
             <div class="product-title-wrap">
                 <h1 class="product-title" itemprop="name">

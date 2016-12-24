@@ -9,6 +9,10 @@ use Session;
 
 class CategoryController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('customer.auth');
+    }
     /**
      * Display a listing of the resource.
      *

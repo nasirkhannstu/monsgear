@@ -16,6 +16,10 @@ use Auth;
 
 class OrderController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('customer.auth', ['except' => ['getShowOrder', 'store']]);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -129,7 +133,7 @@ class OrderController extends Controller
             return redirect()->route('pages.index');
         }
         $cart = Session::get('newcart');
-
+        $subtotal = $cart->totalPrice;
         if(Session::has('coupon')){
             $coupon = Session::get('coupon');
             $getTotal = new Functionss;
@@ -141,8 +145,14 @@ class OrderController extends Controller
         }else{
             $coupon = false;
             $couponTotal = false;
-            $order->grandtotal = $cart->totalPrice;
-            $order->save();
+
+            if($subtotal <= 500){
+                $order->grandtotal = $subtotal + 25;
+                $order->save();
+            }else{
+                $order->grandtotal = $subtotal;
+                $order->save();
+            }
         }
         
         Session::forget('cart');
