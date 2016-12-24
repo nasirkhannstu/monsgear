@@ -1,5 +1,5 @@
 @extends('admin')
-@section('title', '| Moonster-Gear')
+@section('title', '| Coupon Create')
 
 <script>
 $( function() {

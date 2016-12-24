@@ -1,5 +1,5 @@
 @extends('main')
-@section('title', '| Moonster-Gear')
+@section('title', '| Single Blog')
 @section('stylsheets')
 
 @endsection

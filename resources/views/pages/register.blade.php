@@ -1,5 +1,5 @@
 @extends('main')
-@section('title', '| Moonster-Gear| Regeister')
+@section('title', '| Regeister')
 @section('stylsheets')
 
     {!! Html::style('css/register.css') !!}

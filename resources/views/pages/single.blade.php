@@ -1,5 +1,5 @@
 @extends('main')
-@section('title', '| Moonster-Gear')
+@section('title', '| Single')
 @section('stylsheets')
   {!! Html::style('css/cart/app.css') !!}
   {!! Html::style('css/appSingle1.css') !!}

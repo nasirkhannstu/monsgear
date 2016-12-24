@@ -25,7 +25,8 @@ class PagesController extends Controller
     }
     public function getAllblog(){
         $blogs = Blog::orderBy('id','desc')->get();
-        return view('pages.allblogs')->withBlogs($blogs);
+        $sideblogs = Blog::orderBy('id','desc')->limit(5)->get();
+        return view('pages.allblogs')->withBlogs($blogs)->withSideblogs($sideblogs);
     }
     // public function getSingle($id){
     // 	$product = Product::find($id);
@@ -164,7 +165,8 @@ class PagesController extends Controller
         return view('pages.contact')->withSideblogs($sideblogs);
     }
     public function showAbout(){
-        return view('pages.about');
+        $sideblogs = Blog::orderBy('id','desc')->limit(5)->get();
+        return view('pages.about')->withSideblogs($sideblogs);
     }
 
     public function postContact(Request $request)

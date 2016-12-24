@@ -1,5 +1,5 @@
 @extends('admin')
-@section('title', '| Moonster-Gear')
+@section('title', '| Coupon Create')
 @section('stylsheets')
 	{!! Html::style('css/select2.min.css') !!}
 @endsection

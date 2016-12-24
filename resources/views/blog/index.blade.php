@@ -1,5 +1,5 @@
 @extends('admin')
-@section('title', '| Moonster-Gear')
+@section('title', '| Blog Index')
 @section('content')
 	<div class="row">
 		<div class="panel panel-info">

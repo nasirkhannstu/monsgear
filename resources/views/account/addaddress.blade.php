@@ -1,5 +1,5 @@
 @extends('main')
-@section('title', '| Moonster-Gear')
+@section('title', '| Address')
 @section('stylsheets')
     {!! Html::style('css/account.css') !!}
 @endsection
@@ -34,7 +34,7 @@
     <div style="top: 157.25px;" class="aside-shadow"></div>
 
     <div class="main-content">
-        <h1>Add/Edit Address</h1>
+        <h1>Order History</h1>
 
         {!! Form::open(array('route' => 'account.saveaddress','data-parsley-validate'=>'', 'class' => 'fstyle-one')) !!}
             <div class="row">

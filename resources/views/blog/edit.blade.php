@@ -1,5 +1,5 @@
 @extends('admin')
-@section('title', '| Moonster-Gear')
+@section('title', '| Blog Edit')
 @section('stylsheets')
 
 	<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
