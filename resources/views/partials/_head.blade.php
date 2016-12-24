@@ -6,22 +6,22 @@
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="x-dns-prefetch-control" content="on" />
-    <link rel="dns-prefetch" href="//cdn.muscleandstrength.com" />
+    <link rel="dns-prefetch" href="" />
     <!--[if IE 9]>
-    <link rel="prefetch" href="//cdn.muscleandstrength.com" />
+    <link rel="prefetch" href="" />
     <![endif]-->
-    <link rel="alternate" type="application/rss+xml" title="Muscle &amp; Strength RSS" href="https://www.muscleandstrength.com/rss.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Monster Gear" href="" />
     <link rel="shortcut icon" href="https://cdn.muscleandstrength.com/favicon.ico" type="image/vnd.microsoft.icon" />
-    <meta name="description" content="Learn how to build muscle, burn fat and stay motivated! Massive online supplement store shipping worldwide." />
-    <meta name="generator" content="Drupal 7 (http://drupal.org)" />
-    <link rel="canonical" href="https://www.muscleandstrength.com/" />
-    <link rel="shortlink" href="https://www.muscleandstrength.com/node" />
-    <meta property="og:site_name" content="Muscle &amp; Strength" />
+    <meta name="description" content="" />
+    <meta name="generator" content="" />
+    <link rel="canonical" href="" />
+    <link rel="shortlink" href="" />
+    <meta property="og:site_name" content="Monster Gear" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.muscleandstrength.com/" />
-    <meta property="og:title" content="Muscle &amp; Strength" />
-    <meta name="twitter:site" content="@muscle_strength" />
-    <meta name="twitter:creator" content="@muscle_strength" />
+    <meta property="og:url" content="" />
+    <meta property="og:title" content="Monster &amp; Gear" />
+    <meta name="twitter:site" content="@monster_gear" />
+    <meta name="twitter:creator" content="@monster_gear" />
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,900italic,700italic,500italic,900,700,500,300italic,400italic,300,100italic,100&subset=latin' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300&subset=latin' rel='stylesheet' type='text/css'>
 
@@ -69,22 +69,22 @@
     <!--[if (gte IE 7)&(lte IE 8)]>
     <![endif]--><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="x-dns-prefetch-control" content="on" />
-    <link rel="dns-prefetch" href="//cdn.muscleandstrength.com" />
+    <link rel="dns-prefetch" href="" />
     <!--[if IE 9]>
-    <link rel="prefetch" href="//cdn.muscleandstrength.com" />
+    <link rel="prefetch" href="" />
     <![endif]-->
-    <link rel="alternate" type="application/rss+xml" title="Muscle &amp; Strength RSS" href="https://www.muscleandstrength.com/rss.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Monster &amp; Gear" href="" />
     <link rel="shortcut icon" href="https://cdn.muscleandstrength.com/favicon.ico" type="image/vnd.microsoft.icon" />
-    <meta name="description" content="Learn how to build muscle, burn fat and stay motivated! Massive online supplement store shipping worldwide." />
-    <meta name="generator" content="Drupal 7 (http://drupal.org)" />
-    <link rel="canonical" href="https://www.muscleandstrength.com/" />
-    <link rel="shortlink" href="https://www.muscleandstrength.com/node" />
-    <meta property="og:site_name" content="Muscle &amp; Strength" />
+    <meta name="description" content="" />
+    <meta name="generator" content="" />
+    <link rel="canonical" href="" />
+    <link rel="shortlink" href="" />
+    <meta property="og:site_name" content="Monster &amp; Gear" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.muscleandstrength.com/" />
-    <meta property="og:title" content="Muscle &amp; Strength" />
-    <meta name="twitter:site" content="@muscle_strength" />
-    <meta name="twitter:creator" content="@muscle_strength" />
+    <meta property="og:url" content="https://www.monster-gear.com/" />
+    <meta property="og:title" content="Monster &amp; Gear" />
+    <meta name="twitter:site" content="@monster_gear" />
+    <meta name="twitter:creator" content="@monster_gear" />
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,900italic,700italic,500italic,900,700,500,300italic,400italic,300,100italic,100&subset=latin' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300&subset=latin' rel='stylesheet' type='text/css'>
 

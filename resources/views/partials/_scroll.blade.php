@@ -37,7 +37,7 @@
                     <button class="search-button" type="submit">
                         <svg style="width:1em; height:1em;">
                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search_bold"></use>
-                            <image style="width:1em; height:1em;" src="https://cdn.muscleandstrength.com/images/fallback/search_bold.png"></image>
+                            <image style="width:1em; height:1em;" src="{{asset('uploads/icon/search_bold.png')}}"></image>
                         </svg>
                     </button>
 
@@ -50,7 +50,7 @@
                     <a class="dtap" href="/store/help">
                         <svg style="width:2em; height:2em; max-width:100%;margin-bottom: -.2em;margin-top: .2em;" >
                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-customer-support"></use>
-                            <image style="width:2em; height:2em; max-width:100%;margin-bottom: -.2em;margin-top: .2em;"   src="https://cdn.muscleandstrength.com/images/fallback/customer-support.png"></image>
+                            <image style="width:2em; height:2em; max-width:100%;margin-bottom: -.2em;margin-top: .2em;"   src="{{asset('uploads/icon/customer-support.png')}}"></image>
                         </svg>
                     </a>
 
@@ -59,13 +59,13 @@
 
                             <li class="last"><span class="text open-chat"><svg style="width:1.3em; height:1.3em; margin-left:-.3em; margin-bottom: -0.25em; margin-right: 0.1em;">
                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-insta-comments-blue"></use>
-                                <image style="width:1.3em; height:1.3em; margin-left:-.3em; margin-bottom: -0.25em; margin-right: 0.1em;" src="https://cdn.muscleandstrength.com/images/fallback/insta-comments-blue.png"></image>
+                                <image style="width:1.3em; height:1.3em; margin-left:-.3em; margin-bottom: -0.25em; margin-right: 0.1em;" src="{{asset('uploads/icon/insta-comments-blue.png')}}"></image>
                             </svg> Live Chat</span></li>
                         </ul>
                         <div class="gray margTop10 acenter border-wrap"><svg style="width:1.3em; height:1.3em; margin-left:-.3em; margin-bottom: -0.25em; margin-right: 0.1em;">
                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-support"></use>
-                            <image style="width:1.3em; height:1.3em; margin-left:-.3em; margin-bottom: -0.25em;" src="https://cdn.muscleandstrength.com/images/fallback/support.png"></image>
-                        </svg> <span class="number-font">1-800-537-9910</span></div>
+                            <image style="width:1.3em; height:1.3em; margin-left:-.3em; margin-bottom: -0.25em;" src="{{asset('uploads/icon/support.png')}}"></image>
+                        </svg> <span class="number-font">1-phone-number-9910</span></div>
                     </div>
 
                 </div>
@@ -80,7 +80,7 @@
 
                         <svg style="width:2em; height:2em; max-width:100%;" >
                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-store-cart"></use>
-                            <image style="width:2em; height:2em; max-width:100%;"   src="https://cdn.muscleandstrength.com/images/fallback/store-cart.png"></image>
+                            <image style="width:2em; height:2em; max-width:100%;"   src="{{asset('uploads/icon/store-cart.png')}}"></image>
                         </svg>
                     </a>
                 </div>
@@ -89,7 +89,7 @@
 
                     <svg class="default-user-image" style="width:2em; height:2em; max-width:100%; margin-top: .3em;margin-bottom: -.15em;" >
                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-user-login"></use>
-                        <image style="width:2em; height:2em; max-width:100%; margin-top: .3em;margin-bottom: -.15em;"   src="https://cdn.muscleandstrength.com/images/fallback/user-login.png"></image>
+                        <image style="width:2em; height:2em; max-width:100%; margin-top: .3em;margin-bottom: -.15em;"   src="{{asset('uploads/icon/user-login.png')}}"></image>
                     </svg>
 
                     <img class="authenticated-user-image" src="">
@@ -97,17 +97,8 @@
                     <div class="store-dropdown">
 
 
-                        <div class="user-account">
-                            <div class="welcome">
-                                Welcome
-                            </div>
 
-                            <ul class="account-menu">
-                                <li><a rel="nofollow" href="https://www.muscleandstrength.com/store/customer/account/"><svg style="width:1.3em; height:1.3em; margin-bottom:-.3em"><use xlink:href="#icon-account"/><image width="20" height="20" src="https://cdn.muscleandstrength.com/images/fallback/account.png"/></svg> My Account</a></li>
-                                <li><a rel="nofollow" href="https://www.muscleandstrength.com/store/sales/order/history/"><svg style="width:1.3em; height:1.3em; margin-bottom:-.3em"><use xlink:href="#icon-history"/><image width="20" height="20" src="https://cdn.muscleandstrength.com/images/fallback/history.png"/></svg> Order History</a></li>
-                                <li class="logout"><a rel="nofollow" href="https://www.muscleandstrength.com/store/customer/account/logout/" rel="nofollow"><svg style="width:1.3em; height:1.3em; margin-bottom:-.3em"><use xlink:href="#icon-logout"/><image width="20" height="20" src="https://cdn.muscleandstrength.com/images/fallback/logout.png"/></svg> Log Out</a></li>
-                            </ul>
-                        </div>
+
                         @if(!Auth::guest())
                             <div class="user-account" style="display:block">
                                 <div class="welcome">
@@ -115,9 +106,9 @@
                                 </div>
 
                                 <ul class="account-menu">
-                                    <li><a rel="nofollow" href="https://www.muscleandstrength.com/store/customer/account/"><svg style="width:1.3em; height:1.3em; margin-bottom:-.3em; margin-right: 0.1em;"><use xlink:href="#icon-account"/><image style="width:1.3em; height:1.3em; margin-bottom:-.3em; margin-right: 0.1em;" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" menu-data-src="https://cdn.muscleandstrength.com/images/fallback/account.png"/></svg> My Account</a></li>
+                                    <li><a rel="nofollow" href="{{url('myaccount')}}"><svg style="width:1.3em; height:1.3em; margin-bottom:-.3em; margin-right: 0.1em;"><use xlink:href="#icon-account"/><image style="width:1.3em; height:1.3em; margin-bottom:-.3em; margin-right: 0.1em;" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" menu-data-src="{{asset('uploads/icon/account.png')}}"/></svg> My Account</a></li>
 
-                                    <li><a rel="nofollow" href="https://www.muscleandstrength.com/store/sales/order/history/"><svg style="width:1.3em; height:1.3em; margin-bottom:-.3em; margin-right: 0.1em;"><use xlink:href="#icon-history"/><image style="width:1.3em; height:1.3em; margin-bottom:-.3em; margin-right: 0.1em;" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" menu-data-src="https://cdn.muscleandstrength.com/images/fallback/history.png"/></svg> Order History</a></li>
+                                    <li><a rel="nofollow" href="{{url('account/showorder')}}"><svg style="width:1.3em; height:1.3em; margin-bottom:-.3em; margin-right: 0.1em;"><use xlink:href="#icon-history"/><image style="width:1.3em; height:1.3em; margin-bottom:-.3em; margin-right: 0.1em;" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" menu-data-src="{{asset('uploads/icon/history.png')}}"/></svg> Order History</a></li>
                                     <li>
                                         <a href="{{ url('/logout') }}"
                                            onclick="event.preventDefault();
@@ -154,7 +145,7 @@
                                             class="loading"><span class="svg-wrap"><svg style="width:.8em; height:.8em;">
                                         <use xlink:href="#icon-update-white"/>
                                         <image style="width:.8em; height:.8em;"
-                                               src="https://cdn.muscleandstrength.com/images/fallback/update-white.png"/>
+                                               src="{{asset('uploads/icon/update-white.png')}}"/>
                                     </svg></span> Loading...</span></button>
                                     <a rel="nofollow" class="btn btn-flat-gray btn-lg form-button" href="/register">Register</a>
                                 </div>

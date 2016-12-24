@@ -15,6 +15,10 @@ use Auth;
 
 class AccountController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function showMyaccount(){
     	$userId = Auth::user()->id;
         if(Userinfo::where('userId', "=", $userId)->exists()){
