@@ -120,7 +120,7 @@
                                                         <div class="form-item webform-component webform-component-textfield" id="webform-component-order-number">
                                                             <label for="edit-submitted-order-number">Order Number </label>
                                                             <input id="edit-submitted-order-number" name="order_number" value="" size="60" maxlength="128" class="form-text" type="text">
-                                                            <div class="description">Enter your M&amp;S order number if you have one.</div>
+                                                            <div class="description">Enter your Monster Gear order number if you have one.</div>
                                                         </div>
                                                         <div class="form-item webform-component webform-component-textfield" id="webform-component-subject">
                                                             <label for="edit-submitted-subject">Subject <span class="form-required" title="This field is required.">*</span></label>
