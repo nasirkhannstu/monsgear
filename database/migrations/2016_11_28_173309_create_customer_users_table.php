@@ -14,7 +14,7 @@ class CreateCustomerUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('Customer_users', function (Blueprint $table) {
+        Schema::create('customer_users', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
             $table->string('email')->unique();
@@ -32,6 +32,6 @@ class CreateCustomerUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Customer_Users');
+        Schema::dropIfExists('customer_Users');
     }
 }

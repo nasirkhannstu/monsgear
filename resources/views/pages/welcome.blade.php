@@ -64,7 +64,7 @@
 
                 <!-- End homeSlider -->
                 <div class="ad-space">
-                    <p><a href="/workout-routines"><img alt="Free Workouts" src="https://cdn.muscleandstrength.com/sites/default/files/images/findafreeworkout.jpg"></a></p>
+                    <p><a href=""><img alt="Free Workouts" src="https://cdn.muscleandstrength.com/sites/default/files/images/findafreeworkout.jpg"></a></p>
                     <div class="social">
 
                         <ul class="follow">
@@ -112,7 +112,7 @@
                                 </a>
                             </li>
                         </ul>
-                        <span>Join over 1.4 Million M&amp;S fans!</span>
+                        <span>Join over 1.4 Million Monster Gear fans!</span>
                     </div>
                 </div>
             </div>
@@ -123,7 +123,7 @@
             <div class="todays-deals clearfix">
                 <h2 class="hstyle-two">Injectable Products</h2>
                 <div class="product-grid-4up">
-                    <ul>
+                    <ul style="padding-left: 0em;">
                     @foreach ($products as $key => $product)
                         @if($product->category->name == "Injectable")
 
@@ -160,7 +160,7 @@
             <div class="todays-deals clearfix">
                 <h2 class="hstyle-two">Oral Products</h2>
                 <div class="product-grid-4up">
-                    <ul>
+                    <ul style="padding-left: 0em;">
                     @foreach ($products as $key => $product)
                         @if($product->category->name == "Oral")
 
@@ -197,7 +197,7 @@
             <div class="todays-deals clearfix">
                 <h2 class="hstyle-two">Peptides/HGH/HCG Products</h2>
                 <div class="product-grid-4up">
-                    <ul>
+                    <ul style="padding-left: 0em;" >
                     @foreach ($products as $key => $product)
                         @if($product->category->name == "Peptides")
 

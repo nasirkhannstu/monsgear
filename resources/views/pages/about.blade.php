@@ -5,57 +5,55 @@
 
         <div class="aside">
             <div class="region region-sidebar-second">
+                <div class="form aside-widget">
+                    <img alt="Build Muscle, Lose Fat &amp; Stay Motivated!" src="https://cdn.muscleandstrength.com/sites/all/themes/mnsnew/images/signupbanner.jpg">
+                    <div class="wrap">
+                        <p>Keep Yourself Updated!!! Subscribe Now.</p>
 
-    <div class="form aside-widget">
-    <img alt="Build Muscle, Lose Fat &amp; Stay Motivated!" src="https://cdn.muscleandstrength.com/sites/all/themes/mnsnew/images/signupbanner.jpg">
-    <div class="wrap">
-        <p>Keep Yourself Updated!!! Subscribe Now.</p>
-
-        <form method="post" action="" name="icpsignup" id="icpsignup6636" accept-charset="UTF-8">
-            <input name="redirect" value="" type="hidden">
-            <input name="errorredirect" value="" type="hidden">
-            <div class="qg-full">
-                <input name="fields_fname" placeholder="first name" type="text">
-            </div>
-            <div class="qg-full">
-                <input name="fields_email" placeholder="email" type="text">
-            </div>
-            <div class="qg-half">
-                <button class="btn-icon-muscle btn btn-blue half" type="submit" onclick="ga('send', 'event', { eventCategory: 'email', eventAction: 'signup', eventLabel: 'sidebar'});">
-                    <span class="text">Sign up</span>
-                    <div class="muscle-icon">
-                        <svg>
-                            <use class="muscle-down" xlink:href="#icon-muscle-icon"></use>
-                            <use class="muscle-up" xlink:href="#icon-muscle-icon-2"></use>
-                            <image width="45" height="45" class="muscle-down" src="https://cdn.muscleandstrength.com/images/fallback/muscle-icon.png"></image>
-                            <image width="45" height="45" class="muscle-up" src="https://cdn.muscleandstrength.com/images/fallback/muscle-icon-2.png"></image>
-                        </svg>
+                        <form method="post" action="" name="icpsignup" id="icpsignup6636" accept-charset="UTF-8">
+                            <input name="redirect" value="" type="hidden">
+                            <input name="errorredirect" value="" type="hidden">
+                            <div class="qg-full">
+                                <input name="fields_fname" placeholder="first name" type="text">
+                            </div>
+                            <div class="qg-full">
+                                <input name="fields_email" placeholder="email" type="text">
+                            </div>
+                            <div class="qg-half">
+                                <button class="btn-icon-muscle btn btn-blue half" type="submit" onclick="ga('send', 'event', { eventCategory: 'email', eventAction: 'signup', eventLabel: 'sidebar'});">
+                                    <span class="text">Sign up</span>
+                                    <div class="muscle-icon">
+                                        <svg>
+                                            <use class="muscle-down" xlink:href="#icon-muscle-icon"></use>
+                                            <use class="muscle-up" xlink:href="#icon-muscle-icon-2"></use>
+                                            <image width="45" height="45" class="muscle-down" src="https://cdn.muscleandstrength.com/images/fallback/muscle-icon.png"></image>
+                                            <image width="45" height="45" class="muscle-up" src="https://cdn.muscleandstrength.com/images/fallback/muscle-icon-2.png"></image>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                        </form>
                     </div>
-                </button>
+                </div>
+                <div id="block-mnsblock-mnssidebar-content" class="block block-mnsblock">
+
+
+                    <div class="content">
+                        <div class="h3">Must Read Articles</div>
+
+                        <ul class="popular-list">
+                            @foreach ($sideblogs as $key => $blog)
+                                <li>
+                                    <a href="{{ url('b/'.$blog->slug)}}" title="{{ $blog->title }}">
+                                        <img src="{{ asset('uploads/blogimg/'. $blog->image) }}" alt="{{ $blog->title }}">
+                                        <span>{{ $blog->title }}</span>
+                                    </a>
+                                </li>
+                            @endforeach
+                        </ul></div>
+                </div>
             </div>
-        </form> 
-    </div>
-</div>
-<div id="block-mnsblock-mnssidebar-content" class="block block-mnsblock">
-
-    
-  <div class="content">
-    <div class="h3">Must Read Articles</div>
-
-<ul class="popular-list">
-    @foreach ($sideblogs as $key => $blog)
-    <li>
-      <a href="{{ url('b/'.$blog->slug)}}" title="{{ $blog->title }}">
-        <img src="{{ asset('uploads/blogimg/'. $blog->image) }}" alt="{{ $blog->title }}">
-        <span>{{ $blog->title }}</span>
-      </a>
-    </li>
-    @endforeach
-  </ul></div>
-</div>
-
-  </div>
-          </div>
+        </div>
         <div style="top: 117.25px;" class="aside-shadow"> </div>
         <div class="main-content">
 
@@ -90,7 +88,7 @@
 
                                                 </div></div></div>		    <div class="qg-twothird">
 
-                                    </div><!-- End content -->
+                                        </div><!-- End content -->
 
                                 </article><!-- End Node Body -->
 
