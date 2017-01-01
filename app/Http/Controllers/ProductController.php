@@ -181,7 +181,7 @@ class ProductController extends Controller
         
         $this->validate($request, array(
             'name'          => 'required|max:255',
-            'slug'           => 'required|alpha_dash|min:5|max:255|unique:products,slug,$id',
+            'slug'           => "required|alpha_dash|min:5|max:255|unique:products,slug,$id",
             'category_id'       => 'required|integer',
             'body'           => 'required',
             'price'           => 'required|integer',
