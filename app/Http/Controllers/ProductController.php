@@ -136,7 +136,8 @@ class ProductController extends Controller
         Session::flash('success','The Product has successfully saved!');
 
         //redirect to another page
-        return redirect()->route('product.show', $product->id);
+        //return redirect()->route('product.show', $product->id);
+        return redirect()->route('product.index');
     }
 
     /**
@@ -214,7 +215,8 @@ class ProductController extends Controller
         
 
         Session::flash('success','This product was successfully saved!');
-        return redirect()->route('product.show', $product->id);
+        //return redirect()->route('product.show', $product->id);
+        return redirect()->route('product.index');
     }
 
     /**
