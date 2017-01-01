@@ -136,7 +136,8 @@ class ProductController extends Controller
         Session::flash('success','The Product has successfully saved!');
 
         //redirect to another page
-        return redirect()->route('product.show', $product->id);
+        //return redirect()->route('product.show', $product->id);
+        return redirect()->route('product.index');
     }
 
     /**
@@ -181,7 +182,7 @@ class ProductController extends Controller
         
         $this->validate($request, array(
             'name'          => 'required|max:255',
-            'slug'           => 'required|alpha_dash|min:5|max:255|unique:products,slug,$id',
+            'slug'           => "required|alpha_dash|min:5|max:255|unique:products,slug,$id",
             'category_id'       => 'required|integer',
             'body'           => 'required',
             'price'           => 'required|integer',
@@ -214,7 +215,8 @@ class ProductController extends Controller
         
 
         Session::flash('success','This product was successfully saved!');
-        return redirect()->route('product.show', $product->id);
+        //return redirect()->route('product.show', $product->id);
+        return redirect()->route('product.index');
     }
 
     /**

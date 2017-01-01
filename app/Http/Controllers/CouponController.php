@@ -65,6 +65,7 @@ class CouponController extends Controller
         $coupon->excludcat = $request->excludcat;
         $coupon->limit = $request->limit;
         $coupon->created = time();
+        $coupon->used = 0;
         $coupon->expire = $request->expire;
 
         $coupon->save();
