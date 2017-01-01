@@ -21,7 +21,7 @@ class Functionss
 
 
         $var = $coupon->created +($coupon->expire * 60 * 60);
-        if($var <= time()){
+        if($var >= time()){
             if($coupon->limit <= $coupon->limit){
                 if($total >= $coupon->minspent){
                     $withCat = 0;
@@ -77,7 +77,7 @@ class Functionss
             $products = $cart->items;
 
             $exp = $coupon->created +($coupon->expire * 60 * 60);
-            if($exp <= time()){
+            if($exp >= time()){
                 if($coupon->limit <= $coupon->limit){
                     if($totalPrice >= $coupon->minspent){
                         $withCat = 0;
@@ -137,7 +137,7 @@ class Functionss
             $products = $cart->items;
 
             $exp = $coupon->expire * 60 * 60;
-            if($exp <= time()){
+            if($exp >= time()){
                 if($coupon->limit <= $coupon->limit){
                     if($totalPrice >= $coupon->minspent){
                         $withCat = 0;
