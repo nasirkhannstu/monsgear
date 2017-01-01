@@ -56,18 +56,18 @@
 
         <div class="logo">
             <a href="/" alt="Monster Gear">
-                <svg style="width:6em; height:3.5em; max-width:100%;">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-logo"></use>
-                    <image style="width:6em; height:3.5em; max-width:100%;" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://cdn.muscleandstrength.com/images/logo.png"></image>
-                </svg>
+
+
+                    <image style="width:6em; height:3.5em; max-width:100%;" src="{{asset('uploads/logo.png')}}" ></image>
+
             </a>
         </div>
         <div class="mobile-logo">
             <a href="/" alt="monster-gear">
-                <svg style="width:4.5em; height:2.5em; max-width:100%;">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-logo"></use>
-                    <image style="width:4.5em; height:2.5em; max-width:100%;" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://cdn.muscleandstrength.com/images/logo.png"></image>
-                </svg>
+
+
+                    <image style="width:4.5em; height:2.5em; max-width:100%;" src="{{asset('uploads/logo.png')}}" ></image>
+
             </a>
         </div>
         <div class="search">

@@ -1,10 +1,10 @@
 <div class="scroll">
     <div class="logo">
                 <a href="/">
-                    <svg style="width:4em; height:2em; max-width:100%;">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-logo"></use>
-                        <image style="width:4em; height:2em; max-width:100%;" src="https://cdn.muscleandstrength.com/images/logo.png"></image>
-                    </svg>
+
+
+                        <image style="width:4em; height:2em; max-width:100%;" src="{{asset('uploads/logo.png')}}"></image>
+
                 </a>
             </div>
 
