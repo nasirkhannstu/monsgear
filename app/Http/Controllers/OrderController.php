@@ -75,6 +75,9 @@ class OrderController extends Controller
         if(Session::has('coupon')){
             $coupon = Session::get('coupon');
             $couponid = $coupon->id;
+            $coupon = Coupon::find($couponid);
+            $coupon->used = $coupon->used + 1;
+            $coupon->save();
         }else{
             $couponid = 'NULL';
         }
@@ -168,7 +171,7 @@ class OrderController extends Controller
             $message->to($data1['email']);
             $message->subject($data1['subject']);
         });
-//admin order email
+        //admin order email
         $data2 = array(
             'email' => 't@sectorbravo1.com',
             'subject' => '[Monster Gear]New customer order #'.$order->id.',Date '.$order->created_at,
@@ -182,6 +185,7 @@ class OrderController extends Controller
         });
 
         Session::forget('cart');
+        Session::forget('coupon');
 
         return view('pages.showorder', ['products' => $cart->items, 'totalPrice' => $cart->totalPrice, 'coupon' => $coupon, 'couponTotal' => $couponTotal, 'order' => $order, 'info' => $userInfo]);
 

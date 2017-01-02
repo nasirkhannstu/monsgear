@@ -65,15 +65,15 @@ class ProductController extends Controller
         return redirect()->route('product.shoppingCart');
     }
 
-    public function getCart()
-    {
-        if(!Session::has('cart')){
-            return redirect()->route('pages.index');
-        }
-        $oldCart = Session::get('cart');
-        $cart = new Cart($oldCart);
-        return view('pages.cart', ['products' => $cart->items, 'totalPrice' => $cart->totalPrice]);
-    }
+    // public function getCart()
+    // {
+    //     if(!Session::has('cart')){
+    //         return redirect()->route('pages.index');
+    //     }
+    //     $oldCart = Session::get('cart');
+    //     $cart = new Cart($oldCart);
+    //     return view('pages.cart', ['products' => $cart->items, 'totalPrice' => $cart->totalPrice]);
+    // }
 
     public function index()
     {

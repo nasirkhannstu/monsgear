@@ -91,8 +91,8 @@ class PagesController extends Controller
             $products = $cart->items;
 
             $exp = $coupon->created +($coupon->expire * 60 * 60);
-            if($exp <= time()){
-                if($coupon->limit <= $coupon->limit){
+            if($exp >= time()){
+                if($coupon->used < $coupon->limit){
                     if($totalPrice >= $coupon->minspent){
                         $withCat = 0;
                         $withoutCat = 0;
@@ -114,50 +114,63 @@ class PagesController extends Controller
 
                         $total = $withoutCat+$withCat;
 
-                        if($coupon->freeship == 'No' && $totalPrice <= 500){
+                        if($coupon->freeship == 'no' && $totalPrice <= 500){
                             $total = $total + 25;
                         }
                         return $total;
                     }else{
-                        Session::flash('err','Min Spent: failed!');
+                        Session::flash('err',"You must have to buy minimum $$coupon->minspent to use this coupon!");
+                        Session::forget('coupon');
                         return false;
                     }
                 }else{
                     Session::flash('err','Coupon limit failed!');
-                        return false;
+                    Session::forget('coupon');
+                    return false;
                 }
             }else{
                 Session::flash('err','Coupon Expired!');
-                        return false;
+                Session::forget('coupon');
+                return false;
             }  
         }else{
             Session::flash('err','Invalid Coupon!');
-                        return false;
+            Session::forget('coupon');
+            return false;
         }
     }
-    public function getCoupon(Request $request){
-        if($getCoupon = $this->calCoupon($request->coupon)){
-            
-            // $coupon = Coupon::where('name', "=", $request->coupon)->first();
+    public function getShowCoupon(){
+        if(Session::has('coupon')){
             $coupon = Session::get('coupon');
-            
-            if(!Session::has('cart')){
-                return redirect()->route('pages.index');
+            if($getCoupon = $this->calCoupon($coupon->name)){
+                $coupon = Session::get('coupon');
+            }else{
+                $coupon = false;
+                $getCoupon = false;
             }
-            $oldCart = Session::get('cart');
-            $cart = new Cart($oldCart);
-
-            return view('pages.cart', ['products' => $cart->items, 'totalPrice' => $cart->totalPrice, 'coupon' => $coupon, 'couponTotal' => $getCoupon]);
         }else{
-            $coupon = Coupon::where('name', "=", $request->coupon)->first();
-
-            if(!Session::has('cart')){
-                return redirect()->route('pages.index');
-            }
-            $oldCart = Session::get('cart');
-            $cart = new Cart($oldCart);
-            return redirect()->route('product.shoppingCart')->withProducts($cart->items)->withTotalPrice($cart->totalPrice);
+            $coupon = false;
+            $getCoupon = false;
         }
+        
+        if(!Session::has('cart')){
+            return redirect()->route('pages.index');
+        }
+        $oldCart = Session::get('cart');
+        $cart = new Cart($oldCart);
+
+        return view('pages.cart', ['products' => $cart->items, 'totalPrice' => $cart->totalPrice, 'coupon' => $coupon, 'couponTotal' => $getCoupon]);
+    }
+    public function getCoupon(Request $request){
+        if(Coupon::where('name', '=', $request->coupon)->exists()){
+            $coupon = Coupon::where('name', "=", $request->coupon)->first();
+            Session::put('coupon', $coupon);
+            return redirect()->route('product.shoppingCart');
+        }else{
+            Session::flash('err','Invalid Coupon!');
+            return redirect()->route('product.shoppingCart');
+        }
+        
     }
 
     public function showContact(){
