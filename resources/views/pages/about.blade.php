@@ -5,7 +5,6 @@
 
         <div class="aside">
             <div class="region region-sidebar-second">
-
                 <div class="form aside-widget">
                     <img alt="Build Muscle, Lose Fat &amp; Stay Motivated!" src="https://cdn.muscleandstrength.com/sites/all/themes/mnsnew/images/signupbanner.jpg">
                     <div class="wrap">
@@ -53,7 +52,6 @@
                             @endforeach
                         </ul></div>
                 </div>
-
             </div>
         </div>
         <div style="top: 117.25px;" class="aside-shadow"> </div>
