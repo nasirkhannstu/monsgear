@@ -34,7 +34,7 @@
     <div style="top: 157.25px;" class="aside-shadow"></div>
 
     <div class="main-content">
-        <h1>Add/Edit Address</h1>
+        <h1>Your Order Details</h1>
         @if($orders)
         <table class="table table-hover">
         <thead> 

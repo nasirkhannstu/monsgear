@@ -4,6 +4,7 @@ namespace App\Http\Controllers\CustomerAuth;
 
 use App\User;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
@@ -67,6 +68,7 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+        Session::
     }
     public function showRegisterForm(){
         return view('customer-auth/register');

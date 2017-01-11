@@ -65,15 +65,15 @@ class ProductController extends Controller
         return redirect()->route('product.shoppingCart');
     }
 
-    public function getCart()
-    {
-        if(!Session::has('cart')){
-            return redirect()->route('pages.index');
-        }
-        $oldCart = Session::get('cart');
-        $cart = new Cart($oldCart);
-        return view('pages.cart', ['products' => $cart->items, 'totalPrice' => $cart->totalPrice]);
-    }
+    // public function getCart()
+    // {
+    //     if(!Session::has('cart')){
+    //         return redirect()->route('pages.index');
+    //     }
+    //     $oldCart = Session::get('cart');
+    //     $cart = new Cart($oldCart);
+    //     return view('pages.cart', ['products' => $cart->items, 'totalPrice' => $cart->totalPrice]);
+    // }
 
     public function index()
     {
@@ -125,7 +125,7 @@ class ProductController extends Controller
            $image = $request->file('image');
            $filename = time() . '.' . $image->getClientOriginalExtension();
            $location = public_path('uploads/product/'. $filename);
-           Image::make($image)->resize(800, 400)->save($location);
+           Image::make($image)->resize(400, 400)->save($location);
 
            $product->image = $filename;
         }
@@ -204,7 +204,7 @@ class ProductController extends Controller
            $image = $request->file('image');
            $filename = time() . '.' . $image->getClientOriginalExtension();
            $location = public_path('uploads/product/'. $filename);
-           Image::make($image)->resize(800, 400)->save($location);
+           Image::make($image)->resize(400, 400)->save($location);
 
            $oldImg = $product->image;
            $product->image = $filename;

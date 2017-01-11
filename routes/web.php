@@ -29,15 +29,15 @@ Route::get('/reduceC/{id}', ['uses' => 'ProductController@getReduceByOneC', 'as'
 
 Route::get('/remove/{id}', ['uses' => 'ProductController@getRemoveItem', 'as' => 'product.remove']);
 
-Route::get('/shopping-cart', ['uses' => 'ProductController@getCart', 'as' => 'product.shoppingCart']);
+//Shopping Cart
+Route::get('/shopping-cart', ['uses' => 'PagesController@getShowCoupon', 'as' => 'product.shoppingCart']);
+//Route::get('showcoupon', ['uses' => 'PagesController@getShowCoupon', 'as' => 'product.showcoupon']);
+Route::post('coupon', ['uses' => 'PagesController@getCoupon', 'as' => 'product.coupon']);
+
 //Pages
 Route::get('/', ['uses' => 'PagesController@getIndex', 'as' => 'pages.index']);
-
 // Route::get('/single/{id}', ['uses' => 'PagesController@getSingle', 'as' => 'pages.single']);
-
 Route::get('checkout', ['uses' => 'PagesController@getCheckout', 'as' => 'product.checkout']);
-
-Route::post('coupon', ['uses' => 'PagesController@getCoupon', 'as' => 'product.coupon']);
 
 Route::get('p/{slug}', ['uses' => 'PagesController@getSingleProduct', 'as' => 'blog.single'])->where('slug', '[\w\d\-\_]+');
 Route::get('b/{slug}', ['uses' => 'PagesController@getSingleBlog', 'as' => 'sBlog.single'])->where('slug', '[\w\d\-\_]+');

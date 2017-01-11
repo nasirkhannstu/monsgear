@@ -32,6 +32,8 @@
         </div>
         <div style="top: 157.25px;" class="aside-shadow"></div>
         <div class="main-content">
+
+            @include('partials._messages')
             <h1>Account Dashboard</h1>
             <div class="dashboard clearfix">
                 <div class="simple-card-wrap">

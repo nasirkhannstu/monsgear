@@ -64,51 +64,50 @@
 
                 <!-- End homeSlider -->
                 <div class="ad-space">
-                    <p><a href=""><img alt="Free Workouts" src="https://cdn.muscleandstrength.com/sites/default/files/images/findafreeworkout.jpg"></a></p>
+                    <p><a href=""><img alt="Free Workouts" src="uploads/icon/findafreeworkout.jpg"></a></p>
                     <div class="social">
 
                         <ul class="follow">
                             <li><a rel="nofollow" href="">
                                     <svg width="25" height="25">
                                         <use xlink:href="#icon-facebook-brand"></use>
-                                        <image width="25" height="25" src="https://cdn.muscleandstrength.com/images/fallback/facebook-brand.png"></image>
+                                        <image width="25" height="25" src="uploads/icon/facebook-brand.png"></image>
                                     </svg>
                                 </a></li>
                             <li><a rel="nofollow" href="">
                                     <svg width="25" height="25">
                                         <use xlink:href="#icon-twitter-brand"></use>
-                                        <image width="25" height="25" src="https://cdn.muscleandstrength.com/images/fallback/twitter-brand.png"></image>
+                                        <image width="25" height="25" src="uploads/icon/twitter-brand.png"></image>
                                     </svg>
                                 </a></li>
                             <li><a rel="nofollow" href="">
                                     <svg width="25" height="25">
                                         <use xlink:href="#icon-youtube-brand"></use>
-                                        <image width="25" height="25" src="https://cdn.muscleandstrength.com/images/fallback/youtube-brand.png"></image>
+                                        <image width="25" height="25" src="uploads/icon/youtube-brand.png"></image>
                                     </svg>
                                 </a></li>
                             <li><a rel="nofollow" href="">
                                     <svg width="25" height="25">
                                         <use xlink:href="#icon-instagram-brand"></use>
-                                        <image width="25" height="25" src="https://cdn.muscleandstrength.com/images/fallback/instagram-brand.png"></image>
+                                        <image width="25" height="25" src="uploads/icon/instagram-brand.png"></image>
                                     </svg>
                                 </a></li>
                             <li><a href="" rel="publisher">
                                     <svg width="25" height="25">
                                         <use xlink:href="#icon-google-brand"></use>
-                                        <image width="25" height="25" src="https://cdn.muscleandstrength.com/images/fallback/google-brand.png"></image>
+                                        <image width="25" height="25" src="uploads/icon/google-brand.png"></image>
                                     </svg>
                                 </a></li>
                             <li><a rel="nofollow" href="">
-                                    <svg width="25" height="25">
-                                        <use xlink:href="#icon-pinterest-brand"></use>
-                                        <image width="25" height="25" src="https://cdn.muscleandstrength.com/images/fallback/pinterest-brand.png"></image>
-                                    </svg>
+
+                                        <image width="25" height="25" src="uploads/icon/pinterest-brand.png"></image>
+
                                 </a></li>
                             <li><a rel="nofollow" href="">
-                                    <svg width="25" height="25">
-                                        <use xlink:href="#icon-tumblr-brand"></use>
-                                        <image width="25" height="25" src="https://cdn.muscleandstrength.com/images/fallback/tumblr-brand.png"></image>
-                                    </svg>
+
+
+                                        <image width="25" height="25" src="uploads/icon/tumblr-brand.png"></image>
+
                                 </a>
                             </li>
                         </ul>
@@ -147,7 +146,7 @@
                                         <span class="price">${{ $product->price}}</span>
                                     </div>
                                     <div class="savings">
-                                        <a href="{{ route('product.addToCart', ['id' => $product->id]) }}" class="btn btn-lg btn-flat-blue aloading basic-load validate-rating" style="font-size: .6em" role="button">Add To Cart</a>
+                                        <a href="{{ route('product.addToCart', ['id' => $product->id]) }}" class="btn btn-lg btn-flat-blue aloading basic-load validate-rating " style="font-size: 0.8em;padding: 7px;font-weight: bold;margin-top: 4px;" role="button">Add To Cart</a>
                                     </div>
                                 </div>
                             </div>
@@ -184,7 +183,7 @@
                                         <span class="price">${{ $product->price}}</span>
                                     </div>
                                     <div class="savings">
-                                        <a href="{{ route('product.addToCart', ['id' => $product->id]) }}" class="btn btn-lg btn-flat-blue aloading basic-load validate-rating" style="font-size: .6em" role="button">Add To Cart</a>
+                                        <a href="{{ route('product.addToCart', ['id' => $product->id]) }}" class="btn btn-lg btn-flat-blue aloading basic-load validate-rating" style="font-size: 0.8em;padding: 7px;font-weight: bold;margin-top: 4px;" role="button">Add To Cart</a>
                                     </div>
                                 </div>
                             </div>
@@ -221,7 +220,7 @@
                                         <span class="price">${{ $product->price}}</span>
                                     </div>
                                     <div class="savings">
-                                        <a href="{{ route('product.addToCart', ['id' => $product->id]) }}" class="btn btn-lg btn-flat-blue aloading basic-load validate-rating" style="font-size: .6em" role="button">Add To Cart</a>
+                                        <a href="{{ route('product.addToCart', ['id' => $product->id]) }}" class="btn btn-lg btn-flat-blue aloading basic-load validate-rating " style="font-size: 0.8em;padding: 7px;font-weight: bold;margin-top: 4px;" role="button">Add To Cart</a>
                                     </div>
                                 </div>
                             </div>

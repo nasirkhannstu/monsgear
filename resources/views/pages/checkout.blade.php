@@ -56,7 +56,7 @@
                                     Shipping Cost-
                                     <span class="floatRight">
                                 @if($coupon)
-                                    @if($coupon->freeship == 'No' && $totalPrice <= 500)
+                                    @if($coupon->freeship == 'no' && $totalPrice <= 500)
                                         + $25
                                     @else
                                         $0
