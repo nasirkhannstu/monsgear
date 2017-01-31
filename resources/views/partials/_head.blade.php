@@ -11,7 +11,11 @@
     <link rel="prefetch" href="" />
     <![endif]-->
     <link rel="alternate" type="application/rss+xml" title="Monster Gear" href="" />
-    <link rel="shortcut icon" href="https://cdn.muscleandstrength.com/favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <link rel="shortcut icon" href="{{asset('uploads/Favicons/favicon-48x48.png')}}" type="image/vnd.microsoft.icon" />
+
+    <link rel="shortcut icon" href="{{asset('uploads/Favicons/favicon-32x32.png')}}" type="" />
+
     <meta name="description" content="" />
     <meta name="generator" content="" />
     <link rel="canonical" href="" />
@@ -19,7 +23,7 @@
     <meta property="og:site_name" content="Monster Gear" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="" />
-    <meta property="og:title" content="Monster &amp; Gear" />
+    <meta property="og:title" content="Monster  Gear" />
     <meta name="twitter:site" content="@monster_gear" />
     <meta name="twitter:creator" content="@monster_gear" />
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,900italic,700italic,500italic,900,700,500,300italic,400italic,300,100italic,100&subset=latin' rel='stylesheet' type='text/css'>
@@ -27,22 +31,27 @@
 
 
     <!-- favicons -->
-    <link rel="apple-touch-icon" sizes="57x57" href="uploads/Favicons/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="uploads/Favicons/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="uploads/Favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="{{asset('uploads/Favicons/apple-touch-icon-57x57.png')}}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{asset('uploads/Favicons/apple-touch-icon-114x114.png')}}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{asset('uploads/Favicons/apple-touch-icon-72x72.png')}}">
     <link rel="apple-touch-icon" sizes="144x144" href="uploads/Favicons/apple-touch-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="60x60" href="uploads/Favicons/apple-touch-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="120x120" href="uploads/Favicons/apple-touch-icon-120x120.png">
     <link rel="apple-touch-icon" sizes="76x76" href="uploads/Favicons/apple-touch-icon-76x76.png">
     <link rel="apple-touch-icon" sizes="152x152" href="uploads/Favicons/apple-touch-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="uploads/Favicons/apple-touch-icon-180x180.png">
+
     <link rel="icon" type="image/png" href="uploads/Favicons/favicon-192x192.png" sizes="192x192">
-    <link rel="icon" type="image/png" href="uploads/Favicons/favicon-160x160.png" sizes="160x160">
-    <link rel="icon" type="image/png" href="uploads/Favicons/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/png" href="uploads/Favicons/favicon-16x16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="uploads/Favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="{{asset('uploads/Favicons/favicon-160x160.png')}}" sizes="160x160">
+
+
+    <link rel="icon" type="image/png" href="{{asset('uploads/Favicons/favicon-144x144.png')}}" sizes="144x144">
+
+    <link rel="icon" type="image/png" href="{{asset('uploads/Favicons/favicon-96x96.png')}}" sizes="96x96">
+    <link rel="icon" type="image/png" href="{{asset('uploads/Favicons/favicon-16x16.png')}}" sizes="16x16">
+    <link rel="icon" type="image/png" href="{{asset('uploads/Favicons/favicon-32x32.png')}}" sizes="32x32">
     <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="msapplication-TileImage" content="https://cdn.muscleandstrength.com/mstile-144x144.png">
+    <meta name="msapplication-TileImage" content="{{asset('uploads/Favicons/favicon-48x48.png')}}">
 
     <!-- MASTER CSS -->
     <!--[if (gte IE 11)|(gt IEMobile 7)]><!-->
@@ -51,14 +60,10 @@
 
     <!-- IE 7-9 CSS -->
     <!--[if (gte IE 7)&(lte IE 9)]>
-    <link rel="stylesheet" css/split.min.css?v=1477591262" type="text/css">
-    <link rel="stylesheet" href="css/split.1.min.css?v=1477591263" type="text/css">
+
     <![endif]-->
 
-    <link type="text/css" rel="stylesheet" href="css/style1.css" media="all" />
-    <link type="text/css" rel="stylesheet" href="css/style2.css" media="all" />
-    <link type="text/css" rel="stylesheet" href="css/style3.css" media="all" />
-    <link type="text/css" rel="stylesheet" href="css/style4.css" media="all" />
+
 
 
     {!! Html::script('js/js_gPM6NXOQjN2XM2JWQGfy07nKmcdDFrL289YA7h80ySs.js') !!}
@@ -66,47 +71,7 @@
     {!! Html::script('js/js_iUmxeAKkF0lcK8M-5BIL7FUlKT5RQz8K551HiCJKewI.js') !!}
     {!! Html::script('js/js_CxlDTB2Ez3KjzRQ7NmPfcG7JSvtMiZhY1Q7jHHj3OoM.js') !!}
 
-    <!--[if (gte IE 7)&(lte IE 8)]>
-    <![endif]--><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta http-equiv="x-dns-prefetch-control" content="on" />
-    <link rel="dns-prefetch" href="" />
-    <!--[if IE 9]>
-    <link rel="prefetch" href="" />
-    <![endif]-->
-    <link rel="alternate" type="application/rss+xml" title="Monster &amp; Gear" href="" />
-    <link rel="shortcut icon" href="https://cdn.muscleandstrength.com/favicon.ico" type="image/vnd.microsoft.icon" />
-    <meta name="description" content="" />
-    <meta name="generator" content="" />
-    <link rel="canonical" href="" />
-    <link rel="shortlink" href="" />
-    <meta property="og:site_name" content="Monster  Gear" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.monster-gear.com/" />
-    <meta property="og:title" content="Monster  Gear" />
-    <meta name="twitter:site" content="@monster_gear" />
-    <meta name="twitter:creator" content="@monster_gear" />
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,900italic,700italic,500italic,900,700,500,300italic,400italic,300,100italic,100&subset=latin' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300&subset=latin' rel='stylesheet' type='text/css'>
 
-
-
-            <!-- favicons -->
-    <link rel="apple-touch-icon" sizes="57x57" href="uploads/Favicons/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="uploads/Favicons/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="uploads/Favicons/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="uploads/Favicons/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="uploads/Favicons/apple-touch-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="uploads/Favicons/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="uploads/Favicons/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
-    <link rel="icon" type="image/png" href="uploads/Favicons/favicon-192x192.png" sizes="192x192">
-    <link rel="icon" type="image/png" href="uploads/Favicons/favicon-160x160.png" sizes="160x160">
-    <link rel="icon" type="image/png" href="uploads/Favicons/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/png" href="uploads/Favicons/favicon-16x16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="uploads/Favicons/favicon-32x32.png" sizes="32x32">
-    <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="msapplication-TileImage" content="https://cdn.muscleandstrength.com/mstile-144x144.png">
 
             <!-- MASTER CSS -->
             <!--[if (gte IE 11)|(gt IEMobile 7)]><!-->
