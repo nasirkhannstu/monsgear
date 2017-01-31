@@ -18,10 +18,15 @@ use Auth;
 class PagesController extends Controller
 {
     public function getIndex(){
-        $products = Product::orderBy('id','desc')->get();
+        $products = Product::all();
+            $injectable = Product::where('category_id', "=", 2)->orderBy('id', 'desc')->get();
+            $oral = Product::where('category_id', "=", 1)->orderBy('id', 'desc')->get();
+            $peptide = Product::where('category_id', "=", 3)->orderBy('id', 'desc')->get();
+
+
     	$blogs = Blog::orderBy('id','desc')->get();
 
-        return view('pages.welcome')->withProducts($products)->withBlogs($blogs);
+        return view('pages.welcome')->withInjectable($injectable)->withOral($oral)->withPeptides($peptide)->withProducts($products)->withBlogs($blogs);
     }
     public function getAllblog(){
         $blogs = Blog::orderBy('id','desc')->get();

@@ -8,6 +8,8 @@
 <div id="main-wrap" >
     <div class="main-content">
         @include('partials._messages')
+        <a href="/"><button type="button" style="margin-bottom: 5px" class="btn btn-white btn-sm btn-auto btn-shop">Continue Shopping</button></a>
+        <br />
         <div class="product-header">
             <div class="product-title-wrap">
                 <h1 class="product-title" itemprop="name">
@@ -23,7 +25,7 @@
             <div class="product-info">
               <span class="brand" itemprop="brand" itemscope itemtype="http://schema.org/Brand">
                 <div class="brand">A <a itemprop="url" href="/store/manufacturer/muscletech.html">
-                  <span itemprop="name">MuscleTech</span></a> Product
+                  <span itemprop="name"></span></a> Product
                 </div>     
               </span>
               <div class="tagline">

@@ -119,80 +119,139 @@
         <div class="main-content wide-format">
             <div class="tabs">
             </div> <!-- /#tabs -->
+            @foreach($injectable->chunk(6) as $key => $productchunk)
             <div class="todays-deals clearfix">
-                <h2 class="hstyle-two">Injectable Products</h2>
+                <h2 class="hstyle-two">Injectable{{ $key+1 }} Products </h2>
                 <div class="product-grid-4up">
                     <ul style="padding-left: 0em;">
-                    @foreach ($products as $key => $product)
-                        @if($product->category->name == "Injectable")
 
-                        <li class="item id-{{ $key + 1 }}">
-                            <div class="inner-wrap">
-                                <div class="grid-product-header">
-                                    <h4 class="product-name">
-                                        <a href="{{ url('p/'.$product->slug)}}">{{ $product->name}}</a>
-                                    </h4>
-                                </div>
-                                <div class="product-image">
-                                    <a href="{{ url('p/'.$product->slug)}}" title="{{ $product->name}}">
-                                        <img src="{{ asset('uploads/product/'. $product->image) }}" alt="{{ $product->name}}">
-                                    </a>
-                                </div>
-                                <div class="prodDataWrap">
-                                    <div class="price-box">
-                                        <!-- <span class="retail-price">
-                                            <del><span class="price">$25.99</span></del>
-                                        </span> -->
-                                        <span class="price">${{ $product->price}}</span>
-                                    </div>
-                                    <div class="savings">
-                                        <a href="{{ route('product.addToCart', ['id' => $product->id]) }}" class="btn btn-lg btn-flat-blue aloading basic-load validate-rating " style="font-size: 0.8em;padding: 7px;font-weight: bold;margin-top: 4px;" role="button">Add To Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        @endif
-                    @endforeach
+                        @foreach ($productchunk as $key => $product)
+
+
+                                @if($product->category->name == "Injectable")
+
+                                    <li class="item id-{{ $key + 1 }}">
+                                        <div class="inner-wrap">
+                                            <div class="grid-product-header">
+                                                <h4 class="product-name">
+                                                    <a href="{{ url('p/'.$product->slug)}}">{{ $product->name}}</a>
+                                                </h4>
+                                            </div>
+                                            <div class="product-image">
+                                                <a href="{{ url('p/'.$product->slug)}}" title="{{ $product->name}}">
+                                                    <img src="{{ asset('uploads/product/'. $product->image) }}" alt="{{ $product->name}}">
+                                                </a>
+                                            </div>
+                                            <div class="prodDataWrap">
+                                                <div class="price-box">
+                                                    <!-- <span class="retail-price">
+                                                        <del><span class="price">$25.99</span></del>
+                                                    </span> -->
+                                                    <span class="price">${{ $product->price}}</span>
+                                                </div>
+                                                <div class="savings">
+                                                    <a href="{{ route('product.addToCart', ['id' => $product->id]) }}" class="btn btn-lg btn-flat-blue aloading basic-load validate-rating " style="font-size: 0.8em;padding: 7px;font-weight: bold;margin-top: 4px;" role="button">Add To Cart</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                            @endif
+                        @endforeach
                     </ul>
                 </div>
             </div>
-            <div class="todays-deals clearfix">
-                <h2 class="hstyle-two">Oral Products</h2>
-                <div class="product-grid-4up">
-                    <ul style="padding-left: 0em;">
-                    @foreach ($products as $key => $product)
-                        @if($product->category->name == "Oral")
+            @endforeach
 
-                        <li class="item id-{{ $key + 1 }}">
-                            <div class="inner-wrap">
-                                <div class="grid-product-header">
-                                    <h4 class="product-name">
-                                        <a href="{{ url('p/'.$product->slug)}}">{{ $product->name}}</a>
-                                    </h4>
-                                </div>
-                                <div class="product-image">
-                                    <a href="{{ url('p/'.$product->slug)}}" title="{{ $product->name}}">
-                                        <img src="{{ asset('uploads/product/'. $product->image) }}" alt="{{ $product->name}}">
-                                    </a>
-                                </div>
-                                <div class="prodDataWrap">
-                                    <div class="price-box">
-                                        <!-- <span class="retail-price">
-                                            <del><span class="price">$25.99</span></del>
-                                        </span> -->
-                                        <span class="price">${{ $product->price}}</span>
-                                    </div>
-                                    <div class="savings">
-                                        <a href="{{ route('product.addToCart', ['id' => $product->id]) }}" class="btn btn-lg btn-flat-blue aloading basic-load validate-rating" style="font-size: 0.8em;padding: 7px;font-weight: bold;margin-top: 4px;" role="button">Add To Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        @endif
-                    @endforeach
-                    </ul>
+            @foreach($oral->chunk(6) as $key => $productchunk)
+                <div class="todays-deals clearfix">
+                    <h2 class="hstyle-two">Oral{{ $key+1 }} Products </h2>
+                    <div class="product-grid-4up">
+                        <ul style="padding-left: 0em;">
+
+                            @foreach ($productchunk as $key => $product)
+
+
+                                @if($product->category->name == "Oral")
+
+                                    <li class="item id-{{ $key + 1 }}">
+                                        <div class="inner-wrap">
+                                            <div class="grid-product-header">
+                                                <h4 class="product-name">
+                                                    <a href="{{ url('p/'.$product->slug)}}">{{ $product->name}}</a>
+                                                </h4>
+                                            </div>
+                                            <div class="product-image">
+                                                <a href="{{ url('p/'.$product->slug)}}" title="{{ $product->name}}">
+                                                    <img src="{{ asset('uploads/product/'. $product->image) }}" alt="{{ $product->name}}">
+                                                </a>
+                                            </div>
+                                            <div class="prodDataWrap">
+                                                <div class="price-box">
+                                                    <!-- <span class="retail-price">
+                                                        <del><span class="price">$25.99</span></del>
+                                                    </span> -->
+                                                    <span class="price">${{ $product->price}}</span>
+                                                </div>
+                                                <div class="savings">
+                                                    <a href="{{ route('product.addToCart', ['id' => $product->id]) }}" class="btn btn-lg btn-flat-blue aloading basic-load validate-rating " style="font-size: 0.8em;padding: 7px;font-weight: bold;margin-top: 4px;" role="button">Add To Cart</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                @endif
+                            @endforeach
+                        </ul>
+                    </div>
                 </div>
-            </div>
+            @endforeach
+
+            @foreach($peptides->chunk(6) as $key => $productchunk)
+                <div class="todays-deals clearfix">
+                    <h2 class="hstyle-two">Peptides/HGH/HCG{{ $key+1 }} Products </h2>
+                    <div class="product-grid-4up">
+                        <ul style="padding-left: 0em;">
+
+                            @foreach ($productchunk as $key => $product)
+
+
+                                @if($product->category->name == "Peptides")
+
+                                    <li class="item id-{{ $key + 1 }}">
+                                        <div class="inner-wrap">
+                                            <div class="grid-product-header">
+                                                <h4 class="product-name">
+                                                    <a href="{{ url('p/'.$product->slug)}}">{{ $product->name}}</a>
+                                                </h4>
+                                            </div>
+                                            <div class="product-image">
+                                                <a href="{{ url('p/'.$product->slug)}}" title="{{ $product->name}}">
+                                                    <img src="{{ asset('uploads/product/'. $product->image) }}" alt="{{ $product->name}}">
+                                                </a>
+                                            </div>
+                                            <div class="prodDataWrap">
+                                                <div class="price-box">
+                                                    <!-- <span class="retail-price">
+                                                        <del><span class="price">$25.99</span></del>
+                                                    </span> -->
+                                                    <span class="price">${{ $product->price}}</span>
+                                                </div>
+                                                <div class="savings">
+                                                    <a href="{{ route('product.addToCart', ['id' => $product->id]) }}" class="btn btn-lg btn-flat-blue aloading basic-load validate-rating " style="font-size: 0.8em;padding: 7px;font-weight: bold;margin-top: 4px;" role="button">Add To Cart</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                @endif
+                            @endforeach
+                        </ul>
+                    </div>
+                </div>
+            @endforeach
+
+
             <div class="todays-deals clearfix">
                 <h2 class="hstyle-two">Peptides/HGH/HCG Products</h2>
                 <div class="product-grid-4up">
