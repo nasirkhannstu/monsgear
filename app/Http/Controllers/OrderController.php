@@ -299,6 +299,12 @@ class OrderController extends Controller
         $order->save();
         return redirect()->back();
     }
+    public function newAction(Request $request, $id)
+    {
+        $order = Order::find($id);
+        $order->coupon = $request->selcoupon;
+        
+    }
     public function getAddquantity(Request $request, $id)
     {
         
@@ -321,6 +327,7 @@ class OrderController extends Controller
     {
         $info = Userinfo::where('order_id', "=", $id)->first();
 
+        $info->email = $request->email;
         $info->address = $request->address;
         $info->city = $request->city;
         $info->state = $request->state;

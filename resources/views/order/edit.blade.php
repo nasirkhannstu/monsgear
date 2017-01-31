@@ -101,6 +101,18 @@
 						{!! Form::close() !!}
 						</p>
 					</dl>
+					<dl class="dl-horizontal">
+						<label>New Order</label>
+						<p>
+						{!! Form::open(array('route' => ['coupon.newaction',$order->id],'data-parsley-validate'=>'')) !!}
+						<select class="form-control  select2-product" name="selcoupon">
+							<option value="neworder">New Order</option>		
+							<option value="processingorder">Processing Order</option>		
+						</select>
+						{{Form::submit('Update',array('class' => 'btn btn-success btn-lg btn-block','style'=>'margin-top:20px'))}}
+						{!! Form::close() !!}
+						</p>
+					</dl>
 				</div>
 			</div>
 			</div>
@@ -159,6 +171,12 @@
 			{!! Form::open(array('route' => ['address.update',$order->id],'data-parsley-validate'=>'','files' => true)) !!}
 				<div class="well">
 					<h3>Shipping Address</h3><hr>
+					<dl class="dl-horizontal">
+						<label>Email:</label>
+						<p>
+							{{Form::text('email', $info->address,array('class' => 'form-control','required'=>'','maxlength'=>'225')) }}
+						</p>
+					</dl>
 					<dl class="dl-horizontal">
 						<label>Address:</label>
 						<p>

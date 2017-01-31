@@ -181,6 +181,10 @@ class PagesController extends Controller
         $sideblogs = Blog::orderBy('id','desc')->limit(5)->get();
         return view('pages.about')->withSideblogs($sideblogs);
     }
+    public function getSearchPage(){
+        $sideblogs = Blog::orderBy('id','desc')->limit(5)->get();
+        return view('pages.search')->withSideblogs($sideblogs);
+    }
 
     public function postContact(Request $request)
     {
