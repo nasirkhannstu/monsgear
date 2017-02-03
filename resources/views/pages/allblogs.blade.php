@@ -46,7 +46,7 @@
 <ul class="popular-list">
     @foreach ($sideblogs as $key => $blog)
     <li>
-      <a href="{{ url('b/'.$blog->slug)}}" title="{{ $blog->title }}">
+      <a href="{{ url('blog/'.$blog->slug)}}" title="{{ $blog->title }}">
         <img src="{{ asset('uploads/blogimg/'. $blog->image) }}" alt="{{ $blog->title }}">
         <span>{{ $blog->title }}</span>
       </a>
@@ -68,7 +68,7 @@
                 @foreach ($blogs as $key => $blog)
                   <div class="item">
                     <div class="inner-wrap">
-                      <a href="{{ url('b/'.$blog->slug)}}" alt="{{ $blog->title }}" title="{{ $blog->title }}">
+                      <a href="{{ url('blog/'.$blog->slug)}}" alt="{{ $blog->title }}" title="{{ $blog->title }}">
                       <div class="nodeImgWrap">
                         <div class="nodeImg ">
                           <img src="{{ asset('uploads/blogimg/'. $blog->image) }}" alt="{{ $blog->title }}" width="400" height="250">        </div>

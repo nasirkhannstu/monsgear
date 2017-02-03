@@ -19,42 +19,14 @@ Route::get('/adminpanel','AdminpanelController@getIndex');
 Route::resource('adminpanel/blog', 'BlogController');
 
 //Product Route
-<<<<<<< HEAD
+
 Route::resource('adminpanel/product', 'ProductController');
 //Categories
 Route::resource('adminpanel/categories', 'CategoryController', ['except' => 'create']);
 //Coupon
 Route::resource('adminpanel/coupons', 'CouponController');
-=======
-Route::resource('product', 'ProductController');
-
-//Cart
-
-Route::get('/add-to-cart/{id}', ['uses' => 'ProductController@getAddToCart', 'as' => 'product.addToCart']);
-
-Route::get('/add-to-cartC/{id}', ['uses' => 'ProductController@getAddToCartC', 'as' => 'product.addToCartC']);
-
-Route::get('/reduceC/{id}', ['uses' => 'ProductController@getReduceByOneC', 'as' => 'product.reduceByOneC']);
-
-Route::get('/remove/{id}', ['uses' => 'ProductController@getRemoveItem', 'as' => 'product.remove']);
-
-//Shopping Cart
-Route::get('/shopping-cart', ['uses' => 'PagesController@getShowCoupon', 'as' => 'product.shoppingCart']);
-//Route::get('showcoupon', ['uses' => 'PagesController@getShowCoupon', 'as' => 'product.showcoupon']);
-Route::post('coupon', ['uses' => 'PagesController@getCoupon', 'as' => 'product.coupon']);
-
-//Pages
-Route::get('/', ['uses' => 'PagesController@getIndex', 'as' => 'pages.index']);
-// Route::get('/single/{id}', ['uses' => 'PagesController@getSingle', 'as' => 'pages.single']);
-Route::get('checkout', ['uses' => 'PagesController@getCheckout', 'as' => 'product.checkout']);
-
-Route::get('p/{slug}', ['uses' => 'PagesController@getSingleProduct', 'as' => 'blog.single'])->where('slug', '[\w\d\-\_]+');
-Route::get('b/{slug}', ['uses' => 'PagesController@getSingleBlog', 'as' => 'sBlog.single'])->where('slug', '[\w\d\-\_]+');
-Route::get('allblogs', ['uses' => 'PagesController@getAllblog', 'as' => 'blog.all']);
-
->>>>>>> 27ae7530c1ead060c58f962fc7b48f7c1301a868
 //Order 
-Route::resource('order', 'OrderController', ['except' => 'create']);
+Route::resource('adminpanel/order', 'OrderController', ['except' => 'create']);
 Route::get('/showorder/{id}', ['uses' => 'OrderController@getShowOrder', 'as' => 'pages.showorder']);
 Route::post('addproduct/{prod_id}', ['uses' =>'OrderController@getAddprod', 'as' => 'product.add']);
 Route::post('orderaction/{prod_id}',['uses' =>'OrderController@newAction', 'as'=>'coupon.newaction']);
@@ -72,6 +44,32 @@ Route::post('pcomments/{product_id}', ['uses' =>'PcommentController@store', 'as'
 Route::put('pcomments/{id}', ['uses' =>'PcommentController@update', 'as' => 'pcomment.update']);
 Route::delete('pdestroy/{id}', ['uses' =>'PcommentController@destroy', 'as' => 'pcomment.destroy']);
 Route::get('pcomment', ['uses' =>'PcommentController@index', 'as' => 'pcomments.index']);
+
+
+
+// //Cart
+
+// Route::get('/add-to-cart/{id}', ['uses' => 'ProductController@getAddToCart', 'as' => 'product.addToCart']);
+
+// Route::get('/add-to-cartC/{id}', ['uses' => 'ProductController@getAddToCartC', 'as' => 'product.addToCartC']);
+
+// Route::get('/reduceC/{id}', ['uses' => 'ProductController@getReduceByOneC', 'as' => 'product.reduceByOneC']);
+
+// Route::get('/remove/{id}', ['uses' => 'ProductController@getRemoveItem', 'as' => 'product.remove']);
+
+// //Shopping Cart
+// Route::get('/shopping-cart', ['uses' => 'PagesController@getShowCoupon', 'as' => 'product.shoppingCart']);
+// //Route::get('showcoupon', ['uses' => 'PagesController@getShowCoupon', 'as' => 'product.showcoupon']);
+// Route::post('coupon', ['uses' => 'PagesController@getCoupon', 'as' => 'product.coupon']);
+
+// //Pages
+// Route::get('/', ['uses' => 'PagesController@getIndex', 'as' => 'pages.index']);
+// // Route::get('/single/{id}', ['uses' => 'PagesController@getSingle', 'as' => 'pages.single']);
+// Route::get('checkout', ['uses' => 'PagesController@getCheckout', 'as' => 'product.checkout']);
+
+// Route::get('p/{slug}', ['uses' => 'PagesController@getSingleProduct', 'as' => 'blog.single'])->where('slug', '[\w\d\-\_]+');
+// Route::get('b/{slug}', ['uses' => 'PagesController@getSingleBlog', 'as' => 'sBlog.single'])->where('slug', '[\w\d\-\_]+');
+// Route::get('allblogs', ['uses' => 'PagesController@getAllblog', 'as' => 'blog.all']);
 
 
 
@@ -103,15 +101,11 @@ Route::get('blog', ['uses' => 'PagesController@getAllblog', 'as' => 'blog.all'])
                               //  customer account route   //
 
 
-
-Route::get('myaccount', ['uses' =>'AccountController@showMyaccount', 'as' => 'account.index']);
-Route::get('account/address', ['uses' =>'AccountController@showAddress', 'as' => 'account.address']);
-Route::post('account/saveaddress', ['uses' =>'AccountController@save', 'as' => 'account.saveaddress']);
-Route::get('account/showorder', ['uses' =>'AccountController@showOrder', 'as' => 'account.showorder']);
-Route::get('account/showproducts/{id}', ['uses' =>'AccountController@showProducts', 'as' => 'account.showproducts']);
-
-
-
+Route::get('myaccount',['uses' =>'AccountController@showMyaccount','as'=>'account.index']);
+Route::get('account/address',['uses'=>'AccountController@showAddress','as'=>'account.address']);
+Route::post('account/saveaddress',['uses'=>'AccountController@save','as'=>'account.saveaddress']);
+Route::get('account/showorder',['uses'=>'AccountController@showOrder','as'=>'account.showorder']);
+Route::get('account/showproducts/{id}',['uses'=>'AccountController@showProducts','as'=>'account.showproducts']);
 
 Auth::routes();
 
@@ -122,12 +116,8 @@ Route::post('/contact', 'PagesController@postContact');
 Route::get('/about', 'PagesController@showAbout');
 
 Auth::routes();
-
 Route::get('/home', 'HomeController@index');
 Route::get('/customer_home', 'CustomerController@index');
-
-
-
 
 
 Auth::routes();

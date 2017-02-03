@@ -46,7 +46,7 @@
 <ul class="popular-list">
     @foreach ($sideblogs as $key => $blog)
     <li>
-      <a href="{{ url('b/'.$blog->slug)}}" title="{{ $blog->title }}">
+      <a href="{{ url('blog/'.$blog->slug)}}" title="{{ $blog->title }}">
         <img src="{{ asset('uploads/blogimg/'. $blog->image) }}" alt="{{ $blog->title }}">
         <span>{{ $blog->title }}</span>
       </a>

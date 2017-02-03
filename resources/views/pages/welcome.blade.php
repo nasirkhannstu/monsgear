@@ -134,11 +134,11 @@
                                         <div class="inner-wrap">
                                             <div class="grid-product-header">
                                                 <h4 class="product-name">
-                                                    <a href="{{ url('p/'.$product->slug)}}">{{ $product->name}}</a>
+                                                    <a href="{{ url('shop/'.$product->slug)}}">{{ $product->name}}</a>
                                                 </h4>
                                             </div>
                                             <div class="product-image">
-                                                <a href="{{ url('p/'.$product->slug)}}" title="{{ $product->name}}">
+                                                <a href="{{ url('shop/'.$product->slug)}}" title="{{ $product->name}}">
                                                     <img src="{{ asset('uploads/product/'. $product->image) }}" alt="{{ $product->name}}">
                                                 </a>
                                             </div>
@@ -178,11 +178,11 @@
                                         <div class="inner-wrap">
                                             <div class="grid-product-header">
                                                 <h4 class="product-name">
-                                                    <a href="{{ url('p/'.$product->slug)}}">{{ $product->name}}</a>
+                                                    <a href="{{ url('shop/'.$product->slug)}}">{{ $product->name}}</a>
                                                 </h4>
                                             </div>
                                             <div class="product-image">
-                                                <a href="{{ url('p/'.$product->slug)}}" title="{{ $product->name}}">
+                                                <a href="{{ url('shop/'.$product->slug)}}" title="{{ $product->name}}">
                                                     <img src="{{ asset('uploads/product/'. $product->image) }}" alt="{{ $product->name}}">
                                                 </a>
                                             </div>
@@ -222,11 +222,11 @@
                                         <div class="inner-wrap">
                                             <div class="grid-product-header">
                                                 <h4 class="product-name">
-                                                    <a href="{{ url('p/'.$product->slug)}}">{{ $product->name}}</a>
+                                                    <a href="{{ url('shop/'.$product->slug)}}">{{ $product->name}}</a>
                                                 </h4>
                                             </div>
                                             <div class="product-image">
-                                                <a href="{{ url('p/'.$product->slug)}}" title="{{ $product->name}}">
+                                                <a href="{{ url('shop/'.$product->slug)}}" title="{{ $product->name}}">
                                                     <img src="{{ asset('uploads/product/'. $product->image) }}" alt="{{ $product->name}}">
                                                 </a>
                                             </div>
@@ -263,11 +263,11 @@
                             <div class="inner-wrap">
                                 <div class="grid-product-header">
                                     <h4 class="product-name">
-                                        <a href="{{ url('p/'.$product->slug)}}">{{ $product->name}}</a>
+                                        <a href="{{ url('shop/'.$product->slug)}}">{{ $product->name}}</a>
                                     </h4>
                                 </div>
                                 <div class="product-image">
-                                    <a href="{{ url('p/'.$product->slug)}}" title="{{ $product->name}}">
+                                    <a href="{{ url('shop/'.$product->slug)}}" title="{{ $product->name}}">
                                         <img src="{{ asset('uploads/product/'. $product->image) }}" alt="{{ $product->name}}">
                                     </a>
                                 </div>
@@ -293,7 +293,7 @@
 
 
             <div class="new clearfix">
-                <h2 class="hstyle-two">New At Muscle &amp; Strength <a href="{{url('allblogs')}}" class="inner-link">View all</a></h2>
+                <h2 class="hstyle-two">New At Muscle &amp; Strength <a href="{{url('blog')}}" class="inner-link">View all</a></h2>
                 <div class="content-grid-3up">
                     <div class="view view-newest-content-by-type view-id-newest_content_by_type view-display-id-posted_in view-dom-id-3739d303609e7db5c7e0ee32613b6362">
 
@@ -301,7 +301,7 @@
                             @foreach ($blogs as $key => $blog)
                                 <div class="item">
                                     <div class="inner-wrap">
-                                        <a href="{{ url('b/'.$blog->slug)}}" title="{{ $blog->title }}">
+                                        <a href="{{ url('blog/'.$blog->slug)}}" title="{{ $blog->title }}">
                                             <div class="nodeImgWrap">
                                                 <div class="nodeImg ">
                                                     <img src="{{ asset('uploads/blogimg/'. $blog->image) }}" width="400" height="250" alt="{{ $blog->title }}" /></div>

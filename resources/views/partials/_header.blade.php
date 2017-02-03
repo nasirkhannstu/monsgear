@@ -252,7 +252,7 @@
                 </li>
 
                 <li>
-                    <a class="branch-link" href="{{url('allblogs')}}">Blog
+                    <a class="branch-link" href="{{url('blog')}}">Blog
                     </a>
                 </li>
                 <li>

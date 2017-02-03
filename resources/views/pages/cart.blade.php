@@ -48,7 +48,7 @@
     
 				<div class="item-info">
 				    <span class="product-name">
-				        <a href="{{ url('p/'.$product['item']['slug'])}}">{{ $product['item']['name'] }}</a>
+				        <a href="{{ url('shop/'.$product['item']['slug'])}}">{{ $product['item']['name'] }}</a>
 					</span>
 				    <span class="price">$4.99</span>			
 				    <div class="options_messages">

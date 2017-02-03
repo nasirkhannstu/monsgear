@@ -3,16 +3,16 @@
   <div class="panel-body">
     	<ul class="nav nav-pills nav-stacked">
 			<li>
-				<a href="/product">Products</a>
+				<a href="/adminpanel/product">Products</a>
 			</li>
 			<li>
-				<a href="/order">Orders</a>
+				<a href="/adminpanel/order">Orders</a>
 			</li>
 			<li>
-				<a href="/blog">Blogs</a>
+				<a href="/adminpanel/blog">Blogs</a>
 			</li>
 			<li>
-				<a href="/categories">Category</a>
+				<a href="/adminpanel/categories">Category</a>
 			</li>
 			<li>
 				<a href="{{ route('comments.index') }}">Blog Comments</a>
@@ -21,7 +21,7 @@
 				<a href="{{ route('pcomments.index') }}">Product Comments</a>
 			</li>
 			<li>
-				<a href="/coupons">Coupons</a>
+				<a href="/adminpanel/coupons">Coupons</a>
 			</li>
 		</ul>
   </div>

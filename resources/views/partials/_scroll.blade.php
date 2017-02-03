@@ -14,7 +14,7 @@
                     </a>
                 </li>
                 <li>
-                    <a  href="/allblogs">Blog
+                    <a  href="/blog">Blog
                     </a>
                 </li>
                 <li>
