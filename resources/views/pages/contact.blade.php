@@ -83,25 +83,25 @@
 
                                     <div class="content clearfix">
                                         <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even"><h4 class="hstyle-three">
-                                                        Contact M&amp;S By Phone</h4>
-                                                    <p>Muscle &amp; Strength has a fully trained, friendly, and enthusiastic store support team that can help you with any question you have about your order. We practice what we preach, and all our support team workout and take supplements, so we can help answer any questions you might have about our products.</p>
+                                                        Contact Monster Gear By Phone</h4>
+                                                    <p>Monster Gear has a fully trained, friendly, and enthusiastic store support team that can help you with any question you have about your order. We practice what we preach, and all our support team workout and take supplements, so we can help answer any questions you might have about our products.</p>
                                                     <p>We can also take orders by phone, so call us if you want to speak to someone about placing an order!</p>
                                                     <p><strong>Customer Service Numbers</strong>:</p>
-                                                    <p class="rteindent1">Toll free: 1-800-537-9910<br>
-                                                        International: +1 803-695-0558<br>
-                                                        Fax: +1 803 227 0147</p>
+                                                    <p class="rteindent1">Toll free: +507 205-1600<br>
+                                                       </p>
                                                     <p><strong>Support Hours:</strong></p>
                                                     <p class="rteindent1">Monday-Friday: 8am to 11pm EST<br>
                                                         Saturday &amp; Sunday: 9am to 5pm EST</p>
                                                     <h3 class="hstyle-three">
-                                                        M&amp;S Mailing Address</h3>
+                                                        Monster Gear Mailing Address</h3>
                                                     <p>Need to send us something? Here's where to find us:</p>
-                                                    <p class="rteindent1">Muscle &amp; Strength<br>
-                                                        1180 First Street South<br>
-                                                        Columbia, SC, 29209<br>
+                                                    <p class="rteindent1">Monster Gear<br>
+                                                        Calle 53 Este, Marbella
+                                                         <br>
+                                                        Planta 1-Área comercial, Panama City, Panama<br>
                                                         USA</p>
                                                     <h3 class="hstyle-three">
-                                                        Contact M&amp;S Via Email</h3>
+                                                        Contact Monster GearVia Email</h3>
                                                     <p>We answer emails 7 days a week. Our customer service team is very fast, most weekday inquiries are answered in around an hour! Some questions may be more complicated and take time to resolve. Please use the form below to contact us by email.</p>
                                                 </div></div></div>		    <div class="qg-twothird">
                                             <div class="border-wrap">

@@ -56,8 +56,8 @@
                 <div >
                     <div id="wrapper">
                         <div class="slider-wrapper theme-default">
-                            <div id="slider" class="nivoSlider"> <img src="uploads/demo/images/slider1.jpg" data-thumb="uploads/demo/images/slider1.jpg" alt="" /> <a href="http://dev7studios.com"><img src="uploads/demo/images/slider2.jpg" data-thumb="uploads/demo/images/slider2.jpg" alt="" title="This is an example of a caption" /></a> <img src="uploads/demo/images/slider3.jpg" data-thumb="uploads/demo/images/slider3.jpg" alt="" data-transition="sliceDown" /> <img src="uploads/demo/images/slider4.jpg" data-thumb="uploads/demo/images/slider4.jpg" alt="" title="#htmlcaption" /> </div>
-                            <div id="htmlcaption" class="nivo-html-caption"> <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>. </div>
+                            <div id="slider" class="nivoSlider"> <img src="uploads/demo/images/slider1.jpg" data-thumb="uploads/demo/images/slider1.jpg"  title="100% DOMESTIC SHIPPING" alt="" /> <a href=""><img src="uploads/demo/images/slider2.jpg" data-thumb="uploads/demo/images/slider2.jpg" alt="" title="WU MG BITCOIN AMEX GIFT CARD" /></a> <img src="uploads/demo/images/slider3.jpg" data-thumb="uploads/demo/images/slider3.jpg" alt="" data-transition="sliceDown" title="DISCREET SHIPPING" /> <img src="uploads/demo/images/slider4.jpg" data-thumb="uploads/demo/images/slider4.jpg" alt="" title="1-2 DAY SHIPPING " /> </div>
+                            <div id="htmlcaption" class="nivo-html-caption"> <strong>100% DOMESTIC SHIPPING</strong>  </div>
                         </div>
                     </div>
                 </div>
@@ -68,7 +68,7 @@
                     <div class="social">
 
                         <ul class="follow">
-                            <li><a rel="nofollow" href="">
+                            <li><a rel="nofollow" href="https://web.facebook.com/monster.mylabs/">
                                     <svg width="25" height="25">
                                         <use xlink:href="#icon-facebook-brand"></use>
                                         <image width="25" height="25" src="uploads/icon/facebook-brand.png"></image>
@@ -80,38 +80,9 @@
                                         <image width="25" height="25" src="uploads/icon/twitter-brand.png"></image>
                                     </svg>
                                 </a></li>
-                            <li><a rel="nofollow" href="">
-                                    <svg width="25" height="25">
-                                        <use xlink:href="#icon-youtube-brand"></use>
-                                        <image width="25" height="25" src="uploads/icon/youtube-brand.png"></image>
-                                    </svg>
-                                </a></li>
-                            <li><a rel="nofollow" href="">
-                                    <svg width="25" height="25">
-                                        <use xlink:href="#icon-instagram-brand"></use>
-                                        <image width="25" height="25" src="uploads/icon/instagram-brand.png"></image>
-                                    </svg>
-                                </a></li>
-                            <li><a href="" rel="publisher">
-                                    <svg width="25" height="25">
-                                        <use xlink:href="#icon-google-brand"></use>
-                                        <image width="25" height="25" src="uploads/icon/google-brand.png"></image>
-                                    </svg>
-                                </a></li>
-                            <li><a rel="nofollow" href="">
 
-                                        <image width="25" height="25" src="uploads/icon/pinterest-brand.png"></image>
-
-                                </a></li>
-                            <li><a rel="nofollow" href="">
-
-
-                                        <image width="25" height="25" src="uploads/icon/tumblr-brand.png"></image>
-
-                                </a>
-                            </li>
                         </ul>
-                        <span>Join over 1.4 Million Monster Gear fans!</span>
+                        <span>Join over  Monster Gear fans!</span>
                     </div>
                 </div>
             </div>
@@ -121,7 +92,14 @@
             </div> <!-- /#tabs -->
             @foreach($injectable->chunk(6) as $key => $productchunk)
             <div class="todays-deals clearfix">
-                <h2 class="hstyle-two">Injectable{{ $key+1 }} Products </h2>
+                <h2 class="hstyle-two"><?php
+                if($key==0){
+                echo "BLENDS";}
+                elseif($key==1){
+                echo"POPULAR";
+                }elseif($key==3){echo "GOLDLINE";}
+                else{echo "MORE";}?>
+                                                   Products </h2>
                 <div class="product-grid-4up">
                     <ul style="padding-left: 0em;">
 
@@ -165,7 +143,13 @@
 
             @foreach($oral->chunk(6) as $key => $productchunk)
                 <div class="todays-deals clearfix">
-                    <h2 class="hstyle-two">Oral{{ $key+1 }} Products </h2>
+                    <h2 class="hstyle-two"><?php
+                        if($key==0){
+                            echo "HORMONES";}
+                        elseif($key==1){
+                            echo"ANTI ESTROGEN";
+                        }elseif($key==3){echo "POPULAR";}
+                        else{echo "MORE";}?> Products </h2>
                     <div class="product-grid-4up">
                         <ul style="padding-left: 0em;">
 
@@ -293,7 +277,7 @@
 
 
             <div class="new clearfix">
-                <h2 class="hstyle-two">New At Muscle &amp; Strength <a href="{{url('blog')}}" class="inner-link">View all</a></h2>
+                <h2 class="hstyle-two">Blog <a href="{{url('allblogs')}}" class="inner-link">View all</a></h2>
                 <div class="content-grid-3up">
                     <div class="view view-newest-content-by-type view-id-newest_content_by_type view-display-id-posted_in view-dom-id-3739d303609e7db5c7e0ee32613b6362">
 

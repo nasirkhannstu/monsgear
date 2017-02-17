@@ -55,17 +55,12 @@
                     </a>
 
                     <div class="store-dropdown">
-                        <ul class="nested-menu">
 
-                            <li class="last"><span class="text open-chat"><svg style="width:1.3em; height:1.3em; margin-left:-.3em; margin-bottom: -0.25em; margin-right: 0.1em;">
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-insta-comments-blue"></use>
-                                <image style="width:1.3em; height:1.3em; margin-left:-.3em; margin-bottom: -0.25em; margin-right: 0.1em;" src="{{asset('uploads/icon/insta-comments-blue.png')}}"></image>
-                            </svg> Live Chat</span></li>
-                        </ul>
                         <div class="gray margTop10 acenter border-wrap"><svg style="width:1.3em; height:1.3em; margin-left:-.3em; margin-bottom: -0.25em; margin-right: 0.1em;">
                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-support"></use>
                             <image style="width:1.3em; height:1.3em; margin-left:-.3em; margin-bottom: -0.25em;" src="{{asset('uploads/icon/support.png')}}"></image>
-                        </svg> <span class="number-font">1-phone-number-9910</span></div>
+                        </svg> <span class="number-font">+507 205-1600
+</span></div>
                     </div>
 
                 </div>

@@ -133,6 +133,8 @@ class ProductController extends Controller
         $product->save();
 
 
+
+
         Session::flash('success','The Product has successfully saved!');
 
         //redirect to another page

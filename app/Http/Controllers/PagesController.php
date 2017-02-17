@@ -182,6 +182,10 @@ class PagesController extends Controller
         $sideblogs = Blog::orderBy('id','desc')->limit(5)->get();
         return view('pages.contact')->withSideblogs($sideblogs);
     }
+    public function showShipping(){
+        $sideblogs = Blog::orderBy('id','desc')->limit(5)->get();
+        return view('pages.shipping')->withSideblogs($sideblogs);
+    }
     public function showAbout(){
         $sideblogs = Blog::orderBy('id','desc')->limit(5)->get();
         return view('pages.about')->withSideblogs($sideblogs);

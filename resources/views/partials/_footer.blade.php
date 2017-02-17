@@ -5,8 +5,8 @@
                     <li><a href="/contact">Contact Support</a></li>
                     <li><a href="{{url('myaccount')}}">Your Account</a></li>
                     <li><a href="">Order Status</a></li>
-                    <li><a href="">Shipping &amp; Returns</a></li>
-                    <li><a href="">Bulk Buy Discounts</a></li>
+                    <li><a href="/shipping">Shipping &amp; Returns</a></li>
+
                 </ul>
             </div>
             <div class="f-rewards">
@@ -31,46 +31,7 @@
                                        data-src="{{asset('uploads/icon/twitter.png')}}"/>
                             </svg>
                         </a></li>
-                        <li><a rel="nofollow" href="">
-                            <svg style="width:1.2em; height:1.2em;">
-                                <use xlink:href="#icon-youtube"/>
-                                <image style="width:1.2em; height:1.2em;"
-                                       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
-                                       data-src="{{asset('uploads/icon/youtube.png')}}"/>
-                            </svg>
-                        </a></li>
-                        <li><a rel="nofollow" href="">
-                            <svg style="width:1.2em; height:1.2em;">
-                                <use xlink:href="#icon-instagram"/>
-                                <image style="width:1.2em; height:1.2em;"
-                                       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
-                                       data-src="{{asset('uploads/icon/instagram.png')}}"/>
-                            </svg>
-                        </a></li>
-                        <li><a href="" rel="publisher nofollow">
-                            <svg style="width:1.2em; height:1.2em;">
-                                <use xlink:href="#icon-google"/>
-                                <image style="width:1.2em; height:1.2em;"
-                                       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
-                                       data-src="{{asset('uploads/icon/google.png')}}"/>
-                            </svg>
-                        </a></li>
-                        <li><a rel="nofollow" href="">
-                            <svg style="width:1.2em; height:1.2em;">
-                                <use xlink:href="#icon-pinterest"/>
-                                <image style="width:1.2em; height:1.2em;"
-                                       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
-                                       data-src="{{asset('uploads/icon/pinterest.png')}}"/>
-                            </svg>
-                        </a></li>
-                        <li><a rel="nofollow" href="">
-                            <svg style="width:1.2em; height:1.2em;">
-                                <use xlink:href="#icon-tumblr"/>
-                                <image style="width:1.2em; height:1.2em;"
-                                       src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
-                                       data-src="{{asset('uploads/icon/tumblr.png')}}"/>
-                            </svg>
-                        </a></li>
+
                     </ul>
                 </div>
             </div>
@@ -80,10 +41,11 @@
                 <p itemscope="" itemtype="http://schema.org/Organization">
                     <span itemprop="name">Monster Gear </span><br>
                     <span itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
-                    <span itemprop="streetAddress">contact First Street address</span><br>
-                    <span itemprop="addressLocality">address</span>, <span itemprop="addressRegion">region</span> <span
-                            itemprop="postalCode">post code</span><br>
-                    PH: <span itemprop="telephone" class="number-font">1-phone-number-hear</span><br>
+                    <span itemprop="streetAddress">Calle 53 Este, Marbella
+</span><br>
+                    <span itemprop="addressLocality">Planta 1-Área comercial</span>, <span itemprop="addressRegion">Panama City, Panama</span> <span
+                            itemprop="postalCode"></span><br>
+                    PH: <span itemprop="telephone" class="number-font">+507 205-1600</span><br>
                     Email: <a href="/contact">click here</a>
                     </span>
                 </p>
@@ -100,7 +62,7 @@
                     </form>
                 </div>
                 <img class="f-join-img" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
-                     data-src="https://cdn.muscleandstrength.com/sites/all/themes/mnsnew/images/brettandmeganfooter.png"
+                     data-src=""
                      alt="Brett and Megan">
             </div>
             <div class="tagline">
