@@ -8,7 +8,7 @@
      <div class="aside">
             <div class="region region-sidebar-second">
     <div class="form aside-widget">
-    <img alt="Build Muscle, Lose Fat &amp; Stay Motivated!" src="https://cdn.muscleandstrength.com/sites/all/themes/mnsnew/images/signupbanner.jpg">
+
     <div class="wrap">
         <p>Keep Yourself Updated!!! Subscribe Now.</p>
 

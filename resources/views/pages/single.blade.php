@@ -54,7 +54,17 @@
                                         </div>
                                     </span>
                                 </div>
-                                <div class="title">120 Servings</div>
+                                <div class="title"><?php
+                                    if($product->category->name=="Injectable"){
+                                        echo "Quantity:10 ML";
+                                    }
+                                        elseif($product->category->name=="Oral"){
+                                            echo "Quantity: 50 Tabs";
+                                        }
+                                    elseif($product->category->name=="Peptides"){
+                                        echo " ";
+                                    }
+                                    ?></div>
                                 <br>
                                 <!-- <div class="deal">
                                     <span class="label success">
@@ -64,13 +74,7 @@
                             </div>
                             <div class="fields">
                                 <div class="row">  
-                                    <div class="qty-field field">
-                                        <div class="input-group">
-                                            <div class="minus increment">-</div>
-                                            <input class="number" readonly="readonly" type="text" value="0" min="0" max="20" />
-                                            <div class="add increment">+</div>
-                                        </div>
-                                    </div>
+
                                 </div>
                             </div>
                         </div>

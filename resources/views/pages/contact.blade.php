@@ -8,7 +8,7 @@
         <div class="aside">
             <div class="region region-sidebar-second">
     <div class="form aside-widget">
-    <img alt="Build Muscle, Lose Fat &amp; Stay Motivated!" src="https://cdn.muscleandstrength.com/sites/all/themes/mnsnew/images/signupbanner.jpg">
+
     <div class="wrap">
         <p>Keep Yourself Updated!!! Subscribe Now.</p>
 
@@ -85,12 +85,12 @@
                                         <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even"><h4 class="hstyle-three">
                                                         Contact Monster Gear By Phone</h4>
                                                     <p>Monster Gear has a fully trained, friendly, and enthusiastic store support team that can help you with any question you have about your order. We practice what we preach, and all our support team workout and take supplements, so we can help answer any questions you might have about our products.</p>
-                                                    <p>We can also take orders by phone, so call us if you want to speak to someone about placing an order!</p>
-                                                    <p><strong>Customer Service Numbers</strong>:</p>
-                                                    <p class="rteindent1">Toll free: +507 205-1600<br>
+
+
+
                                                        </p>
                                                     <p><strong>Support Hours:</strong></p>
-                                                    <p class="rteindent1">Monday-Friday: 8am to 11pm EST<br>
+                                                    <p class="rteindent1">Monday-Friday: 8am to 6pm EST<br>
                                                         Saturday &amp; Sunday: 9am to 5pm EST</p>
                                                     <h3 class="hstyle-three">
                                                         Monster Gear Mailing Address</h3>

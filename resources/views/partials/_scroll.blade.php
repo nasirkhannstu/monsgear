@@ -154,6 +154,17 @@
 
                     </div>
                 </div>
+                <div class="store-action help has-dropdown">
+                    <a class="dtap" href="mailto:info@mymonsterlabs.com">
+
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-customer-support"></use>
+                            <image style="width:2em; height:2em; max-width:100%;margin-bottom: -.2em;margin-top: .2em;"   src="{{asset('uploads/icon/sendemail.png')}}"></image>
+
+                    </a>
+
+
+
+                </div>
             </div>
 
         </div>

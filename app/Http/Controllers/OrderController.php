@@ -302,7 +302,36 @@ class OrderController extends Controller
     public function newAction(Request $request, $id)
     {
         $order = Order::find($id);
-        $order->coupon = $request->selcoupon;
+        $couponsel = Coupon::where('id', "=", $order->coupon)->first();
+        $info = Userinfo::where('order_id', "=", $order->id)->first();
+        $cartproducts = Cartproduct::where('order_id', "=", $order->id)->get();
+        $mproducts = Product::all();
+
+        //email
+
+        $data1 = array(
+            'email' => $userInfo->email,
+            'subject' => 'Your Monster Gear Order Details',
+
+        );
+
+        Mail::send('email.order-customer', ['cartproducts' => $cartproducts,'products' => $mproducts, 'order' => $order, 'coupon' => $couponsel, 'info' => $info], function ($message) use ($data1) {
+            $message ->from('t@sectorbravo.com','Monster');
+            $message->to($data1['email']);
+            $message->subject($data1['subject']);
+        });
+        //admin order email
+        $data2 = array(
+            'email' => 't@sectorbravo1.com',
+            'subject' => '[Monster Gear]New customer order #'.$order->id.',Date '.$order->created_at,
+
+        );
+
+        Mail::send('email.order-admin', ['cartproducts' => $cartproducts,'products' => $mproducts, 'order' => $order, 'coupon' => $couponsel, 'info' => $info], function ($message) use ($data2) {
+            $message ->from('t@sectorbravo.com');
+            $message->to($data2['email']);
+            $message->subject($data2['subject']);
+        });
         
     }
     public function getAddquantity(Request $request, $id)

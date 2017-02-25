@@ -243,6 +243,34 @@
 
                 </div>
             </div>
+
+            {{--Send email--}}
+
+            <div class="store-action help has-dropdown">
+                <a class="dtap" href="mailto:info@mymonsterlabs.com">
+
+
+                        <image style="width:2em; height:2em; max-width:100%;margin-bottom: -.2em;margin-top: .2em;"    src="{{asset('uploads/icon/sendemail.png')}}"></image>
+
+        <span class="text">Send Email
+          <span class="white">
+
+
+                <image style="width:.4em; height:.4em; margin-top:-.6em"   src="{{asset('uploads/icon/sendemail.png')}}"></image>
+
+          </span>
+          <span class="blue">
+
+
+                <image style="width:.4em; height:.4em; margin-top:-.6em"   src="{{asset('uploads/icon/sendemail.png')}}"></image>
+
+          </span>
+        </span>
+                </a>
+
+
+
+            </div>
         </div>
         <div class="navigation">
             <ul class="nav-tree">

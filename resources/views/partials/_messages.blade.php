@@ -27,7 +27,7 @@
 	          <div class="messages statuserr">
 	            <p>There was an Error.</p>
 	            <ul>
-				@foreach ($errors->all as $error)
+				@foreach ($errors->all() as $error)
 					<li>{{ $error }}</li>
 				@endforeach
 				</ul>
