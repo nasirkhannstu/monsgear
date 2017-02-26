@@ -90,37 +90,7 @@
         </div>
 
         <div class="store-action-wrap">
-            <div class="store-action help has-dropdown">
-                <a class="dtap" href="/store/help">
-                    <svg style="width:2em; height:2em; max-width:100%;margin-bottom: -.2em;margin-top: .2em;" >
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-customer-support"></use>
-                        <image style="width:2em; height:2em; max-width:100%;margin-bottom: -.2em;margin-top: .2em;"   src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="{{asset('uploads/icon/customer-support.png')}}"></image>
-                    </svg>
-        <span class="text">Help
-          <span class="white">
-            <svg style="width:.4em; height:.4em; margin-top:-.6em">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-caret-white"></use>
-                <image style="width:.4em; height:.4em; margin-top:-.6em"  src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="{{asset('uploads/icon/caret-white.png')}}"></image>
-            </svg>
-          </span>
-          <span class="blue">
-            <svg style="width:.4em; height:.4em; margin-top:-.6em">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-caret-blue"></use>
-                <image style="width:.4em; height:.4em; margin-top:-.6em"  src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="{{asset('uploads/icon/caret-blue.png')}}"></image>
-            </svg>
-          </span>
-        </span>
-                </a>
 
-                <div class="store-dropdown">
-
-                    <div class="gray margTop10 acenter border-wrap"><svg style="width:1.3em; height:1.3em; margin-left:-.3em; margin-bottom: -0.25em; margin-right: 0.1em;">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-support"></use>
-                        <image style="width:1.3em; height:1.3em; margin-left:-.3em; margin-bottom: -0.25em;" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" menu-data-src="{{asset('uploads/icon/support.png')}}"></image>
-                    </svg> <span class="number-font">+507 205-1600</span></div>
-                </div>
-
-            </div>
 
 
 
@@ -276,6 +246,10 @@
             <ul class="nav-tree">
                 <li>
                     <a class="branch-link" href="/">Home
+                    </a>
+                </li>
+                <li>
+                    <a class="branch-link" href="/">Products
                     </a>
                 </li>
 

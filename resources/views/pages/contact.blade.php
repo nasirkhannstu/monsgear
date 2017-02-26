@@ -83,7 +83,7 @@
 
                                     <div class="content clearfix">
                                         <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even"><h4 class="hstyle-three">
-                                                        Contact Monster Gear By Phone</h4>
+                                                        Contact Monster Gear</h4>
                                                     <p>Monster Gear has a fully trained, friendly, and enthusiastic store support team that can help you with any question you have about your order. We practice what we preach, and all our support team workout and take supplements, so we can help answer any questions you might have about our products.</p>
 
 
@@ -91,7 +91,7 @@
                                                        </p>
                                                     <p><strong>Support Hours:</strong></p>
                                                     <p class="rteindent1">Monday-Friday: 8am to 6pm EST<br>
-                                                        Saturday &amp; Sunday: 9am to 5pm EST</p>
+
                                                     <h3 class="hstyle-three">
                                                         Monster Gear Mailing Address</h3>
                                                     <p>Need to send us something? Here's where to find us:</p>
@@ -101,8 +101,8 @@
                                                         Planta 1-Área comercial, Panama City, Panama<br>
                                                         USA</p>
                                                     <h3 class="hstyle-three">
-                                                        Contact Monster GearVia Email</h3>
-                                                    <p>We answer emails 7 days a week. Our customer service team is very fast, most weekday inquiries are answered in around an hour! Some questions may be more complicated and take time to resolve. Please use the form below to contact us by email.</p>
+                                                        Contact Monster Gear Via Email</h3>
+                                                    <p>We answer emails 5 days a week. Our customer service team is very fast, most weekday inquiries are answered in around an hour! Some questions may be more complicated and take time to resolve. Please use the form below to contact us by email.</p>
                                                 </div></div></div>		    <div class="qg-twothird">
                                             <div class="border-wrap">
                                                 <form class="webform-client-form"  action="{{url('contact')}}" method="POST"  >

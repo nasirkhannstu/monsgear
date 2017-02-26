@@ -83,7 +83,7 @@
                                         <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even"><h4 class="hstyle-three">
                                                         About Monster Gear</h4>
                                                     <p>Products are anabolic steroids and all related hormones, peptides, sarms, ancillary products. Reliability is guaranteed quality is the highest and best in the industry, if you pay by bit coin we ship the same day if you pay by Western Union Money Gram we ship within three days.</p>
-                                                    <p>Our laborde Tori is headed up by Berkeley PhD, We use strict quality controls to guarantee the best product on the market.</p>
+                                                    <p>Our laboratory  Tori is headed up by Berkeley PhD, We use strict quality controls to guarantee the best product on the market.</p>
 
 
                                                 </div></div></div>		    <div class="qg-twothird">

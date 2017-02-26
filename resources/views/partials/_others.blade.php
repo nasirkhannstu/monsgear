@@ -33,6 +33,19 @@
                     </a>
 
                 </li>
+                <li><a href="/">
+                    <span>
+                        <svg class="icon">
+                            <use xlink:href="#icon-store-shop-bag"/>
+                            <image class="icon" src="https://cdn.muscleandstrength.com/images/fallback/store-shop-bag.png"/>
+                        </svg>
+
+                 Products
+
+                    </span>
+                    </a>
+
+                </li>
 
 
 
@@ -69,70 +82,33 @@
                 <div class="customer-support-wrap">
 
                     <li class="support-menu">
-                        <a class="title" href="/store/help/main.html" alt="M&amp;S Help">
-                            7 Day Support
+                        <a class="title" href="/store/help/main.html" alt="Monster Gear Help">
+                            5 Day Support
                         </a>
                     </li>
 
                     <li class="support-menu">
-                        <div class="left" >
-                            <svg style="width:1em; height:1em; margin-bottom: -0.12em;">
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-support-white"></use>
-                                <image style="width:1em; height:1em; margin-bottom: -0.12em;" src="https://cdn.muscleandstrength.com/images/fallback/support-white.png"></image>
-                            </svg> 1-800-537-9910</div>
-                        <div class="right">
-                          <span class="open-chat"><svg style="width:.9em; height:.9em; margin-bottom: -0.1em;">
-                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-insta-comments"></use>
-                              <image style="width:.9em; height:.9em; margin-bottom: -0.1em;" src="https://cdn.muscleandstrength.com/images/fallback/insta-comments.png"></image>
-                          </svg> Live Chat</span></div>
+
+
                     </li>
 
                 </div>
 
 
                 <div class="social-links">
-                    <li><a rel="nofollow" href="http://www.facebook.com/muscleandstrength">
+                    <li><a rel="nofollow" href="https://web.facebook.com/monster.mylabs/">
                         <svg style="width:1em; height:1em;">
                             <use xlink:href="#icon-facebook"/>
-                            <image style="width:1em; height:1em;" src="https://cdn.muscleandstrength.com/images/fallback/facebook.png"/>
+                            <image style="width:1em; height:1em;" src="{{asset('uploads/icon/twitter.png')}}"/>
                         </svg>
                     </a></li>
-                    <li><a rel="nofollow" href="http://www.twitter.com/Muscle_Strength">
+                    <li><a rel="nofollow" href="">
                         <svg style="width:1em; height:1em;">
                             <use xlink:href="#icon-twitter"/>
                             <image style="width:1em; height:1em;" src="https://cdn.muscleandstrength.com/images/fallback/twitter.png"/>
                         </svg>
                     </a></li>
-                    <li><a rel="nofollow" href="http://www.youtube.com/muscleandstrength">
-                        <svg style="width:1em; height:1em;">
-                            <use xlink:href="#icon-youtube"/>
-                            <image style="width:1em; height:1em;" src="https://cdn.muscleandstrength.com/images/fallback/youtube.png"/>
-                        </svg>
-                    </a></li>
-                    <li><a rel="nofollow" href="http://instagram.com/muscleandstrength">
-                        <svg style="width:1em; height:1em;">
-                            <use xlink:href="#icon-instagram"/>
-                            <image style="width:1em; height:1em;" src="https://cdn.muscleandstrength.com/images/fallback/instagram.png"/>
-                        </svg>
-                    </a></li>
-                    <li><a href="https://plus.google.com/+muscleandstrength" rel="publisher nofollow">
-                        <svg style="width:1em; height:1em;">
-                            <use xlink:href="#icon-google"/>
-                            <image style="width:1em; height:1em;" src="https://cdn.muscleandstrength.com/images/fallback/google.png"/>
-                        </svg>
-                    </a></li>
-                    <li><a rel="nofollow" href="http://pinterest.com/musclestrength/">
-                        <svg style="width:1em; height:1em;">
-                            <use xlink:href="#icon-pinterest"/>
-                            <image style="width:1em; height:1em;" src="https://cdn.muscleandstrength.com/images/fallback/pinterest.png"/>
-                        </svg>
-                    </a></li>
-                    <li><a rel="nofollow" href="http://musclestrength.tumblr.com/">
-                        <svg style="width:1em; height:1em;">
-                            <use xlink:href="#icon-tumblr"/>
-                            <image style="width:1em; height:1em;" src="https://cdn.muscleandstrength.com/images/fallback/tumblr.png"/>
-                        </svg>
-                    </a></li>
+
                 </div>
             </ul>
 

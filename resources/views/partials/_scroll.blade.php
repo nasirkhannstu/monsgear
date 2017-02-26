@@ -14,6 +14,10 @@
                     </a>
                 </li>
                 <li>
+                    <a  href="/">Products
+                    </a>
+                </li>
+                <li>
                     <a  href="/blog">Blog
                     </a>
                 </li>
@@ -46,24 +50,6 @@
             </div>
 
             <div class="scroll-store-action-wrap">
-                <div class="store-action help has-dropdown">
-                    <a class="dtap" href="/store/help">
-                        <svg style="width:2em; height:2em; max-width:100%;margin-bottom: -.2em;margin-top: .2em;" >
-                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-customer-support"></use>
-                            <image style="width:2em; height:2em; max-width:100%;margin-bottom: -.2em;margin-top: .2em;"   src="{{asset('uploads/icon/customer-support.png')}}"></image>
-                        </svg>
-                    </a>
-
-                    <div class="store-dropdown">
-
-                        <div class="gray margTop10 acenter border-wrap"><svg style="width:1.3em; height:1.3em; margin-left:-.3em; margin-bottom: -0.25em; margin-right: 0.1em;">
-                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-support"></use>
-                            <image style="width:1.3em; height:1.3em; margin-left:-.3em; margin-bottom: -0.25em;" src="{{asset('uploads/icon/support.png')}}"></image>
-                        </svg> <span class="number-font">+507 205-1600
-</span></div>
-                    </div>
-
-                </div>
 
 
                 <div class="store-action cart">
