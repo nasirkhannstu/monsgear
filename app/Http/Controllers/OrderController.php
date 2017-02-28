@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
 use App\Functionss;
 use Illuminate\Http\Request;
 use App\Cart;
@@ -304,8 +305,13 @@ class OrderController extends Controller
         $order = Order::find($id);
         $couponsel = Coupon::where('id', "=", $order->coupon)->first();
         $info = Userinfo::where('order_id', "=", $order->id)->first();
-        $cartproducts = Cartproduct::where('order_id', "=", $order->id)->get();
-        $mproducts = Product::all();
+        $cartproducts = DB::table('cartproducts')
+            ->leftJoin('products', 'cartproducts.product_id', '=', 'products.id')
+            ->where([['cartproducts.order_id', '=', $order->id]])
+            ->get();
+        //dd($cartproducts);
+        //$cartproducts = Cartproduct::where('order_id', "=", $order->id)->get();
+        //$mproducts = Product::all();
 
         //email
 
@@ -315,7 +321,7 @@ class OrderController extends Controller
 
         );
 
-        Mail::send('email.order-customer', ['cartproducts' => $cartproducts,'products' => $mproducts, 'order' => $order, 'coupon' => $couponsel, 'info' => $info], function ($message) use ($data1) {
+        Mail::send('email.order-customer', ['cartproducts' => $cartproducts, 'order' => $order, 'coupon' => $couponsel, 'info' => $info], function ($message) use ($data1) {
             $message ->from('t@sectorbravo.com','Monster');
             $message->to($data1['email']);
             $message->subject($data1['subject']);

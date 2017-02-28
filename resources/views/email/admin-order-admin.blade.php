@@ -1,5 +1,6 @@
 <html>
 <body>
+'cartproducts' => $cartproducts,'products' => $mproducts, 'order' => $order, 'coupon' => $couponsel, 'info' => $info
 <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">  <tbody><tr><td>    <table align="center" bgcolor="#ababab" border="0" cellpadding="1" cellspacing="0" width="100%">      <tbody><tr><td>        <table align="center" border="0" cellpadding="3" cellspacing="0" width="100%">          <tbody><tr bgcolor="#ffffff"><td><table align="left" border="0" cellpadding="1" cellspacing="5">
                                         <tbody><tr><td align="left"><br><pre>New customer order
 
@@ -9,19 +10,19 @@ You have received an order from {{$info->fname.' '.$info->lname}}. Their order i
 
 Order number: #{{$order->id}}
 Order date: {{$order->created_at}}
-@foreach($products as $product){{ $product['item']['name'] }}
-
-Quantity: {{ $product['qty'] }}
-Cost: ${{ $product['price'] }}
+@foreach($cartproducts as $product)
+{{ $product->name }}
+Quantity: {{ $product->product_amount }}
+Cost: ${{ $product->price * $product->product_amount }}
 @endforeach
 
 
 ----------
 
-Cart Subtotal:${{ $totalPrice }}
+Cart Subtotal:${{$order->total}}
 Shipping:$@if($coupon)@if($coupon->freeship == 'No' && $totalPrice <= 500)+ $25 @else $0 @endif @elseif($totalPrice <= 500) +$25 @else $0 @endif
 Payment Method:{{ $order->method }}
-Order Total:@if($couponTotal)${{ $couponTotal }}@else @if($totalPrice <= 500) ${{ $totalPrice + 25 }} @else ${{ $totalPrice }} @endif @endif
+Order Total:${{$order->grandtotal}}
 
 ****************************************************
 

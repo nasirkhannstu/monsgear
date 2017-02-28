@@ -298,7 +298,7 @@ input.number{font-size:1em;line-height:1.2em;font-family:'nimbus_light',sans-ser
 0 1em;line-height:1em;font-family:'nimbus_light',sans-serif}.product-shop .deal
 .label{line-height:1.2em !important;padding:0.4em 0.6em 0.3em 0.6em !important}.product-shop .deal
 .label.success{background-color:#079c3a;text-shadow:none}.product-shop .deal
-.label.clearance{background-color:#D41313;text-shadow:none}.product-shop .add-to-cart-wrap{padding:1em}.product-shop .add-to-cart{overflow:hidden}@media (min-width: 1082px){.product-shop .add-to-cart .button-wrap{float:right;width:63%}}@media (min-width: 1400px){.product-shop .add-to-cart .button-wrap{float:right;width:65%}}.oldie .product-shop .add-to-cart .button-wrap{float:right;width:65%}.product-shop .add-to-cart .button-wrap
+.label.clearance{background-color:#D41313;text-shadow:none}.product-shop .add-to-cart-wrap{padding:1em}.product-shop .add-to-cart{overflow:hidden}@media (min-width: 1082px){.product-shop .add-to-cart .button-wrap{float:right;width:100%}}@media (min-width: 1400px){.product-shop .add-to-cart .button-wrap{float:right;width:65%}}.oldie .product-shop .add-to-cart .button-wrap{float:right;width:65%}.product-shop .add-to-cart .button-wrap
 .btn{display:block;float:none;width:80%;margin:0;text-transform:uppercase;box-sizing:content-box;border-radius:5px;padding:1.25em 10% 1.25em;text-align:left;font-size:1.3em;font-family:'nimbus_regular',sans-serif;text-align:center;border:0}@media (min-width: 800px){.product-shop .add-to-cart .button-wrap
 .btn{font-size:1em;width:88%;padding:1.25em 6% 1em;text-align:left}}@media (min-width: 1082px){.product-shop .add-to-cart .button-wrap
 .btn{font-size:.8em;width:84%;padding:1.25em 8% 1em}}@media (min-width: 1400px){.product-shop .add-to-cart .button-wrap

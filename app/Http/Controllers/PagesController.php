@@ -38,8 +38,23 @@ class PagesController extends Controller
     //     return view('pages.single')->withProduct($product);
     // }
     public function getSingleProduct($slug){
-    	$product = Product::where('slug', "=", $slug)->first();
-        return view('pages.single')->withProduct($product);
+        $qnty = 0;
+    	$selProduct = Product::where('slug', "=", $slug)->first();
+        if(Session::has('cart')){
+            $oldCart = Session::get('cart');
+            $cart = new Cart($oldCart);
+            $products = $cart->items;
+            //dd($products);
+            foreach ($products as $prod) {
+                //echo $prod['item']['id'].'-'.$selProduct->id.'<br>';
+                if($prod['item']['id'] == $selProduct->id){
+                    $qnty = $prod['qty'];
+                }
+            }
+        }else{
+            $qnty = 0;
+        }
+        return view('pages.single')->withProduct($selProduct)->withQty($qnty);
     }
 
     public function getSingleBlog($slug){

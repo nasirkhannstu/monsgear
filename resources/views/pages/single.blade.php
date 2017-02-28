@@ -83,21 +83,27 @@
                 </div>                            
                 <div class="section-separator"></div>
                 <div class="section-inner-wrap add-to-cart-wrap">
-        
+                    <h3>Add To Cart</h3>
                     <div class="add-to-cart">
                         <div class="button-wrap">
-                            <a href="{{ route('product.addToCart', ['id' => $product->id]) }}">
-                            <button class="btn btn-lg btn-flat-blue aloading basic-load validate-rating">
-                                <span class="init">
-                                    <svg class="svg-icon" style="width: 1.4em; height: 1.4em; max-width: 100%;">
-                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-store-cart"></use>
-                                    </svg>
-                                    Add To Cart
-                              </span>
-                            </button>
-                            </a>
+                            <div class="fields">
+                                <div class="row">  
+                                    <div class="qty-field field">
+                                        <div class="input-group">
+                                            <a href="{{ route('product.reduceByOneC', ['id' => $product->id]) }}">
+                                              <div class="minus">-</div>
+                                            </a>
+                                            <input class="number" readonly="readonly" type="text" value="{{ $qty }}" />
+                                            <a href="{{ route('product.addToCart', ['id' => $product->id]) }}">
+                                              <div class="add">+</div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>

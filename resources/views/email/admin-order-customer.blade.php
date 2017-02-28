@@ -34,12 +34,12 @@
                                                                     <th scope="col" style="text-align:left;border:1px solid #eee">Quantity</th>
                                                                     <th scope="col" style="text-align:left;border:1px solid #eee">Price</th>
                                                                 </tr></thead><tbody>
-                                                                @foreach($products as $product)
+                                                                @foreach($cartproducts as $product)
                                                                 <tr>
 
-                                                                    <td style="text-align:left;vertical-align:middle;border:1px solid #eee;word-wrap:break-word">{{ $product['item']['name'] }}<br><small></small></td>
-                                                                    <td style="text-align:left;vertical-align:middle;border:1px solid #eee">{{ $product['qty'] }}</td>
-                                                                    <td style="text-align:left;vertical-align:middle;border:1px solid #eee"><span class="m_7710281554876410320amount">${{ $product['price'] }}</span></td>
+                                                                    <td style="text-align:left;vertical-align:middle;border:1px solid #eee;word-wrap:break-word">{{ $product->name }}<br><small></small></td>
+                                                                    <td style="text-align:left;vertical-align:middle;border:1px solid #eee">{{ $product->product_amount }}</td>
+                                                                    <td style="text-align:left;vertical-align:middle;border:1px solid #eee"><span class="m_7710281554876410320amount">${{ $product->price * $product->product_amount }}</span></td>
 
                                                                 </tr>
                                                                 @endforeach
@@ -47,7 +47,7 @@
                                                                 <tfoot>
                                                                     <tr>
                                                                         <th scope="row" colspan="2" style="text-align:left;border:1px solid #eee;border-top-width:4px">Cart Subtotal:</th>
-                                                                        <td style="text-align:left;border:1px solid #eee;border-top-width:4px"><span class="m_7710281554876410320amount">${{ $totalPrice }}</span></td>
+                                                                        <td style="text-align:left;border:1px solid #eee;border-top-width:4px"><span class="m_7710281554876410320amount">${{$order->total}}</span></td>
                                                                     </tr>
                                                                     @if($coupon)
                                                                     <tr>
@@ -87,15 +87,7 @@
                                                                     <tr>
                                                                         <th scope="row" colspan="2" style="text-align:left;border:1px solid #eee">Order Total:</th>
                                                                         <td style="text-align:left;border:1px solid #eee"><span class="m_7710281554876410320amount">
-                                                                                @if($couponTotal)
-                                                                                    ${{ $couponTotal }}
-                                                                                @else
-                                                                                    @if($totalPrice <= 500)
-                                                                                        ${{ $totalPrice + 25 }}
-                                                                                    @else
-                                                                                        ${{ $totalPrice }}
-                                                                                    @endif
-                                                                                @endif</span></td>
+                                                                                ${{$order->grandtotal}}</span></td>
                                                                     </tr>
                                                                 </tfoot>
                                                             </table>

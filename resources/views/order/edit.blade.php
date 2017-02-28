@@ -60,7 +60,7 @@
 					<dl class="dl-horizontal">
 						<label>Grand Total:</label>
 						<p>
-							{{ $grandtotal }}
+							${{ $grandtotal }}
 						</p>
 					</dl>
 				</div>

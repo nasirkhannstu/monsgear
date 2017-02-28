@@ -53,7 +53,8 @@ class ProductController extends Controller
         $cart->reduceByOne($id);
 
         Session::put('cart', $cart);
-        return redirect()->route('product.shoppingCart');
+        return back();
+        //return redirect()->route('product.shoppingCart');
     }
     public function getRemoveItem($id)
     {

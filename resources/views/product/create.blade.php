@@ -15,6 +15,8 @@
 @endsection
 
 @section('content')
+
+    @include('partials._messages')
 	<div class="row">
 		<div class="panel panel-info">
 			<div class="panel-heading">
