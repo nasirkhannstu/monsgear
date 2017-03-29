@@ -114,6 +114,10 @@
                                                 <h4 class="product-name">
                                                     <a href="{{ url('shop/'.$product->slug)}}">{{ $product->name}}</a>
                                                 </h4>
+                                                <div class="promoLabel">
+                                                    <span class="label success">
+                                                        Buy 2 Get 1 FREE            </span>
+                                                </div>
                                             </div>
                                             <div class="product-image">
                                                 <a href="{{ url('shop/'.$product->slug)}}" title="{{ $product->name}}">
@@ -122,9 +126,9 @@
                                             </div>
                                             <div class="prodDataWrap">
                                                 <div class="price-box">
-                                                    <!-- <span class="retail-price">
+                                                    <span class="retail-price">
                                                         <del><span class="price">$25.99</span></del>
-                                                    </span> -->
+                                                    </span>
                                                     <span class="price">${{ $product->price}}</span>
                                                 </div>
                                                 <div class="savings">
@@ -164,6 +168,10 @@
                                                 <h4 class="product-name">
                                                     <a href="{{ url('shop/'.$product->slug)}}">{{ $product->name}}</a>
                                                 </h4>
+                                                <div class="promoLabel">
+                                                    <span class="label success">
+                                                        Buy 2 Get 1 FREE            </span>
+                                                </div>
                                             </div>
                                             <div class="product-image">
                                                 <a href="{{ url('shop/'.$product->slug)}}" title="{{ $product->name}}">
@@ -172,9 +180,9 @@
                                             </div>
                                             <div class="prodDataWrap">
                                                 <div class="price-box">
-                                                    <!-- <span class="retail-price">
+                                                    <span class="retail-price">
                                                         <del><span class="price">$25.99</span></del>
-                                                    </span> -->
+                                                    </span>
                                                     <span class="price">${{ $product->price}}</span>
                                                 </div>
                                                 <div class="savings">
@@ -208,6 +216,10 @@
                                                 <h4 class="product-name">
                                                     <a href="{{ url('shop/'.$product->slug)}}">{{ $product->name}}</a>
                                                 </h4>
+                                                <div class="promoLabel">
+                                                    <span class="label success">
+                                                        Buy 2 Get 1 FREE            </span>
+                                                </div>
                                             </div>
                                             <div class="product-image">
                                                 <a href="{{ url('shop/'.$product->slug)}}" title="{{ $product->name}}">
@@ -216,9 +228,9 @@
                                             </div>
                                             <div class="prodDataWrap">
                                                 <div class="price-box">
-                                                    <!-- <span class="retail-price">
+                                                    <span class="retail-price">
                                                         <del><span class="price">$25.99</span></del>
-                                                    </span> -->
+                                                    </span>
                                                     <span class="price">${{ $product->price}}</span>
                                                 </div>
                                                 <div class="savings">

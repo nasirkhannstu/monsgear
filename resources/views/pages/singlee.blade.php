@@ -36,79 +36,76 @@
     </div>
     <div class="aside aside-after" style="display:block">
         <div class="product-shop">
-        <div class="shop-wrap">
-            <div class="section-title">Buying Options</div>
-                <div class="section-inner-wrap">
-                  <div class="group-wrap">
-                    <div class="group">
-                      <div class="group-header">
-                        <div class="cost">
-                          <span class="calc">
-                            <div class="price-box">
-                              <span class="regular-price" id="product-price-22912">
-                                <span class="price">${{ $product->price }}</span>
-                              </span>
+            <div class="shop-wrap">
+                <div class="section-title">Buying Options</div>
+                <div class="section-inner-wrap">                  
+                    <div class="group-wrap">
+                        <div class="group"  itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                            <div class="group-header">
+                                <div class="cost">
+                                    <meta itemprop="priceCurrency" content="USD" />
+                                    <span class="calc"  itemprop="price">
+                                        <div class="price-box">
+                                            <span class="regular-price" id="product-price-18057">
+                                                <span class="price">
+                                                    {{ $product->name }}
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </span>
+                                </div>
+                                <div class="title"><?php
+                                    if($product->category->name=="Injectable"){
+                                        echo "Quantity:10 ML";
+                                    }
+                                        elseif($product->category->name=="Oral"){
+                                            echo "Quantity: 50 Tabs";
+                                        }
+                                    elseif($product->category->name=="Peptides"){
+                                        echo " ";
+                                    }
+                                    ?></div>
+                                <br>
+                                <!-- <div class="deal">
+                                    <span class="label success">
+                                        Buy 1 Get 1 FREE    
+                                    </span>
+                                </div> -->
                             </div>
-                          </span>
-                        </div>
-                        <div class="title">{{ $product->name }}</div>
-                      </div>
-                      <div class="fields">
-                        <div class="row">
-                          <div class="option-field field">
-                            <?php
-                            if($product->category->name=="Injectable"){
-                                echo "Quantity:10 ML";
-                            }elseif($product->category->name=="Oral"){
-                                    echo "Quantity: 50 Tabs";
-                            }elseif($product->category->name=="Peptides"){
-                                echo " ";
-                            }
-                            ?>
-                          </div>
-                          <div class="qty-field field">
-                            <div class="input-group">
-                                <a href="{{route('product.reduceByOneC',['id'=>$product->id])}}">
-                                  <div class="minus">-</div>
-                                </a>
-                                <input class="number" readonly="readonly" type="text" value="{{ $qty }}" min="0" max="20">
-                                <a href="{{ route('product.addToCart',['id' => $product->id]) }}">
-                                  <div class="add">+</div>
-                                </a>
+                            <div class="fields">
+                                <div class="row">  
+
+                                </div>
                             </div>
-                          </div>
                         </div>
-                      </div>
-                      <div class="line">&nbsp;</div>           
+                        <div class="space-break">&nbsp;</div>
                     </div>
-                    <div class="space-break">&nbsp;</div>
-                  </div>
-                </div>
+                </div>                            
                 <div class="section-separator"></div>
                 <div class="section-inner-wrap add-to-cart-wrap">
-                    
-                  <div class="add-to-cart">
-                      <div class="button-wrap">
-                        <a href="{{ route('product.addToCart',['id' => $product->id]) }}">
-                          <button class="btn btn-lg btn-flat-blue aloading basic-load validate-rating">
-                            <span class="init">
-                            <svg class="svg-icon" style="width: 1.4em; height: 1.4em; max-width: 100%;">
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-store-cart"></use>
-                            </svg>Add To Cart
-                            </span>
-                          </button>
-                        </a>
-                      </div>
-                      <div class="badge-wrap">
-                        <div class="mcafee">
-                            <!-- START MCAFEESECURE CODE -->
-                            <a target="_blank" href="https://www.mcafeesecure.com/RatingVerify?ref=www.muscleandstrength.com"><img width="115" height="32" border="0" src="https://images.mcafeesecure.com/meter/www.muscleandstrength.com/22.gif" alt="McAfee SECURE sites help keep you safe from identity theft, credit card fraud, spyware, spam, viruses and online scams" oncontextmenu="alert('Copying Prohibited by Law - McAfee SECURE is a Trademark of McAfee, Inc.'); return false;"></a>
-                            <!-- END MCAFEESECURE CODE -->
+                    <h3>Add To Cart</h3>
+                    <div class="add-to-cart">
+                        <div class="button-wrap">
+                            <div class="fields">
+                                <div class="row">  
+                                    <div class="qty-field field">
+                                        <div class="input-group">
+                                            <a href="{{ route('product.reduceByOneC', ['id' => $product->id]) }}">
+                                              <div class="minus">-</div>
+                                            </a>
+                                            <input class="number" readonly="readonly" type="text" value="{{ $qty }}" />
+                                            <a href="{{ route('product.addToCart', ['id' => $product->id]) }}">
+                                              <div class="add">+</div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                      </div>
-                  </div>
+                    </div>
+
                 </div>
-        </div>
+            </div>
         </div>
     </div>
     <br>
