@@ -60,7 +60,7 @@
                             if($product->category->name=="Injectable"){
                                 echo "Quantity:10 ML";
                             }elseif($product->category->name=="Oral"){
-                                    echo "Quantity: 50 Tabs";
+                                echo "Quantity: 50 Tabs";
                             }elseif($product->category->name=="Peptides"){
                                 echo " ";
                             }
